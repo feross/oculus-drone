@@ -1,8 +1,17 @@
 var arDrone = require('ar-drone')
 var client = arDrone.createClient()
 
+
+process.on( 'SIGINT', function() {
+  console.log( "\ngracefully shutting down from  SIGINT (Crtl-C)" )
+  client.land()
+  process.exit()
+})
+
+
 client.disableEmergency()
 client.stop() // Stop command drone was executing before batt died
+client.takeoff()
 
 client.on('batteryChange', function (num) {
   console.log('battery: ' + num)
