@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FirmwareFileName</key>
+	<string>ardrone_update</string>
+	<key>RepairFileName</key>
+	<string>repair</string>
+	<key>BootldrFileName</key>
+	<string>sys_bootldr</string>
+	<key>RepairVersion</key>
+	<string>1.4.7</string>
+</dict>
+</plist>

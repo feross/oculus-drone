@@ -1,0 +1,33 @@
+1) Install Android SDK and NDK
+------------------------------
+- download Android SDK base package:
+http://developer.android.com/sdk/index.html
+- untar SDK in $HOME/android
+- export PATH=${PATH}:$HOME/android/android-sdk-linux_86/tools
+- apt-get install ant
+- run 'android'
+  * download SDK 2.1 & 1.6
+  * create AVD "myphone" for SDK 1.6
+- download Android NDK 1.6 package, unzip in $HOME/android
+- from NDK directory, run 'build/host-setup.sh --no-awk-check'
+
+2) Build application
+--------------------
+- Move to 'ARDroneLib/Soft/Build directory'
+- From Edit 'custom.makefile' and set USE_ANDROID=yes
+- Edit 'config.makefile' and check line :     
+     * SDK_FLAGS+="TOOLCHAIN_VERSION=arm-eabi-4.4.0"
+     * SDK_FLAGS+="NDK_PLATFORM_VERSION=android-5"
+- export NDK_PATH=$(HOME)/android-ndk-r3
+- Run 'make'
+- Copy libpc_ardrone.a, libsdk.a and libvlib.a located in targets_versions directory to <NDK>/out/apps/ardrone/armeabi/.
+- Copy 'ardrone' directory to <NDK>/apps directory
+- export SDK_PATH
+- from NDK directory, run 'make APP=ardrone' to build native lib
+- from <NDK>/apps/ardrone/project, run 'ant debug' or 'ant release' if needed set sdk path run 'ant debug|release -Dsdk.dir=$(ANDROID_SDK_PATH)'
+- application package is now in <NDK>/apps/ardrone/project/bin directory
+
+3) Install application on Android phone
+---------------------------------------
+  * connect phone via USB
+  * adb -d install -r <NDK>/apps/ardrone/project/bin/DemoActivity-debug.apk

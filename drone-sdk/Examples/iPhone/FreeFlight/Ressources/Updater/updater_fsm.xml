@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<fsm>
+	<states>
+		<state name="WAITING CONNECTION" enter-callback="enterWaitingConnection:" quit-callback="quitWaitingConnection:" object="Trying to connect to AR.Drone" />
+		<state name="NOT CONNECTED" enter-callback="enterNotConnected:"  object="Wifi not available, please connect your %@ to your AR.Drone" />
+		<state name="REPAIR" enter-callback="enterRepair:" quit-callback="quitRepair:" object="Checking/Updating bootloader" />
+		<state name="NOT REPAIRED" enter-callback="enterNotRepaired:"  object="Wifi not available, please connect your %@ to your AR.Drone" />
+		<state name="CHECK VERSION" enter-callback="enterCheckVersion:" quit-callback="quitCheckVersion:" object="AR.Drone firmware %@\n%@\n%@" />
+		<state name="UPDATE FREEFLIGHT" enter-callback="enterUpdateFreeflight:"  object="" />
+		<state name="LAUNCH FREEFLIGHT" enter-callback="enterLaunchFreeflight:"  object="" />
+		<state name="UPDATE FIRMWARE" enter-callback="enterUpdateFirmware:" quit-callback="quitUpdateFirmware:" object="Sending file" />
+		<state name="NOT UPDATED" enter-callback="enterNotUpdated:" object="Wifi not available, please connect your %@ to your AR.Drone" />
+		<state name="RESTART DRONE" enter-callback="enterRestartDrone:" quit-callback="quitRestartDrone:" object="Update file sent succesfully\nPlease restart the AR.Drone" />
+		<state name="INSTALLING FIRMWARE" enter-callback="enterInstallingFirmware:" object="If AR.Drone led is green, reset the Wifi connection." />
+	</states>
+	<actions>
+		<action name="FAIL" />
+		<action name="SUCCESS" />
+		<action name="ASK FOR FREEGLIGHT UPDATE" />
+	</actions>
+	<associations>
+        <association from-state="WAITING CONNECTION" action="SUCCESS" to-state="REPAIR" />
+        <association from-state="WAITING CONNECTION" action="FAIL" to-state="NOT CONNECTED" />
+		
+        <association from-state="NOT CONNECTED" action="FAIL" to-state="NOT CONNECTED" />
+        <association from-state="NOT CONNECTED" action="SUCCESS" to-state="NOT CONNECTED" />
+		
+        <association from-state="REPAIR" action="FAIL" to-state="NOT REPAIRED" />
+        <association from-state="REPAIR" action="SUCCESS" to-state="CHECK VERSION" />
+		
+        <association from-state="NOT REPAIRED" action="FAIL" to-state="NOT REPAIRED" />
+        <association from-state="NOT REPAIRED" action="SUCCESS" to-state="NOT REPAIRED" />
+		
+        <association from-state="CHECK VERSION" action="FAIL" to-state="UPDATE FIRMWARE" />
+        <association from-state="CHECK VERSION" action="SUCCESS" to-state="LAUNCH FREEFLIGHT" />
+        <association from-state="CHECK VERSION" action="ASK FOR FREEGLIGHT UPDATE" to-state="UPDATE FREEFLIGHT" />
+		
+        <association from-state="UPDATE FIRMWARE" action="FAIL" to-state="NOT UPDATED" />
+        <association from-state="UPDATE FIRMWARE" action="SUCCESS" to-state="RESTART DRONE" />
+		
+        <association from-state="NOT UPDATED" action="FAIL" to-state="NOT UPDATED" />
+        <association from-state="NOT UPDATED" action="SUCCESS" to-state="NOT UPDATED" />
+		
+        <association from-state="RESTART DRONE" action="SUCCESS" to-state="INSTALLING FIRMWARE" />
+	</associations>
+</fsm>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<!--
+		Here is where we put the SurfaceView, in a frame so that we can stack
+		other views on top of it.
+	-->
+	<FrameLayout android:layout_width="fill_parent"
+		android:layout_height="0px" android:layout_weight="1">
+
+		<com.parrot.ARDrone.DemoGLSurfaceView android:id="@+id/glsurfaceview"
+			android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+		<RelativeLayout  android:id="@+id/layoutView"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			>
+
+			<com.parrot.ARDrone.RotatedButton android:id="@+id/takeOffButton"
+			    android:text="Take off"
+				  android:layout_width="80dp" 
+				  android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true">
+				</com.parrot.ARDrone.RotatedButton>
+
+        <!--   com.parrot.ARDrone.RotatedButton android:text="Use Acc" 
+          android:id="@+id/useAccSteeringButton"
+          android:layout_width="80dp" 
+          android:layout_height="100dp"
+           android:layout_alignParentRight="true"
+           android:layout_centerInParent="true">
+        </com.parrot.ARDrone.RotatedButton -->
+				
+        <com.parrot.ARDrone.RotatedButton android:text="Halt" 
+          android:id="@+id/emergLandingButton"
+          android:layout_width="80dp" 
+          android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+          android:layout_alignParentBottom="true" >
+        </com.parrot.ARDrone.RotatedButton>
+
+		     <com.parrot.ARDrone.RotatedButton android:text="Up" 
+          android:id="@+id/moveUpButton"
+          android:layout_width="80dp" 
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentBottom="true" >
+        </com.parrot.ARDrone.RotatedButton>
+
+         
+        <com.parrot.ARDrone.RotatedButton android:text="Down" 
+          android:id="@+id/moveDownButton"
+          android:layout_width="80dp" 
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true" >
+        </com.parrot.ARDrone.RotatedButton>
+		
+</RelativeLayout >
+	</FrameLayout>
+
+
+
+</LinearLayout>
+

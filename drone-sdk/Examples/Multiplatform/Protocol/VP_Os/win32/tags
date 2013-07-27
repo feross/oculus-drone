@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+THREAD_HANDLE	vp_os_thread_dep.h	/^typedef HANDLE                  THREAD_HANDLE;$/;"	t
+THREAD_PARAMS	vp_os_thread_dep.h	/^typedef LPVOID                  THREAD_PARAMS;$/;"	t
+THREAD_RET	vp_os_thread_dep.h	/^typedef DWORD                   THREAD_RET;$/;"	t
+THREAD_RETURN	vp_os_thread_dep.h	18;"	d
+THREAD_ROUTINE	vp_os_thread_dep.h	/^typedef LPTHREAD_START_ROUTINE  THREAD_ROUTINE;$/;"	t
+VP_COM_BAUDRATE_110	vp_os_serial.h	/^  VP_COM_BAUDRATE_110 = CBR_110,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_115200	vp_os_serial.h	/^  VP_COM_BAUDRATE_115200 = CBR_115200,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_1200	vp_os_serial.h	/^  VP_COM_BAUDRATE_1200 = CBR_1200,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_128000	vp_os_serial.h	/^  VP_COM_BAUDRATE_128000 = CBR_128000,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_14400	vp_os_serial.h	/^  VP_COM_BAUDRATE_14400 = CBR_14400,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_19200	vp_os_serial.h	/^  VP_COM_BAUDRATE_19200 = CBR_19200,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_2400	vp_os_serial.h	/^  VP_COM_BAUDRATE_2400 = CBR_2400,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_256000	vp_os_serial.h	/^  VP_COM_BAUDRATE_256000 = CBR_256000,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_300	vp_os_serial.h	/^  VP_COM_BAUDRATE_300 = CBR_300,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_38400	vp_os_serial.h	/^  VP_COM_BAUDRATE_38400 = CBR_38400,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_460800	vp_os_serial.h	/^  VP_COM_BAUDRATE_460800 = CBR_256000, \/\/ TODO Added only for $/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_4800	vp_os_serial.h	/^  VP_COM_BAUDRATE_4800 = CBR_4800,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_57600	vp_os_serial.h	/^  VP_COM_BAUDRATE_57600 = CBR_57600,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_600	vp_os_serial.h	/^  VP_COM_BAUDRATE_600 = CBR_600,$/;"	e	enum:_vp_com_baudrates_
+VP_COM_BAUDRATE_9600	vp_os_serial.h	/^  VP_COM_BAUDRATE_9600 = CBR_9600,$/;"	e	enum:_vp_com_baudrates_
+_BitScanReverse	intrin.h	/^static INLINE uint32_t _BitScanReverse(uint32_t* index, uint32_t mask)$/;"	f
+_SIGNAL_INCLUDE_OS_DEP_	vp_os_signal_dep.h	10;"	d
+_THREAD_INCLUDE_OS_DEP_	vp_os_thread_dep.h	8;"	d
+_VP_OS_SERIAL_H_	vp_os_serial.h	9;"	d
+__INTRIN__H__	intrin.h	3;"	d
+_byteswap_ulong	intrin.h	/^static INLINE uint32_t _byteswap_ulong(uint32_t value)$/;"	f
+_vp_com_baudrates_	vp_os_serial.h	/^typedef enum _vp_com_baudrates_$/;"	g
+bswap	intrin.h	48;"	d
+clz	intrin.h	/^static inline uint32_t clz(uint32_t code)$/;"	f
+vp_com_baudrate_t	vp_os_serial.h	/^} vp_com_baudrate_t;$/;"	t	typeref:enum:_vp_com_baudrates_
+vp_os_cond_destroy	vp_os_signal.c	/^vp_os_cond_destroy(vp_os_cond_t *cond)$/;"	f
+vp_os_cond_init	vp_os_signal.c	/^vp_os_cond_init(vp_os_cond_t *cond, vp_os_mutex_t *mutex)$/;"	f
+vp_os_cond_signal	vp_os_signal.c	/^vp_os_cond_signal(vp_os_cond_t *cond)$/;"	f
+vp_os_cond_t	vp_os_signal_dep.h	/^typedef CRITICAL_SECTION vp_os_cond_t;$/;"	t
+vp_os_cond_timed_wait	vp_os_signal.c	/^vp_os_cond_timed_wait(vp_os_cond_t *cond, uint32_t ms)$/;"	f
+vp_os_cond_wait	vp_os_signal.c	/^vp_os_cond_wait(vp_os_cond_t *cond)$/;"	f
+vp_os_delay	vp_os_delay.c	/^void vp_os_delay(uint32_t ms)$/;"	f
+vp_os_delay_us	vp_os_delay.c	/^void vp_os_delay_us(uint32_t us)$/;"	f
+vp_os_mutex_destroy	vp_os_signal.c	/^vp_os_mutex_destroy(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_init	vp_os_signal.c	/^vp_os_mutex_init(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_lock	vp_os_signal.c	/^vp_os_mutex_lock(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_t	vp_os_signal_dep.h	/^typedef CRITICAL_SECTION vp_os_mutex_t;$/;"	t
+vp_os_mutex_unlock	vp_os_signal.c	/^vp_os_mutex_unlock(vp_os_mutex_t *mutex)$/;"	f
+vp_os_thread_create	vp_os_thread.c	/^vp_os_thread_create(THREAD_ROUTINE f, void *parameters, THREAD_HANDLE *handle, ...)$/;"	f
+vp_os_thread_join	vp_os_thread.c	/^vp_os_thread_join(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_priority	vp_os_thread.c	/^vp_os_thread_priority(THREAD_HANDLE handle, int32_t priority)$/;"	f
+vp_os_thread_resume	vp_os_thread.c	/^vp_os_thread_resume(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_self	vp_os_thread.c	/^vp_os_thread_self(void)$/;"	f
+vp_os_thread_suspend	vp_os_thread.c	/^vp_os_thread_suspend(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_yield	vp_os_thread.c	/^vp_os_thread_yield(void)$/;"	f

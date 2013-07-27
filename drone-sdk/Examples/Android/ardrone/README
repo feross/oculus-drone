@@ -1,0 +1,47 @@
+
+This is a quick'n'dirty demo app for controlling an AR drone with an
+Android phone. It was originally based on the "San Angeles" NDK demo app.
+It was written to quickly test the following implementation choices:
+
+ * display video stream in native code using OpenGL ES
+ * retrieve events (touch, trackball, orientation sensor) in Java code and
+ pass data to native threads
+
+The native application itself is derived from a sample linux PC code (not from
+the iPhone app), it consists in a few threads:
+ - the "AT commands" thread sends control frames to AR drone
+ - the "NAV data" thread receives navigation and status data from AR drone
+ - the video thread receives a compressed video stream (encoded in a
+   proprietary codec, UVLC) from AR drone
+
+Note: this demo app should *not* be used as a basis for a real port of the
+iPhone AR drone application.
+
+HOW TO USE
+----------
+1) Setup wifi connection to drone in ad-hoc mode (currently not possible in
+Android), or to an access point, ONLY if drone has been flashed in "PC mode".
+2) Launch AR drone app; a video stream should be displayed
+3) Hold your phone in landscape mode with the trackball on the left
+4) Tap the screen on the bottom left corner to take off/land
+5) Touch the right part of the screen to control gas (up/middle/bottom)
+6) While touching the screen or pressing the trackball, you can use phone
+orientation to control flight
+7) Press and roll the trackball to control yaw
+8) Release touchscreen and trackball to return the drone back into fix-point
+mode
+
+TODO/NOTES
+----------
+- implement proper thread resource management and synchronization
+- adjust thread prorities (AT commands should get the highest prio)
+- Use RENDERMODE_WHEN_DIRTY in order to render video only when a new frame has
+been decoded; this probably means calling requestRender() from native code.
+- understand Wi-Fi issues: we seem to have a lot of trouble connecting from
+Android phone to AR drone via an Access Point.
+We should probably try ad-hoc mode like in the iPhone app, but this does not
+seem to be supported in Android ?
+- improve control ergonomy
+- Nexus One trackball seems to miss press/release events (?), thus it is not
+usable as an orientation mode switch; keep a finger on the touch screen to use
+orientation mode.

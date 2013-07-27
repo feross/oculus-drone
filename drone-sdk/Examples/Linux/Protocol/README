@@ -1,0 +1,38 @@
+1) Edit custom.makefile 
+USE_OPENGL : Enable video render. Only used with Android 
+
+2) Run make
+
+Public functions in "app.h" :
+
+/* Run all process */
+extern void appInit();
+
+/* Stop all process */
+extern void appDeinit();
+
+/* Indicates the number of currently decoded image */
+extern int num_picture_decoded;
+
+/* Current RGB picture buf  */
+extern uint16_t picture_buf[];
+
+/* AT cmds functions  */
+
+/* Calibration of the AR.Drone */
+void at_set_flat_trim( void );
+
+/* Send directly accelero values */
+void at_set_iphone_acceleros( int enable, float32_t fax, float32_t fay, float32_t faz );
+
+/* Update radiogp command */
+void at_set_radiogp_input( int32_t pitch, int32_t roll, int32_t gaz, int32_t yaw );
+
+Note: Do not use commands radiogp and accelero at the same time.
+
+/* Takeoff/Landing  */
+void at_ui_pad_start_pressed( void );
+
+/* Update texture (only used with GLES library)*/
+extern void appRender(long tick, int width, int height);
+
