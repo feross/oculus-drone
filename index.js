@@ -1,10 +1,32 @@
 var arDrone = require('ar-drone')
-var client = arDrone.createClient()
+var net = require('net')
+var split = require('split')
+var through = require('through')
 
-client.disableEmergency()
-client.stop() // Stop command drone was executing before batt died
+var drone = arDrone.createClient()
 
-client.on('batteryChange', function (num) {
+var client = net.connect({
+  port: 12345
+})
+.pipe(split())
+.pipe(through(function (line) {
+  var arr = line.split(',')
+  console.log(arr)
+  var x = arr[0], y = arr[1], z = arr[2]
+  set('x', x)
+  set('y', y)
+  set('z', z)
+}))
+
+drone.disableEmergency()
+drone.stop() // Stop command drone was executing before batt died
+drone.takeoff()
+
+setTimeout(function () {
+  drone.land()
+}, 15000)
+
+drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
 })
 
@@ -19,13 +41,13 @@ function set (param, val) {
     params[param] = val
 
   if (param === 'x')
-    client.front(params[param])
+    drone.front(params[param])
   else if (param === 'y')
-    client.right(params[param])
+    drone.right(params[param])
   else if (param === 'z')
-    client.up(params[param])
+    drone.up(params[param])
   else if (param === 'rot')
-    client.clockwise(params[param])
+    drone.clockwise(params[param])
   else
     console.error('Invalid param to `set`')
 }
@@ -36,6 +58,6 @@ function reset () {
   })
 }
 
-client.on('navdata', function (data) {
+drone.on('navdata', function (data) {
   console.log(data)
 })

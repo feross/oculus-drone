@@ -82,7 +82,7 @@ else
 			TOOLCHAIN_PATH=/Developer/Platforms/$(OS_TARGET_NAME).platform/Developer/usr/bin
 			GENERIC_COMMAND_PREFIX=$(TOOLCHAIN_PATH)/
 	else
-	     OS_TARGET_ID=$(shell uname -sor | sed -e "s/[ \/]/_/g")
+	     OS_TARGET_ID=$(shell uname -sr | sed -e "s/[ \/]/_/g")
         ifeq ($(USE_ANDROID),yes)
           TOOLCHAIN_PATH=$(NDK_PATH)/build/prebuilt/linux-x86/$(TOOLCHAIN_VERSION)/bin
           GENERIC_COMMAND_PREFIX=$(TOOLCHAIN_PATH)/arm-eabi-
