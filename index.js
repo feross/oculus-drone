@@ -20,6 +20,11 @@ var client = net.connect({
 
 drone.disableEmergency()
 drone.stop() // Stop command drone was executing before batt died
+drone.takeoff()
+
+setTimeout(function () {
+  drone.land()
+}, 15000)
 
 drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
