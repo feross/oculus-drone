@@ -107,6 +107,7 @@
 		C50FA3D1177BB88E00730BB7 /* OVR_JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = C50FA3CD177BB88E00730BB7 /* OVR_JSON.h */; };
 		C50FA3D2177BB88E00730BB7 /* OVR_Profile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C50FA3CE177BB88E00730BB7 /* OVR_Profile.cpp */; };
 		C50FA3D3177BB88E00730BB7 /* OVR_Profile.h in Headers */ = {isa = PBXBuildFile; fileRef = C50FA3CF177BB88E00730BB7 /* OVR_Profile.h */; };
+		E495245B17A48EF300919D99 /* server-socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E495245A17A48EF300919D99 /* server-socket.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +264,7 @@
 		C50FA3CD177BB88E00730BB7 /* OVR_JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVR_JSON.h; sourceTree = "<group>"; };
 		C50FA3CE177BB88E00730BB7 /* OVR_Profile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OVR_Profile.cpp; sourceTree = "<group>"; };
 		C50FA3CF177BB88E00730BB7 /* OVR_Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVR_Profile.h; sourceTree = "<group>"; };
+		E495245A17A48EF300919D99 /* server-socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "server-socket.cpp"; path = "../../server/server-socket.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,6 +534,7 @@
 		9B6DEF831728A60A0071E76B /* SensorBox */ = {
 			isa = PBXGroup;
 			children = (
+				E495245A17A48EF300919D99 /* server-socket.cpp */,
 				9B6DEF841728A6560071E76B /* SensorBoxTest.cpp */,
 			);
 			name = SensorBox;
@@ -794,6 +797,7 @@
 				49DB660F1726F0EA0097A8DD /* OSX_Platform.mm in Sources */,
 				49DB66101726F0EA0097A8DD /* Platform.cpp in Sources */,
 				9B6DEF851728A6560071E76B /* SensorBoxTest.cpp in Sources */,
+				E495245B17A48EF300919D99 /* server-socket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +887,7 @@
 					../LibOVR/Include,
 					CommonSrc,
 					../3rdParty/TinyXml,
+					../../server,
 				);
 				INFOPLIST_FILE = "LibOVR_With_Samples.xcodeproj/OculusWorldDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -904,6 +909,7 @@
 					../LibOVR/Include,
 					CommonSrc,
 					../3rdParty/TinyXml,
+					../../server,
 				);
 				INFOPLIST_FILE = "LibOVR_With_Samples.xcodeproj/OculusWorldDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1053,6 +1059,12 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					../LibOVR/Src,
+					../LibOVR/Include,
+					CommonSrc,
+					../../server,
+				);
 				INFOPLIST_FILE = "LibOVR_With_Samples.xcodeproj/SensorBoxTest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
@@ -1069,6 +1081,12 @@
 				CONFIGURATION_BUILD_DIR = Samples/SensorBoxTest/MacOS/Release;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					../LibOVR/Src,
+					../LibOVR/Include,
+					CommonSrc,
+					../../server,
+				);
 				INFOPLIST_FILE = "LibOVR_With_Samples.xcodeproj/SensorBoxTest-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
