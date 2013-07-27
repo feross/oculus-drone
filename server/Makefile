@@ -1,14 +1,14 @@
 CC = g++
-CFLAGS = -g -Wall -I../include
+CFLAGS = -g -Wall
 LDFLAGS =
 
 all: example
 
-example: time-server-sequential.o server-socket.o
-	$(CC) time-server-sequential.o server-socket.o $(LDFLAGS) -o example
+example: server.o server-socket.o
+	$(CC) server.o server-socket.o $(LDFLAGS) -o example
 
 .cpp.o:
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 
 .PHONY: clean
 clean:
