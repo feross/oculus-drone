@@ -29,3 +29,10 @@ function set (param, val) {
   else
     console.error('Invalid param to `set`')
 }
+
+function reset () {
+  ['x', 'y', 'z', 'rot'].forEach(function (param) {
+    set(param, 0)
+  })
+}
+
