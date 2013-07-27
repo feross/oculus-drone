@@ -36,3 +36,6 @@ function reset () {
   })
 }
 
+client.on('navdata', function (data) {
+  console.log(data)
+})

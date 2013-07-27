@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B29F4B513016E08005F23CB /* ARDroneGeneratedCommandIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B29F4B413016E08005F23CB /* ARDroneGeneratedCommandIn.h */; };
+		2BB9A2A313792D66008647BD /* ARDroneFTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB9A2A213792D66008647BD /* ARDroneFTP.h */; };
+		2BB9A2A513792D72008647BD /* ARDroneFTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9A2A413792D72008647BD /* ARDroneFTP.m */; };
+		680BC46F10983EC800F941F4 /* ARDroneProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 680BC46D10983EC800F941F4 /* ARDroneProtocols.h */; };
+		680BC47010983EC800F941F4 /* ARDrone.h in Headers */ = {isa = PBXBuildFile; fileRef = 680BC46E10983EC800F941F4 /* ARDrone.h */; };
+		680BC4C7109840E300F941F4 /* ARDroneEngine_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 680BC4C6109840E300F941F4 /* ARDroneEngine_Prefix.pch */; };
+		680C31351085BDB000C7D327 /* ARDrone.m in Sources */ = {isa = PBXBuildFile; fileRef = 680C31331085BDB000C7D327 /* ARDrone.m */; };
+		680C39401087202000C7D327 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		680C39F41087203700C7D327 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689B5A690FB9AD6C0095AB01 /* CoreGraphics.framework */; };
+		680C39F51087203700C7D327 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68704E230EADCF5900C45877 /* AudioToolbox.framework */; };
+		680C39F61087203700C7D327 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68704E240EADCF5900C45877 /* CoreAudio.framework */; };
+		680C39F71087203700C7D327 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		680C39F81087203700C7D327 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		680C39F91087203700C7D327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		68607EF310DB8D27009514CF /* GLViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68607EEF10DB8D27009514CF /* GLViewController.h */; };
+		68607EF410DB8D27009514CF /* GLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68607EF010DB8D27009514CF /* GLViewController.m */; };
+		68607EF510DB8D27009514CF /* MainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68607EF110DB8D27009514CF /* MainViewController.h */; };
+		68607EF610DB8D27009514CF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68607EF210DB8D27009514CF /* MainViewController.m */; };
+		686A12EE10BBDE16003E176D /* InternalProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 686A12ED10BBDE16003E176D /* InternalProtocols.h */; };
+		6871D839115B5AD900CFEEC8 /* navdata.c in Sources */ = {isa = PBXBuildFile; fileRef = 6871D837115B5AD900CFEEC8 /* navdata.c */; };
+		6871D83A115B5AD900CFEEC8 /* navdata.h in Headers */ = {isa = PBXBuildFile; fileRef = 6871D838115B5AD900CFEEC8 /* navdata.h */; };
+		6871D83F115B5B0800CFEEC8 /* mobile_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6871D83D115B5B0800CFEEC8 /* mobile_main.c */; };
+		6871D840115B5B0800CFEEC8 /* mobile_main.h in Headers */ = {isa = PBXBuildFile; fileRef = 6871D83E115B5B0800CFEEC8 /* mobile_main.h */; };
+		6873906010C7B30F001F305B /* SettingsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6873905E10C7B30F001F305B /* SettingsMenu.m */; };
+		6873906110C7B30F001F305B /* SettingsMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 6873905F10C7B30F001F305B /* SettingsMenu.h */; };
+		6873AACC10D1654E001F305B /* HUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6873AACA10D1654E001F305B /* HUD.h */; };
+		6873AACD10D1654E001F305B /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6873AACB10D1654E001F305B /* HUD.m */; };
+		688C4858134A17D8003C4C94 /* wifi.c in Sources */ = {isa = PBXBuildFile; fileRef = 688C4856134A17D8003C4C94 /* wifi.c */; };
+		688C4859134A17D8003C4C94 /* wifi.h in Headers */ = {isa = PBXBuildFile; fileRef = 688C4857134A17D8003C4C94 /* wifi.h */; };
+		6899BF071083389200ED08CB /* OpenGLVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6899BEF81083389200ED08CB /* OpenGLVideo.m */; };
+		6899BF081083389200ED08CB /* OpenGLVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6899BEF91083389200ED08CB /* OpenGLVideo.h */; };
+		6899BF091083389200ED08CB /* OpenGLSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6899BEFA1083389200ED08CB /* OpenGLSprite.m */; };
+		6899BF0A1083389200ED08CB /* OpenGLSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 6899BEFB1083389200ED08CB /* OpenGLSprite.h */; };
+		68E5679410E1193400EEB77F /* TVOut.h in Headers */ = {isa = PBXBuildFile; fileRef = 68E5679210E1193400EEB77F /* TVOut.h */; };
+		68E5679510E1193400EEB77F /* TVOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E5679310E1193400EEB77F /* TVOut.m */; };
+		8A1298EB12521ECE0007A8C2 /* ARDroneGeneratedTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A1298EA12521ECE0007A8C2 /* ARDroneGeneratedTypes.h */; };
+		8A43A6DF134A0DE1002D2D0C /* ConstantsAndMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A43A6DE134A0DE1002D2D0C /* ConstantsAndMacros.h */; };
+		8A5D9BDA110473C600D4D1BC /* ControlData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5D9BD8110473C600D4D1BC /* ControlData.h */; };
+		8A5D9BDB110473C600D4D1BC /* ControlData.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D9BD9110473C600D4D1BC /* ControlData.c */; };
+		8A774EA611A683B500F76B86 /* ARDroneTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A774EA511A683B500F76B86 /* ARDroneTypes.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6871E05C1160B25D00CFEEC8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 12;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2B29F4B413016E08005F23CB /* ARDroneGeneratedCommandIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDroneGeneratedCommandIn.h; path = Release/ARDroneGeneratedCommandIn.h; sourceTree = "<group>"; };
+		2BB9A2A213792D66008647BD /* ARDroneFTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDroneFTP.h; path = Release/ARDroneFTP.h; sourceTree = "<group>"; };
+		2BB9A2A413792D72008647BD /* ARDroneFTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARDroneFTP.m; path = Classes/ARDroneFTP.m; sourceTree = "<group>"; };
+		37A1E3A413C5FE5500E265F6 /* accelero_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accelero_thumb.png; sourceTree = "<group>"; };
+		37A1E3A513C5FE5500E265F6 /* ARDrone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ARDrone.png; sourceTree = "<group>"; };
+		37A1E3A613C5FE5500E265F6 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		37A1E3A713C5FE5500E265F6 /* background-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-iPad.png"; sourceTree = "<group>"; };
+		37A1E3A813C5FE5500E265F6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		37A1E3A913C5FE5500E265F6 /* battery.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = battery.wav; sourceTree = "<group>"; };
+		37A1E3AA13C5FE5500E265F6 /* battery0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery0.png; sourceTree = "<group>"; };
+		37A1E3AB13C5FE5500E265F6 /* battery1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery1.png; sourceTree = "<group>"; };
+		37A1E3AC13C5FE5500E265F6 /* battery2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery2.png; sourceTree = "<group>"; };
+		37A1E3AD13C5FE5500E265F6 /* battery3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery3.png; sourceTree = "<group>"; };
+		37A1E3AE13C5FE5500E265F6 /* emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency.png; sourceTree = "<group>"; };
+		37A1E3B013C5FE5500E265F6 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/languages.strings; sourceTree = "<group>"; };
+		37A1E3B113C5FE5500E265F6 /* finger_print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger_print.png; sourceTree = "<group>"; };
+		37A1E3B213C5FE5500E265F6 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		37A1E3B313C5FE5500E265F6 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/languages.strings; sourceTree = "<group>"; };
+		37A1E3B413C5FE5500E265F6 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/languages.strings; sourceTree = "<group>"; };
+		37A1E3B513C5FE5500E265F6 /* HUD-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "HUD-iPad.xib"; sourceTree = "<group>"; };
+		37A1E3B613C5FE5500E265F6 /* HUD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HUD.xib; sourceTree = "<group>"; };
+		37A1E3B713C5FE5500E265F6 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/languages.strings; sourceTree = "<group>"; };
+		37A1E3B813C5FE5500E265F6 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/languages.strings; sourceTree = "<group>"; };
+		37A1E3B913C5FE5500E265F6 /* joystick_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick_background.png; sourceTree = "<group>"; };
+		37A1E3BA13C5FE5500E265F6 /* joystick_background_v2-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joystick_background_v2-iPad.png"; sourceTree = "<group>"; };
+		37A1E3BB13C5FE5500E265F6 /* joystick_background_v2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick_background_v2.png; sourceTree = "<group>"; };
+		37A1E3BC13C5FE5500E265F6 /* joystick_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick_thumb.png; sourceTree = "<group>"; };
+		37A1E3BD13C5FE5500E265F6 /* level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level.png; sourceTree = "<group>"; };
+		37A1E3BE13C5FE5500E265F6 /* others.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = others.png; sourceTree = "<group>"; };
+		37A1E3BF13C5FE5500E265F6 /* plop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = plop.wav; sourceTree = "<group>"; };
+		37A1E3C013C5FE5500E265F6 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/languages.strings; sourceTree = "<group>"; };
+		37A1E3C113C5FE5500E265F6 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
+		37A1E3C213C5FE5500E265F6 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		37A1E3C313C5FE5500E265F6 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		37A1E3C413C5FE5500E265F6 /* SettingsMenu-Debug.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SettingsMenu-Debug.xib"; sourceTree = "<group>"; };
+		37A1E3C513C5FE5500E265F6 /* SettingsMenu-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SettingsMenu-iPad.xib"; sourceTree = "<group>"; };
+		37A1E3C613C5FE5500E265F6 /* SettingsMenu-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SettingsMenu-iPhone.xib"; sourceTree = "<group>"; };
+		37A1E3C713C5FE5500E265F6 /* SettingsMenuDebug.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsMenuDebug.xib; sourceTree = "<group>"; };
+		37A1E3C813C5FE5500E265F6 /* Spanish */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Spanish; path = Spanish.lproj/languages.strings; sourceTree = "<group>"; };
+		37A1E3C913C5FE5500E265F6 /* switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch.png; sourceTree = "<group>"; };
+		37A1E3CA13C5FE5500E265F6 /* take_land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_land.png; sourceTree = "<group>"; };
+		37A1E3CB13C5FE5500E265F6 /* take_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_off.png; sourceTree = "<group>"; };
+		680BC46D10983EC800F941F4 /* ARDroneProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDroneProtocols.h; path = Release/ARDroneProtocols.h; sourceTree = "<group>"; };
+		680BC46E10983EC800F941F4 /* ARDrone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDrone.h; path = Release/ARDrone.h; sourceTree = "<group>"; };
+		680BC4C5109840DA00F941F4 /* libARDroneEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libARDroneEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		680BC4C6109840E300F941F4 /* ARDroneEngine_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDroneEngine_Prefix.pch; sourceTree = "<group>"; };
+		680C31331085BDB000C7D327 /* ARDrone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARDrone.m; path = Classes/ARDrone.m; sourceTree = "<group>"; };
+		68607EEF10DB8D27009514CF /* GLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLViewController.h; sourceTree = "<group>"; };
+		68607EF010DB8D27009514CF /* GLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLViewController.m; sourceTree = "<group>"; };
+		68607EF110DB8D27009514CF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		68607EF210DB8D27009514CF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		686A12ED10BBDE16003E176D /* InternalProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InternalProtocols.h; path = Classes/InternalProtocols.h; sourceTree = "<group>"; };
+		68704E230EADCF5900C45877 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		68704E240EADCF5900C45877 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		6871D837115B5AD900CFEEC8 /* navdata.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = navdata.c; sourceTree = "<group>"; };
+		6871D838115B5AD900CFEEC8 /* navdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navdata.h; sourceTree = "<group>"; };
+		6871D83D115B5B0800CFEEC8 /* mobile_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mobile_main.c; path = Classes/mobile_main.c; sourceTree = "<group>"; };
+		6871D83E115B5B0800CFEEC8 /* mobile_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mobile_main.h; path = Classes/mobile_main.h; sourceTree = "<group>"; };
+		6873905E10C7B30F001F305B /* SettingsMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenu.m; sourceTree = "<group>"; };
+		6873905F10C7B30F001F305B /* SettingsMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenu.h; sourceTree = "<group>"; };
+		6873AACA10D1654E001F305B /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
+		6873AACB10D1654E001F305B /* HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUD.m; sourceTree = "<group>"; };
+		688C4856134A17D8003C4C94 /* wifi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wifi.c; path = Classes/wifi.c; sourceTree = "<group>"; };
+		688C4857134A17D8003C4C94 /* wifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wifi.h; path = Classes/wifi.h; sourceTree = "<group>"; };
+		6899BEF81083389200ED08CB /* OpenGLVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLVideo.m; path = Classes/OpenGLVideo.m; sourceTree = "<group>"; };
+		6899BEF91083389200ED08CB /* OpenGLVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLVideo.h; path = Classes/OpenGLVideo.h; sourceTree = "<group>"; };
+		6899BEFA1083389200ED08CB /* OpenGLSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLSprite.m; path = Classes/OpenGLSprite.m; sourceTree = "<group>"; };
+		6899BEFB1083389200ED08CB /* OpenGLSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLSprite.h; path = Classes/OpenGLSprite.h; sourceTree = "<group>"; };
+		689B5A690FB9AD6C0095AB01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		68E5679210E1193400EEB77F /* TVOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVOut.h; path = Classes/Hide/TVOut.h; sourceTree = "<group>"; };
+		68E5679310E1193400EEB77F /* TVOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVOut.m; path = Classes/Hide/TVOut.m; sourceTree = "<group>"; };
+		8A1298EA12521ECE0007A8C2 /* ARDroneGeneratedTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDroneGeneratedTypes.h; path = Release/ARDroneGeneratedTypes.h; sourceTree = "<group>"; };
+		8A43A6DE134A0DE1002D2D0C /* ConstantsAndMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantsAndMacros.h; path = Classes/ConstantsAndMacros.h; sourceTree = "<group>"; };
+		8A5D9BD8110473C600D4D1BC /* ControlData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlData.h; path = Classes/ControlData.h; sourceTree = "<group>"; };
+		8A5D9BD9110473C600D4D1BC /* ControlData.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ControlData.c; path = Classes/ControlData.c; sourceTree = "<group>"; };
+		8A774EA511A683B500F76B86 /* ARDroneTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDroneTypes.h; path = Release/ARDroneTypes.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68903F300EACBEA400D8A80C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				680C39401087202000C7D327 /* OpenGLES.framework in Frameworks */,
+				680C39F41087203700C7D327 /* CoreGraphics.framework in Frameworks */,
+				680C39F51087203700C7D327 /* AudioToolbox.framework in Frameworks */,
+				680C39F61087203700C7D327 /* CoreAudio.framework in Frameworks */,
+				680C39F71087203700C7D327 /* QuartzCore.framework in Frameworks */,
+				680C39F81087203700C7D327 /* UIKit.framework in Frameworks */,
+				680C39F91087203700C7D327 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680BC4C5109840DA00F941F4 /* libARDroneEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				688C4856134A17D8003C4C94 /* wifi.c */,
+				688C4857134A17D8003C4C94 /* wifi.h */,
+				8A5D9BD8110473C600D4D1BC /* ControlData.h */,
+				8A5D9BD9110473C600D4D1BC /* ControlData.c */,
+				6871D83D115B5B0800CFEEC8 /* mobile_main.c */,
+				6871D83E115B5B0800CFEEC8 /* mobile_main.h */,
+				6871D836115B5AD900CFEEC8 /* Navdata */,
+				68903F970EACC1ED00D8A80C /* ARDroneEngine */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				689B5A690FB9AD6C0095AB01 /* CoreGraphics.framework */,
+				68704E230EADCF5900C45877 /* AudioToolbox.framework */,
+				68704E240EADCF5900C45877 /* CoreAudio.framework */,
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37A1E3A313C5FE5500E265F6 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				37A1E3A413C5FE5500E265F6 /* accelero_thumb.png */,
+				37A1E3A513C5FE5500E265F6 /* ARDrone.png */,
+				37A1E3A613C5FE5500E265F6 /* back.png */,
+				37A1E3A713C5FE5500E265F6 /* background-iPad.png */,
+				37A1E3A813C5FE5500E265F6 /* background.png */,
+				37A1E3A913C5FE5500E265F6 /* battery.wav */,
+				37A1E3AA13C5FE5500E265F6 /* battery0.png */,
+				37A1E3AB13C5FE5500E265F6 /* battery1.png */,
+				37A1E3AC13C5FE5500E265F6 /* battery2.png */,
+				37A1E3AD13C5FE5500E265F6 /* battery3.png */,
+				37A1E3AE13C5FE5500E265F6 /* emergency.png */,
+				37A1E3AF13C5FE5500E265F6 /* languages.strings */,
+				37A1E3B113C5FE5500E265F6 /* finger_print.png */,
+				37A1E3B213C5FE5500E265F6 /* fire.png */,
+				37A1E3B513C5FE5500E265F6 /* HUD-iPad.xib */,
+				37A1E3B613C5FE5500E265F6 /* HUD.xib */,
+				37A1E3B913C5FE5500E265F6 /* joystick_background.png */,
+				37A1E3BA13C5FE5500E265F6 /* joystick_background_v2-iPad.png */,
+				37A1E3BB13C5FE5500E265F6 /* joystick_background_v2.png */,
+				37A1E3BC13C5FE5500E265F6 /* joystick_thumb.png */,
+				37A1E3BD13C5FE5500E265F6 /* level.png */,
+				37A1E3BE13C5FE5500E265F6 /* others.png */,
+				37A1E3BF13C5FE5500E265F6 /* plop.wav */,
+				37A1E3C113C5FE5500E265F6 /* reset.png */,
+				37A1E3C213C5FE5500E265F6 /* screen.png */,
+				37A1E3C313C5FE5500E265F6 /* settings.png */,
+				37A1E3C413C5FE5500E265F6 /* SettingsMenu-Debug.xib */,
+				37A1E3C513C5FE5500E265F6 /* SettingsMenu-iPad.xib */,
+				37A1E3C613C5FE5500E265F6 /* SettingsMenu-iPhone.xib */,
+				37A1E3C713C5FE5500E265F6 /* SettingsMenuDebug.xib */,
+				37A1E3C913C5FE5500E265F6 /* switch.png */,
+				37A1E3CA13C5FE5500E265F6 /* take_land.png */,
+				37A1E3CB13C5FE5500E265F6 /* take_off.png */,
+			);
+			name = Ressources;
+			path = Release/Ressources;
+			sourceTree = "<group>";
+		};
+		68607EEE10DB8D27009514CF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68607EEF10DB8D27009514CF /* GLViewController.h */,
+				68607EF010DB8D27009514CF /* GLViewController.m */,
+				68607EF110DB8D27009514CF /* MainViewController.h */,
+				68607EF210DB8D27009514CF /* MainViewController.m */,
+			);
+			name = Controllers;
+			path = Classes/Controllers;
+			sourceTree = "<group>";
+		};
+		6871D836115B5AD900CFEEC8 /* Navdata */ = {
+			isa = PBXGroup;
+			children = (
+				6871D837115B5AD900CFEEC8 /* navdata.c */,
+				6871D838115B5AD900CFEEC8 /* navdata.h */,
+			);
+			name = Navdata;
+			path = Classes/Navdata;
+			sourceTree = "<group>";
+		};
+		68738F8610C6C72C001F305B /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				6873AACA10D1654E001F305B /* HUD.h */,
+				6873AACB10D1654E001F305B /* HUD.m */,
+				6873905F10C7B30F001F305B /* SettingsMenu.h */,
+				6873905E10C7B30F001F305B /* SettingsMenu.m */,
+			);
+			name = Menus;
+			path = Classes/Menus;
+			sourceTree = "<group>";
+		};
+		68903F970EACC1ED00D8A80C /* ARDroneEngine */ = {
+			isa = PBXGroup;
+			children = (
+				68B565051071F81E00752B1E /* Other sources */,
+				6899BF211083391F00ED08CB /* Headers */,
+				6890406F0EACC5F600D8A80C /* Classes */,
+				37A1E3A313C5FE5500E265F6 /* Ressources */,
+			);
+			name = ARDroneEngine;
+			sourceTree = "<group>";
+		};
+		6890406F0EACC5F600D8A80C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68E5677210E1173500EEB77F /* TVOut */,
+				68607EEE10DB8D27009514CF /* Controllers */,
+				68738F8610C6C72C001F305B /* Menus */,
+				686A12ED10BBDE16003E176D /* InternalProtocols.h */,
+				680BC46D10983EC800F941F4 /* ARDroneProtocols.h */,
+				8A1298EA12521ECE0007A8C2 /* ARDroneGeneratedTypes.h */,
+				2B29F4B413016E08005F23CB /* ARDroneGeneratedCommandIn.h */,
+				8A774EA511A683B500F76B86 /* ARDroneTypes.h */,
+				680BC46E10983EC800F941F4 /* ARDrone.h */,
+				680C31331085BDB000C7D327 /* ARDrone.m */,
+				2BB9A2A213792D66008647BD /* ARDroneFTP.h */,
+				2BB9A2A413792D72008647BD /* ARDroneFTP.m */,
+				6899BEF91083389200ED08CB /* OpenGLVideo.h */,
+				6899BEF81083389200ED08CB /* OpenGLVideo.m */,
+				6899BEFB1083389200ED08CB /* OpenGLSprite.h */,
+				6899BEFA1083389200ED08CB /* OpenGLSprite.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		6899BF211083391F00ED08CB /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				8A43A6DE134A0DE1002D2D0C /* ConstantsAndMacros.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		68B565051071F81E00752B1E /* Other sources */ = {
+			isa = PBXGroup;
+			children = (
+				680BC4C6109840E300F941F4 /* ARDroneEngine_Prefix.pch */,
+			);
+			name = "Other sources";
+			sourceTree = "<group>";
+		};
+		68E5677210E1173500EEB77F /* TVOut */ = {
+			isa = PBXGroup;
+			children = (
+				68E5679210E1193400EEB77F /* TVOut.h */,
+				68E5679310E1193400EEB77F /* TVOut.m */,
+			);
+			name = TVOut;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		68903F2E0EACBEA400D8A80C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6899BF081083389200ED08CB /* OpenGLVideo.h in Headers */,
+				6899BF0A1083389200ED08CB /* OpenGLSprite.h in Headers */,
+				680BC46F10983EC800F941F4 /* ARDroneProtocols.h in Headers */,
+				680BC47010983EC800F941F4 /* ARDrone.h in Headers */,
+				680BC4C7109840E300F941F4 /* ARDroneEngine_Prefix.pch in Headers */,
+				686A12EE10BBDE16003E176D /* InternalProtocols.h in Headers */,
+				6873906110C7B30F001F305B /* SettingsMenu.h in Headers */,
+				6873AACC10D1654E001F305B /* HUD.h in Headers */,
+				68607EF310DB8D27009514CF /* GLViewController.h in Headers */,
+				68607EF510DB8D27009514CF /* MainViewController.h in Headers */,
+				68E5679410E1193400EEB77F /* TVOut.h in Headers */,
+				8A5D9BDA110473C600D4D1BC /* ControlData.h in Headers */,
+				6871D83A115B5AD900CFEEC8 /* navdata.h in Headers */,
+				6871D840115B5B0800CFEEC8 /* mobile_main.h in Headers */,
+				8A774EA611A683B500F76B86 /* ARDroneTypes.h in Headers */,
+				8A1298EB12521ECE0007A8C2 /* ARDroneGeneratedTypes.h in Headers */,
+				2B29F4B513016E08005F23CB /* ARDroneGeneratedCommandIn.h in Headers */,
+				8A43A6DF134A0DE1002D2D0C /* ConstantsAndMacros.h in Headers */,
+				688C4859134A17D8003C4C94 /* wifi.h in Headers */,
+				2BB9A2A313792D66008647BD /* ARDroneFTP.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		68903F310EACBEA400D8A80C /* ARDroneEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68903F350EACBEC200D8A80C /* Build configuration list for PBXNativeTarget "ARDroneEngine" */;
+			buildPhases = (
+				6871E1751160E86F00CFEEC8 /* CopyLibraries */,
+				68903F2E0EACBEA400D8A80C /* Headers */,
+				68903F2F0EACBEA400D8A80C /* Sources */,
+				68903F300EACBEA400D8A80C /* Frameworks */,
+				6871E05C1160B25D00CFEEC8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARDroneEngine;
+			productName = MykonosLib;
+			productReference = 680BC4C5109840DA00F941F4 /* libARDroneEngine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ARDroneEngine" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Italian,
+				Spanish,
+				pt,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68903F310EACBEA400D8A80C /* ARDroneEngine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6871E1751160E86F00CFEEC8 /* CopyLibraries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			comments = "Compile ARDrone Library.\n";
+			files = (
+			);
+			inputPaths = (
+			);
+			name = CopyLibraries;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./CopyLibraries.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68903F2F0EACBEA400D8A80C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6899BF071083389200ED08CB /* OpenGLVideo.m in Sources */,
+				6899BF091083389200ED08CB /* OpenGLSprite.m in Sources */,
+				680C31351085BDB000C7D327 /* ARDrone.m in Sources */,
+				6873906010C7B30F001F305B /* SettingsMenu.m in Sources */,
+				6873AACD10D1654E001F305B /* HUD.m in Sources */,
+				68607EF410DB8D27009514CF /* GLViewController.m in Sources */,
+				68607EF610DB8D27009514CF /* MainViewController.m in Sources */,
+				68E5679510E1193400EEB77F /* TVOut.m in Sources */,
+				8A5D9BDB110473C600D4D1BC /* ControlData.c in Sources */,
+				6871D839115B5AD900CFEEC8 /* navdata.c in Sources */,
+				6871D83F115B5B0800CFEEC8 /* mobile_main.c in Sources */,
+				688C4858134A17D8003C4C94 /* wifi.c in Sources */,
+				2BB9A2A513792D72008647BD /* ARDroneFTP.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37A1E3AF13C5FE5500E265F6 /* languages.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37A1E3B013C5FE5500E265F6 /* English */,
+				37A1E3B313C5FE5500E265F6 /* French */,
+				37A1E3B413C5FE5500E265F6 /* German */,
+				37A1E3B713C5FE5500E265F6 /* Italian */,
+				37A1E3B813C5FE5500E265F6 /* Japanese */,
+				37A1E3C013C5FE5500E265F6 /* pt */,
+				37A1E3C813C5FE5500E265F6 /* Spanish */,
+			);
+			name = languages.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		687B4E1C0F1666410094D61F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mykonos Lefebure (YY39MVZ7NL)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = __linux__;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+			};
+			name = Debug;
+		};
+		687B4E1E0F1666410094D61F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__linux__,
+					NO_ARDRONE_MAINLOOP,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				GENERATE_PROFILING_CODE = NO;
+				HEADER_SEARCH_PATHS = (
+					../../ARDroneLib,
+					../../ARDroneLib/Soft/Common,
+					../../ARDroneLib/Soft/Lib,
+					../../ARDroneLib/VLIB,
+					../../ARDroneLib/VLIB/Platform/arm11,
+					../../ARDroneLib/VP_SDK,
+					../../ARDroneLib/VP_SDK/VP_Com,
+					../../ARDroneLib/VP_SDK/VP_Os,
+					../../ARDroneLib/VP_SDK/VP_Os/linux,
+					../../ARDroneLib/VP_SDK/VP_Com/linux,
+				);
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				INFOPLIST_PREPROCESS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LD_OPENMP_FLAGS = "-fopenmp";
+				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fms-extensions";
+				OTHER_LDFLAGS = (
+					"-lpc_ardrone",
+					"-lsdk",
+					"-lvlib",
+				);
+				PREBINDING = NO;
+				PRELINK_LIBS = "";
+				PRODUCT_NAME = ARDroneEngine;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7 i386";
+			};
+			name = Debug;
+		};
+		687B4E1F0F1666610094D61F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mykonos Lefebure (YY39MVZ7NL)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = __linux__;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+			};
+			name = Release;
+		};
+		687B4E210F1666610094D61F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = Release;
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					__linux__,
+					NO_ARDRONE_MAINLOOP,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				GENERATE_PROFILING_CODE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../ARDroneLib,
+					../../ARDroneLib/Soft/Common,
+					../../ARDroneLib/Soft/Lib,
+					../../ARDroneLib/VLIB,
+					../../ARDroneLib/VLIB/Platform/arm11,
+					../../ARDroneLib/VP_SDK,
+					../../ARDroneLib/VP_SDK/VP_Com,
+					../../ARDroneLib/VP_SDK/VP_Os,
+					../../ARDroneLib/VP_SDK/VP_Os/linux,
+					../../ARDroneLib/VP_SDK/VP_Com/linux,
+				);
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				INFOPLIST_PREPROCESS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				KEEP_PRIVATE_EXTERNS = NO;
+				LD_OPENMP_FLAGS = "-fopenmp";
+				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fms-extensions";
+				OTHER_LDFLAGS = (
+					"-lpc_ardrone",
+					"-lsdk",
+					"-lvlib",
+				);
+				PREBINDING = YES;
+				PRELINK_LIBS = "";
+				PRODUCT_NAME = ARDroneEngine;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv6 armv7 i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68903F350EACBEC200D8A80C /* Build configuration list for PBXNativeTarget "ARDroneEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				687B4E1E0F1666410094D61F /* Debug */,
+				687B4E210F1666610094D61F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ARDroneEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				687B4E1C0F1666410094D61F /* Debug */,
+				687B4E1F0F1666610094D61F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

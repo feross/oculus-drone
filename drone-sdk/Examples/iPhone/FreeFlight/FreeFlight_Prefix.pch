@@ -1,0 +1,40 @@
+//
+// Prefix header for all source files of the 'FreeFlight' target in the 'FreeFlight' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#endif
+
+#define LOGS_UPDATER
+
+#define FTP_ADDRESS				@"ftp://%@:%d/%@"
+#define FTP_PORT				5551
+#define FTP_REPAIR_PORT			21
+#define TELNET_PORT				23
+#define SEND_BUFFER_SIZE		32768
+
+#define ERROR_NO_ERROR				0
+#define ERROR_CANNOT_CONNECT_TO_TOY	1
+
+#define FTP_MAX_RETRIES	5
+#define TIME_BEFORE_LAUNCH	5 // in s
+
+#define NORMAL_COLOR	[UIColor colorWithRed:217.0/255.0 green:242.0/255.0 blue:255.0/255.0 alpha:1.0]
+#define FAIL_COLOR		[UIColor colorWithRed:255.0/255.0 green:217.0/255.0 blue:217.0/255.0 alpha:1.0]
+#define PASS_COLOR		[UIColor colorWithRed:230.0/255.0 green:255.0/255.0 blue:217.0/255.0 alpha:1.0]
+#define PROBLEM_COLOR	[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:217.0/255.0 alpha:1.0]
+
+#define SCREEN_W		480
+#define SCREEN_H		320
+
+#define IPAD_SCREEN_W  1024
+#define IPAD_SCREEN_H	768
+

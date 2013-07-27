@@ -1,0 +1,784 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+ACK_CONTROL_MODE	app.h	/^  ACK_CONTROL_MODE              \/\/ Reset command mask in navdata$/;"	e	enum:__anon3
+APP_H_INCLUDED	app.h	8;"	d
+ASSERT	vlib.h	621;"	d
+AT_BUFFER_SIZE	at_cmds.c	32;"	d	file:
+AT_PORT	at_cmds.c	31;"	d	file:
+BDADDR_SIZE	vlib.h	78;"	d
+BUFSIZE	at_cmds.c	185;"	d	file:
+CBOOL	vlib.h	56;"	d
+CC	Makefile	/^CC = $(GENERIC_COMMAND_PREFIX)gcc$/;"	m
+CFG_GET_CONTROL_MODE	app.h	/^  CFG_GET_CONTROL_MODE,         \/\/ Send activ configuration$/;"	e	enum:__anon3
+CFLAGS	Makefile	/^CFLAGS=-g -Wall$/;"	m
+CIF_HEIGHT	vlib.h	178;"	d
+CIF_SIZE	vlib.h	179;"	d
+CIF_WIDTH	vlib.h	177;"	d
+CONST_BITS	vlib.c	2695;"	d	file:
+C_FAIL	vlib.h	45;"	d
+C_OK	vlib.h	44;"	d
+C_RESULT	vlib.h	43;"	d
+DATA_RECEIVED_MAX_SIZE	stream.c	38;"	d	file:
+DCTELEM	vlib.c	2692;"	d	file:
+DCTSIZE	vlib.c	2693;"	d	file:
+DCTSIZE2	vlib.c	2694;"	d	file:
+DCT_BUFFER_SIZE	vlib.h	416;"	d
+DEBUG_PRINT_SDK	VP_Os/vp_os_print.h	23;"	d
+DEBUG_PRINT_SDK	VP_Os/vp_os_print.h	25;"	d
+DEBUG_PRINT_SDK	VP_Os/vp_os_print.h	29;"	d
+DEBUG_PRINT_SDK	VP_Os/vp_os_print.h	31;"	d
+DEFAULT_INTERNAL_STREAM_SIZE	vlib.h	413;"	d
+DEFAULT_QUANTIZATION	vlib.h	411;"	d
+DEFINE_THREAD_ROUTINE	VP_Os/vp_os_thread.h	17;"	d
+DEFINE_THREAD_ROUTINE	at_cmds.c	/^DEFINE_THREAD_ROUTINE( at_cmds_loop, NULL )$/;"	f
+DEFINE_THREAD_ROUTINE	navdata.c	/^DEFINE_THREAD_ROUTINE( navdata_loop, NULL )$/;"	f
+DEFINE_THREAD_ROUTINE	stream.c	/^DEFINE_THREAD_ROUTINE( stream_loop, NULL )$/;"	f
+DESCALE	vlib.c	2699;"	d	file:
+FAIL	vlib.h	48;"	d
+FAILED	VP_Os/vp_os.h	29;"	d
+FAILED	VP_Os/vp_os.h	44;"	d
+FAILED	vlib.h	51;"	d
+FALSE	VP_Os/vp_os_types.h	65;"	d
+FALSE	vlib.h	75;"	d
+FIX_0_298631336	vlib.c	2678;"	d	file:
+FIX_0_390180644	vlib.c	2679;"	d	file:
+FIX_0_541196100	vlib.c	2680;"	d	file:
+FIX_0_765366865	vlib.c	2681;"	d	file:
+FIX_0_899976223	vlib.c	2682;"	d	file:
+FIX_1_175875602	vlib.c	2683;"	d	file:
+FIX_1_501321110	vlib.c	2684;"	d	file:
+FIX_1_847759065	vlib.c	2685;"	d	file:
+FIX_1_961570560	vlib.c	2686;"	d	file:
+FIX_2_053119869	vlib.c	2687;"	d	file:
+FIX_2_562915447	vlib.c	2688;"	d	file:
+FIX_3_072711026	vlib.c	2689;"	d	file:
+GENERIC_COMMAND_PREFIX	Makefile	/^GENERIC_COMMAND_PREFIX=i586-mingw32msvc-$/;"	m
+GENERIC_LIBRARY_SOURCE_FILES	Makefile	/^GENERIC_LIBRARY_SOURCE_FILES=   \\$/;"	m
+GETPROP	app.h	64;"	d
+HAS_UVLC_DECODE_BLOCKLINE	vlib.c	8;"	d	file:
+H_ACQ_HEIGHT	stream.c	35;"	d	file:
+H_ACQ_WIDTH	stream.c	34;"	d	file:
+INCLUDES	Makefile	/^INCLUDES=-I$(ALL_SOURCES)$/;"	m
+INFO	app.h	58;"	d
+INLINE	VP_Os/vp_os.h	22;"	d
+INLINE	VP_Os/vp_os.h	31;"	d
+INLINE	VP_Os/vp_os.h	47;"	d
+INLINE	vlib.h	33;"	d
+INLINE	vlib.h	38;"	d
+INT32	vlib.c	2691;"	d	file:
+LDFLAGS	Makefile	/^LDFLAGS =-lpthread $/;"	m
+LOGS_GET_CONTROL_MODE	app.h	/^  LOGS_GET_CONTROL_MODE,        \/\/ Send previous run's logs$/;"	e	enum:__anon3
+MAKE_RGBA_565	vlib.c	1862;"	d	file:
+MAKE_START_CODE	vlib.h	559;"	d
+MAX_NUM_MACRO_BLOCKS_PER_CALL	vlib.h	412;"	d
+MB_HEIGHT_C	vlib.h	139;"	d
+MB_HEIGHT_Y	vlib.h	137;"	d
+MB_WIDTH_C	vlib.h	138;"	d
+MB_WIDTH_Y	vlib.h	136;"	d
+MCU_BLOCK_SIZE	vlib.h	214;"	d
+MCU_HEIGHT	vlib.h	212;"	d
+MCU_WIDTH	vlib.h	213;"	d
+MJPEG_CODEC	vlib.h	/^  MJPEG_CODEC,$/;"	e	enum:_codec_type_t
+MULTIPLY	vlib.c	2698;"	d	file:
+MYKONOS_ACQ_THREAD_ON	app.h	/^  MYKONOS_ACQ_THREAD_ON       = 1 << 27, \/*!< Acquisition thread ON : (0) thread OFF (1) thread ON *\/$/;"	e	enum:__anon4
+MYKONOS_ADC_WATCHDOG_MASK	app.h	/^  MYKONOS_ADC_WATCHDOG_MASK   = 1 << 29, \/*!< ADC Watchdog : (1) delay in uart2 dsr (> 5ms), (0) uart2 is good *\/$/;"	e	enum:__anon4
+MYKONOS_ALTITUDE_MASK	app.h	/^  MYKONOS_ALTITUDE_MASK       = 1 << 4, \/*!< ALTITUDE CONTROL ALGO : (0) altitude control inactive (1) altitude control active *\/$/;"	e	enum:__anon4
+MYKONOS_ANGLES_OUT_OF_RANGE	app.h	/^  MYKONOS_ANGLES_OUT_OF_RANGE = 1 << 19, \/*!< Angles : (0) Ok, (1) out of range *\/$/;"	e	enum:__anon4
+MYKONOS_ATCODEC_THREAD_ON	app.h	/^  MYKONOS_ATCODEC_THREAD_ON   = 1 << 24, \/*!< ATCodec thread ON : (0) thread OFF (1) thread ON *\/$/;"	e	enum:__anon4
+MYKONOS_COMMAND_MASK	app.h	/^  MYKONOS_COMMAND_MASK        = 1 << 6, \/*!< Control command ACK : (0) None, (1) one received *\/$/;"	e	enum:__anon4
+MYKONOS_COM_LOST_MASK	app.h	/^  MYKONOS_COM_LOST_MASK   = 1 << 13, \/*!< Communication Lost : (1) com problem, (0) Com is ok *\/$/;"	e	enum:__anon4
+MYKONOS_COM_WATCHDOG_MASK	app.h	/^  MYKONOS_COM_WATCHDOG_MASK   = 1 << 30, \/*!< Communication Watchdog : (1) com problem, (0) Com is ok *\/$/;"	e	enum:__anon4
+MYKONOS_CONTROL_MASK	app.h	/^  MYKONOS_CONTROL_MASK        = 1 << 3, \/*!< CONTROL ALGO : (0) euler angles control, (1) angular speed control *\/$/;"	e	enum:__anon4
+MYKONOS_CTRL_WATCHDOG_MASK	app.h	/^  MYKONOS_CTRL_WATCHDOG_MASK  = 1 << 28, \/*!< CTRL watchdog : (1) delay in control execution (> 5ms), (0) control is well scheduled *\/$/;"	e	enum:__anon4
+MYKONOS_CUTOUT_MASK	app.h	/^  MYKONOS_CUTOUT_MASK         = 1 << 22, \/*!< Cutout system detection : (0) Not detected, (1) detected *\/$/;"	e	enum:__anon4
+MYKONOS_EMERGENCY_MASK	app.h	/^  MYKONOS_EMERGENCY_MASK      = 1 << 31  \/*!< Emergency landing : (0) no emergency, (1) emergency *\/$/;"	e	enum:__anon4
+MYKONOS_FLY_MASK	app.h	/^  MYKONOS_FLY_MASK            = 1 << 0, \/*!< FLY MASK : (0) mykonos is landed, (1) mykonos is flying *\/$/;"	e	enum:__anon4
+MYKONOS_GYROS_ZERO	app.h	/^  MYKONOS_GYROS_ZERO          = 1 << 14, \/*!< Bit means that there's an hardware problem with gyrometers *\/$/;"	e	enum:__anon4
+MYKONOS_MOTORS_BRUSHED	app.h	/^  MYKONOS_MOTORS_BRUSHED      = 1 << 12, \/*!< Motors brushed : (0) brushless, (1) brushed *\/$/;"	e	enum:__anon4
+MYKONOS_NAVDATA_BOOTSTRAP	app.h	/^  MYKONOS_NAVDATA_BOOTSTRAP   = 1 << 11, \/*!< Navdata bootstrap : (0) options sent in all or demo mode, (1) no navdata options sent *\/$/;"	e	enum:__anon4
+MYKONOS_NAVDATA_DEMO_MASK	app.h	/^  MYKONOS_NAVDATA_DEMO_MASK   = 1 << 10, \/*!< Navdata demo : (0) All navdata, (1) only navdata demo *\/$/;"	e	enum:__anon4
+MYKONOS_NAVDATA_THREAD_ON	app.h	/^  MYKONOS_NAVDATA_THREAD_ON   = 1 << 25, \/*!< Navdata thread ON : (0) thread OFF (1) thread ON *\/$/;"	e	enum:__anon4
+MYKONOS_NOT_ENOUGH_POWER	app.h	/^  MYKONOS_NOT_ENOUGH_POWER    = 1 << 18, \/*!< Power : (0) Ok, (1) not enough to fly *\/$/;"	e	enum:__anon4
+MYKONOS_NO_TRIM	at_cmds.c	187;"	d	file:
+MYKONOS_PIC_VERSION_MASK	app.h	/^  MYKONOS_PIC_VERSION_MASK    = 1 << 23, \/*!< PIC Version number OK : (0) a bad version number, (1) version number is OK *\/$/;"	e	enum:__anon4
+MYKONOS_REFRESH_MS	app.h	66;"	d
+MYKONOS_TIMER_ELAPSED	app.h	/^  MYKONOS_TIMER_ELAPSED       = 1 << 17, \/*!< Timer elapsed : (1) elapsed, (0) not elapsed *\/$/;"	e	enum:__anon4
+MYKONOS_TRIM_COMMAND_MASK	app.h	/^  MYKONOS_TRIM_COMMAND_MASK   = 1 << 7, \/*!< Trim command ACK : (0) None, (1) one received *\/$/;"	e	enum:__anon4
+MYKONOS_TRIM_RESULT_MASK	app.h	/^  MYKONOS_TRIM_RESULT_MASK    = 1 << 9, \/*!< Trim result : (0) failed, (1) succeeded *\/$/;"	e	enum:__anon4
+MYKONOS_TRIM_RUNNING_MASK	app.h	/^  MYKONOS_TRIM_RUNNING_MASK   = 1 << 8, \/*!< Trim running : (0) none, (1) running *\/$/;"	e	enum:__anon4
+MYKONOS_UI_BIT_AB	at_cmds.c	/^    MYKONOS_UI_BIT_AB             = 1, \/* Button altitude down (ah - ab)*\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_AD	at_cmds.c	/^    MYKONOS_UI_BIT_AD             = 2, \/* Button turn to right *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_AG	at_cmds.c	/^    MYKONOS_UI_BIT_AG             = 0, \/* Button turn to left *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_AH	at_cmds.c	/^    MYKONOS_UI_BIT_AH             = 3, \/* Button altitude up (ah - ab)*\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_L1	at_cmds.c	/^    MYKONOS_UI_BIT_L1             = 4, \/* Button - z-axis (r1 - l1) *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_L2	at_cmds.c	/^    MYKONOS_UI_BIT_L2             = 6, \/* Button + z-axis (r1 - l1) *\/ $/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_R1	at_cmds.c	/^    MYKONOS_UI_BIT_R1             = 5, \/* Not used *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_R2	at_cmds.c	/^    MYKONOS_UI_BIT_R2             = 7, \/* Not used *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_SELECT	at_cmds.c	/^    MYKONOS_UI_BIT_SELECT         = 8, \/* Button emergency reset all *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_START	at_cmds.c	/^    MYKONOS_UI_BIT_START          = 9, \/* Button Takeoff \/ Landing *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_TRIM_PHI	at_cmds.c	/^    MYKONOS_UI_BIT_TRIM_PHI       = 20, \/* x-axis trim +1 (Trim increase at +\/- 1??\/s) *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_TRIM_THETA	at_cmds.c	/^    MYKONOS_UI_BIT_TRIM_THETA     = 18, \/* y-axis trim +1 (Trim increase at +\/- 1??\/s) *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_TRIM_YAW	at_cmds.c	/^    MYKONOS_UI_BIT_TRIM_YAW       = 22, \/* z-axis trim +1 (Trim increase at +\/- 1??\/s) *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_X	at_cmds.c	/^    MYKONOS_UI_BIT_X              = 24, \/* x-axis +1 *\/$/;"	e	enum:__anon5	file:
+MYKONOS_UI_BIT_Y	at_cmds.c	/^    MYKONOS_UI_BIT_Y              = 28, \/* y-axis +1 *\/$/;"	e	enum:__anon5	file:
+MYKONOS_ULTRASOUND_MASK	app.h	/^  MYKONOS_ULTRASOUND_MASK     = 1 << 21, \/*!< Ultrasonic sensor : (0) Ok, (1) deaf *\/$/;"	e	enum:__anon4
+MYKONOS_UPDATE_CONTROL_MODE	app.h	/^  MYKONOS_UPDATE_CONTROL_MODE,  \/\/ Mykonos software update reception (update is done next run)$/;"	e	enum:__anon3
+MYKONOS_USER_FEEDBACK_START	app.h	/^  MYKONOS_USER_FEEDBACK_START = 1 << 5, \/*!< USER feedback : Start button state *\/$/;"	e	enum:__anon4
+MYKONOS_VBAT_HIGH	app.h	/^  MYKONOS_VBAT_HIGH           = 1 << 16, \/*!< VBat high (US mad) : (1) too high, (0) Ok *\/$/;"	e	enum:__anon4
+MYKONOS_VBAT_LOW	app.h	/^  MYKONOS_VBAT_LOW            = 1 << 15, \/*!< VBat low : (1) too low, (0) Ok *\/$/;"	e	enum:__anon4
+MYKONOS_VIDEO_MASK	app.h	/^  MYKONOS_VIDEO_MASK          = 1 << 1, \/*!< VIDEO MASK : (0) video disable, (1) video enable *\/$/;"	e	enum:__anon4
+MYKONOS_VIDEO_THREAD_ON	app.h	/^  MYKONOS_VIDEO_THREAD_ON     = 1 << 26, \/*!< Video thread ON : (0) thread OFF (1) thread ON *\/$/;"	e	enum:__anon4
+MYKONOS_VISION_MASK	app.h	/^  MYKONOS_VISION_MASK         = 1 << 2, \/*!< VISION MASK : (0) vision disable, (1) vision enable *\/$/;"	e	enum:__anon4
+MYKONOS_WIND_MASK	app.h	/^  MYKONOS_WIND_MASK           = 1 << 20, \/*!< Wind : (0) Ok, (1) too much to fly *\/$/;"	e	enum:__anon4
+NAVDATA_BUFFER_SIZE	navdata.c	33;"	d	file:
+NAVDATA_CKS_TAG	navdata.c	/^    NAVDATA_CKS_TAG = 0xFFFF$/;"	e	enum:_navdata_tag_t	file:
+NAVDATA_DEMO_TAG	navdata.c	/^    NAVDATA_DEMO_TAG = 0,$/;"	e	enum:_navdata_tag_t	file:
+NAVDATA_HEADER	navdata.c	32;"	d	file:
+NAVDATA_IPHONE_ANGLES_TAG	navdata.c	/^    NAVDATA_IPHONE_ANGLES_TAG = 18,$/;"	e	enum:_navdata_tag_t	file:
+NAVDATA_PORT	navdata.c	31;"	d	file:
+NAVDATA_SEQUENCE_DEFAULT	navdata.c	30;"	d	file:
+NAVDATA_VISION_DETECT_TAG	navdata.c	/^    NAVDATA_VISION_DETECT_TAG = 16,$/;"	e	enum:_navdata_tag_t	file:
+NO_CONTROL_MODE	app.h	/^  NO_CONTROL_MODE = 0,          \/\/ Doing nothing$/;"	e	enum:__anon3
+NO_INSTRUMENT	VP_Os/vp_os.h	50;"	d
+NO_INSTRUMENT	vlib.h	40;"	d
+NULL_CODEC	vlib.h	/^  NULL_CODEC    = 0,$/;"	e	enum:_codec_type_t
+NULL_THREAD_HANDLE	VP_Os/linux/vp_os_thread.c	/^static const THREAD_HANDLE NULL_THREAD_HANDLE = 0;$/;"	v	file:
+NUM_MAX_DCT_BLOCKS	vlib.h	418;"	d
+OBJS	Makefile	/^OBJS=$(GENERIC_LIBRARY_SOURCE_FILES:.c=.o)$/;"	m
+ONE	vlib.c	2697;"	d	file:
+OS	Makefile	/^   OS=linux$/;"	m
+OS	Makefile	/^   OS=win32$/;"	m
+OVERPAD	vlib.h	135;"	d
+P263_CODEC	vlib.h	/^  P263_CODEC$/;"	e	enum:_codec_type_t
+PACK_BITS	vlib.c	452;"	d	file:
+PASS1_BITS	vlib.c	2696;"	d	file:
+PICTURE_END_CODE	vlib.h	561;"	d
+PICTURE_START_CODE	vlib.h	560;"	d
+PIC_UPDATE_CONTROL_MODE	app.h	/^  PIC_UPDATE_CONTROL_MODE,      \/\/ Mykonos pic software update reception (update is done next run)$/;"	e	enum:__anon3
+PIX_FMT_BGR24	vlib.h	/^    PIX_FMT_BGR24,     \/\/\/< Packed pixel, 3 bytes per pixel, BGRBGR...$/;"	e	enum:PixelFormat
+PIX_FMT_GRAY8	vlib.h	/^    PIX_FMT_GRAY8,$/;"	e	enum:PixelFormat
+PIX_FMT_MONOBLACK	vlib.h	/^    PIX_FMT_MONOBLACK, \/\/\/< 0 is black$/;"	e	enum:PixelFormat
+PIX_FMT_MONOWHITE	vlib.h	/^    PIX_FMT_MONOWHITE, \/\/\/< 0 is white$/;"	e	enum:PixelFormat
+PIX_FMT_NB	vlib.h	/^    PIX_FMT_NB,$/;"	e	enum:PixelFormat
+PIX_FMT_NONE	vlib.h	/^    PIX_FMT_NONE= -1,$/;"	e	enum:PixelFormat
+PIX_FMT_PAL8	vlib.h	/^    PIX_FMT_PAL8,      \/\/\/< 8 bit with RGBA palette$/;"	e	enum:PixelFormat
+PIX_FMT_RGB24	vlib.h	/^    PIX_FMT_RGB24,     \/\/\/< Packed pixel, 3 bytes per pixel, RGBRGB...$/;"	e	enum:PixelFormat
+PIX_FMT_RGB555	vlib.h	/^    PIX_FMT_RGB555,    \/\/\/< always stored in cpu endianness, most significant bit to 1$/;"	e	enum:PixelFormat
+PIX_FMT_RGB565	vlib.h	/^    PIX_FMT_RGB565,    \/\/\/< always stored in cpu endianness$/;"	e	enum:PixelFormat
+PIX_FMT_RGBA32	vlib.h	/^    PIX_FMT_RGBA32,    \/\/\/< Packed pixel, 4 bytes per pixel, BGRABGRA..., stored in cpu endianness$/;"	e	enum:PixelFormat
+PIX_FMT_UYVY411	vlib.h	/^    PIX_FMT_UYVY411,   \/\/\/< Packed pixel, Cb Y0 Y1 Cr Y2 Y3$/;"	e	enum:PixelFormat
+PIX_FMT_UYVY422	vlib.h	/^    PIX_FMT_UYVY422,   \/\/\/< Packed pixel, Cb Y0 Cr Y1$/;"	e	enum:PixelFormat
+PIX_FMT_XVMC_MPEG2_IDCT	vlib.h	/^    PIX_FMT_XVMC_MPEG2_IDCT,$/;"	e	enum:PixelFormat
+PIX_FMT_XVMC_MPEG2_MC	vlib.h	/^    PIX_FMT_XVMC_MPEG2_MC,\/\/\/< XVideo Motion Acceleration via common packet passing(xvmc_render.h)$/;"	e	enum:PixelFormat
+PIX_FMT_YUV410P	vlib.h	/^    PIX_FMT_YUV410P,   \/\/\/< Planar YUV 4:1:0 (1 Cr & Cb sample per 4x4 Y samples)$/;"	e	enum:PixelFormat
+PIX_FMT_YUV411P	vlib.h	/^    PIX_FMT_YUV411P,   \/\/\/< Planar YUV 4:1:1 (1 Cr & Cb sample per 4x1 Y samples)$/;"	e	enum:PixelFormat
+PIX_FMT_YUV420P	vlib.h	/^    PIX_FMT_YUV420P,   \/\/\/< Planar YUV 4:2:0 (1 Cr & Cb sample per 2x2 Y samples)$/;"	e	enum:PixelFormat
+PIX_FMT_YUV422	vlib.h	/^    PIX_FMT_YUV422,    \/\/\/< Packed pixel, Y0 Cb Y1 Cr$/;"	e	enum:PixelFormat
+PIX_FMT_YUV422P	vlib.h	/^    PIX_FMT_YUV422P,   \/\/\/< Planar YUV 4:2:2 (1 Cr & Cb sample per 2x1 Y samples)$/;"	e	enum:PixelFormat
+PIX_FMT_YUV444P	vlib.h	/^    PIX_FMT_YUV444P,   \/\/\/< Planar YUV 4:4:4 (1 Cr & Cb sample per 1x1 Y samples)$/;"	e	enum:PixelFormat
+PIX_FMT_YUVJ420P	vlib.h	/^    PIX_FMT_YUVJ420P,  \/\/\/< Planar YUV 4:2:0 full scale (jpeg)$/;"	e	enum:PixelFormat
+PIX_FMT_YUVJ422P	vlib.h	/^    PIX_FMT_YUVJ422P,  \/\/\/< Planar YUV 4:2:2 full scale (jpeg)$/;"	e	enum:PixelFormat
+PIX_FMT_YUVJ444P	vlib.h	/^    PIX_FMT_YUVJ444P,  \/\/\/< Planar YUV 4:4:4 full scale (jpeg)$/;"	e	enum:PixelFormat
+PRINT	VP_Os/vp_os_print.h	15;"	d
+PRINT	VP_Os/vp_os_print.h	18;"	d
+PixelFormat	vlib.h	/^enum PixelFormat {$/;"	g
+QCIF_HEIGHT	vlib.h	149;"	d
+QCIF_SIZE	vlib.h	150;"	d
+QCIF_WIDTH	vlib.h	148;"	d
+QQCIF_HEIGHT	vlib.h	158;"	d
+QQCIF_SIZE	vlib.h	159;"	d
+QQCIF_WIDTH	vlib.h	157;"	d
+QQVGA_HEIGHT	vlib.h	153;"	d
+QQVGA_HEIGHT	vlib.h	163;"	d
+QQVGA_SIZE	vlib.h	154;"	d
+QQVGA_SIZE	vlib.h	164;"	d
+QQVGA_WIDTH	vlib.h	152;"	d
+QQVGA_WIDTH	vlib.h	162;"	d
+QVGA_HEIGHT	vlib.h	168;"	d
+QVGA_SIZE	vlib.h	169;"	d
+QVGA_WIDTH	vlib.h	167;"	d
+Qp	vlib.h	/^  int32_t   Qp;$/;"	m	struct:_video_controller_t
+RAW_CAPTURE_PORT	stream.c	32;"	d	file:
+RIGHT_SHIFT	vlib.c	2700;"	d	file:
+RTMON_FLUSH	vlib.h	624;"	d
+RTMON_START	vlib.h	622;"	d
+RTMON_STOP	vlib.h	623;"	d
+RTMON_USTART	vlib.h	625;"	d
+RTMON_USTOP	vlib.h	626;"	d
+RTMON_UVAL	vlib.h	627;"	d
+Read	vlib.h	/^typedef C_RESULT (*Read)  (void* s, int8_t* buffer, int32_t* size);$/;"	t
+SIGRESUME	VP_Os/linux/vp_os_thread.c	16;"	d	file:
+SIGSUSPEND	VP_Os/linux/vp_os_thread.c	17;"	d	file:
+SQCIF_HEIGHT	vlib.h	144;"	d
+SQCIF_SIZE	vlib.h	145;"	d
+SQCIF_WIDTH	vlib.h	143;"	d
+SUCCEED	vlib.h	50;"	d
+SUCCESS	vlib.h	47;"	d
+TABLE_QUANTIZATION	vlib.h	502;"	d
+TARGET	Makefile	/^TARGET=protocol_demo$/;"	m
+TARGET_CPU_ARM	vlib.h	15;"	d
+THREAD_HANDLE	VP_Os/linux/vp_os_thread_dep.h	/^typedef pthread_t THREAD_HANDLE;$/;"	t
+THREAD_HANDLE	VP_Os/win32/vp_os_thread_dep.h	/^typedef HANDLE                  THREAD_HANDLE;$/;"	t
+THREAD_PARAMS	VP_Os/linux/vp_os_thread_dep.h	/^typedef void *THREAD_PARAMS;$/;"	t
+THREAD_PARAMS	VP_Os/win32/vp_os_thread_dep.h	/^typedef LPVOID                  THREAD_PARAMS;$/;"	t
+THREAD_RET	VP_Os/linux/vp_os_thread_dep.h	/^typedef void *THREAD_RET;$/;"	t
+THREAD_RET	VP_Os/win32/vp_os_thread_dep.h	/^typedef DWORD                   THREAD_RET;$/;"	t
+THREAD_RETURN	VP_Os/linux/vp_os_thread_dep.h	19;"	d
+THREAD_RETURN	VP_Os/win32/vp_os_thread_dep.h	18;"	d
+THREAD_ROUTINE	VP_Os/linux/vp_os_thread_dep.h	/^typedef THREAD_RET (*THREAD_ROUTINE) (THREAD_PARAMS);$/;"	t
+THREAD_ROUTINE	VP_Os/win32/vp_os_thread_dep.h	/^typedef LPTHREAD_START_ROUTINE  THREAD_ROUTINE;$/;"	t
+TRUE	VP_Os/vp_os_types.h	61;"	d
+TRUE	vlib.h	71;"	d
+TWEAKY_QQVGA_HEIGHT	vlib.h	173;"	d
+TWEAKY_QQVGA_SIZE	vlib.h	174;"	d
+TWEAKY_QQVGA_WIDTH	vlib.h	172;"	d
+UVLC_CODEC	vlib.h	/^  UVLC_CODEC,$/;"	e	enum:_codec_type_t
+UVLC_FORMAT_CIF	vlib.h	563;"	d
+UVLC_FORMAT_VGA	vlib.h	564;"	d
+UVLC_RESOLUTION_1	vlib.h	568;"	d
+UVLC_RESOLUTION_16	vlib.h	570;"	d
+UVLC_RESOLUTION_4	vlib.h	569;"	d
+UVLC_RESOLUTION_Q	vlib.h	567;"	d
+UVLC_RESOLUTION_SUBQ	vlib.h	566;"	d
+VGA_HEIGHT	vlib.h	183;"	d
+VGA_SIZE	vlib.h	184;"	d
+VGA_WIDTH	vlib.h	182;"	d
+VIDEO_BUFFER_SIZE	stream.c	36;"	d	file:
+VIDEO_DECODE	vlib.h	/^  VIDEO_DECODE  = 2$/;"	e	enum:__anon6
+VIDEO_ENCODE	vlib.h	/^  VIDEO_ENCODE  = 1,$/;"	e	enum:__anon6
+VIDEO_HEIGHT	app.h	17;"	d
+VIDEO_PICTURE_B	vlib.h	/^  VIDEO_PICTURE_B     = 3,$/;"	e	enum:__anon7
+VIDEO_PICTURE_CONTEXT_CB_SRC	vlib.h	218;"	d
+VIDEO_PICTURE_CONTEXT_CR_SRC	vlib.h	219;"	d
+VIDEO_PICTURE_CONTEXT_C_WOFFSET	vlib.h	221;"	d
+VIDEO_PICTURE_CONTEXT_Y_HOFFSET	vlib.h	222;"	d
+VIDEO_PICTURE_CONTEXT_Y_SRC	vlib.h	217;"	d
+VIDEO_PICTURE_CONTEXT_Y_WOFFSET	vlib.h	220;"	d
+VIDEO_PICTURE_EI	vlib.h	/^  VIDEO_PICTURE_EI    = 4,$/;"	e	enum:__anon7
+VIDEO_PICTURE_EP	vlib.h	/^  VIDEO_PICTURE_EP    = 5,$/;"	e	enum:__anon7
+VIDEO_PICTURE_INTER	vlib.h	/^  VIDEO_PICTURE_INTER = 1,  \/\/ Picture is encoded using motion estimation \/ compensation$/;"	e	enum:__anon7
+VIDEO_PICTURE_INTRA	vlib.h	/^  VIDEO_PICTURE_INTRA = 0,  \/\/ Picture is a reference frame$/;"	e	enum:__anon7
+VIDEO_PICTURE_PB	vlib.h	/^  VIDEO_PICTURE_PB    = 2,  \/\/ Picture is encoded using a PB frame$/;"	e	enum:__anon7
+VIDEO_PORT	stream.c	31;"	d	file:
+VIDEO_STREAM_BIG_ENDIAN	vlib.h	/^  VIDEO_STREAM_BIG_ENDIAN     = 2$/;"	e	enum:__anon8
+VIDEO_STREAM_LITTLE_ENDIAN	vlib.h	/^  VIDEO_STREAM_LITTLE_ENDIAN  = 1,$/;"	e	enum:__anon8
+VIDEO_WIDTH	app.h	16;"	d
+VLIB_ALLOC_ALIGN	vlib.h	414;"	d
+VLIB_DEFAULT_BITRATE	vlib.h	266;"	d
+VP_OS_ASSERT	VP_Os/vp_os_assert.h	14;"	d
+VP_OS_ASSERT	VP_Os/vp_os_assert.h	16;"	d
+WEAK	VP_Os/vp_os.h	33;"	d
+WEAK	VP_Os/vp_os.h	49;"	d
+WEAK	vlib.h	39;"	d
+WIFI_MYKONOS_IP	app.h	67;"	d
+WINAPI	VP_Os/vp_os.h	42;"	d
+WINAPI	vlib.h	37;"	d
+Write	vlib.h	/^typedef C_RESULT (*Write) (void* s, const int8_t* buffer, int32_t* size);$/;"	t
+_ASSERT_INCLUDE_OS_	VP_Os/vp_os_assert.h	8;"	d
+_BitScanReverse	VP_Os/linux/intrin.h	/^static INLINE uint32_t _BitScanReverse(uint32_t* index, uint32_t mask)$/;"	f
+_BitScanReverse	VP_Os/win32/intrin.h	/^static INLINE uint32_t _BitScanReverse(uint32_t* index, uint32_t mask)$/;"	f
+_CODEC_H	vlib.h	6;"	d
+_DELAY_INCLUDE_OS_	VP_Os/vp_os_delay.h	8;"	d
+_GNU_SOURCE	VP_Os/vp_os.h	39;"	d
+_GNU_SOURCE	vlib.h	36;"	d
+_MALLOC_INCLUDE_OS_	VP_Os/vp_os_malloc.h	8;"	d
+_OS_H_	VP_Os/vp_os.h	12;"	d
+_OS_PRINT_H_	VP_Os/vp_os_print.h	11;"	d
+_SIGNAL_INCLUDE_OS_	VP_Os/vp_os_signal.h	8;"	d
+_SIGNAL_INCLUDE_OS_DEP_	VP_Os/linux/vp_os_signal_dep.h	8;"	d
+_SIGNAL_INCLUDE_OS_DEP_	VP_Os/win32/vp_os_signal_dep.h	10;"	d
+_THREAD_INCLUDE_OS_	VP_Os/vp_os_thread.h	8;"	d
+_THREAD_INCLUDE_OS_DEP_	VP_Os/linux/vp_os_thread_dep.h	8;"	d
+_THREAD_INCLUDE_OS_DEP_	VP_Os/win32/vp_os_thread_dep.h	8;"	d
+_VP_SDK_TYPES_H_	VP_Os/vp_os_types.h	11;"	d
+__INTRIN__H__	VP_Os/linux/intrin.h	3;"	d
+__INTRIN__H__	VP_Os/win32/intrin.h	3;"	d
+__USE_GNU	VP_Os/linux/vp_os_signal.c	10;"	d	file:
+_bdaddr_t	vlib.h	/^typedef struct _bdaddr_t$/;"	s
+_byteswap_ulong	VP_Os/linux/intrin.h	/^static INLINE uint32_t _byteswap_ulong(uint32_t value)$/;"	f
+_byteswap_ulong	VP_Os/win32/intrin.h	/^static INLINE uint32_t _byteswap_ulong(uint32_t value)$/;"	f
+_byteswap_ulong	vlib.h	/^static INLINE uint32_t _byteswap_ulong(uint32_t value)$/;"	f
+_codec_type_t	vlib.h	/^typedef enum _codec_type_t {$/;"	g
+_huffman_code_t	vlib.h	/^typedef struct _huffman_code_t {$/;"	s
+_huffman_tree_data_t	vlib.h	/^typedef struct _huffman_tree_data_t {$/;"	s
+_huffman_tree_t	vlib.h	/^typedef struct _huffman_tree_t {$/;"	s
+_matrix33_t	navdata.c	/^typedef struct _matrix33_t$/;"	s	file:
+_navdata_cks_t	navdata.c	/^typedef struct _navdata_cks_t {$/;"	s	file:
+_navdata_demo_t	navdata.c	/^typedef struct _navdata_demo_t {$/;"	s	file:
+_navdata_iphone_angles_t	navdata.c	/^typedef struct _navdata_iphone_angles_t {$/;"	s	file:
+_navdata_option_t	navdata.c	/^typedef struct _navdata_option_t {$/;"	s	file:
+_navdata_t	navdata.c	/^typedef struct _navdata_t {$/;"	s	file:
+_navdata_tag_t	navdata.c	/^typedef enum _navdata_tag_t {$/;"	g	file:
+_navdata_time_t	navdata.c	/^typedef struct _navdata_time_t {$/;"	s	file:
+_navdata_unpacked_t	navdata.c	/^typedef struct _navdata_unpacked_t {$/;"	s	file:
+_navdata_vision_detect_t	navdata.c	/^typedef struct _navdata_vision_detect_t {$/;"	s	file:
+_pthread_data_t	VP_Os/linux/vp_os_thread.c	/^typedef struct _pthread_data_t$/;"	s	file:
+_uvlc_codec_t	vlib.h	/^typedef struct _uvlc_codec_t {$/;"	s
+_uvlc_gob_layer_t	vlib.h	/^typedef struct _uvlc_gob_layer_t {$/;"	s
+_uvlc_mb_layer_t	vlib.h	/^typedef struct _uvlc_mb_layer_t {$/;"	s
+_uvlc_picture_layer_t	vlib.h	/^typedef struct _uvlc_picture_layer_t {$/;"	s
+_vector31_t	navdata.c	/^typedef struct _vector31_t {$/;"	s	file:
+_video_codec_t	vlib.h	/^struct _video_codec_t {$/;"	s
+_video_controller_t	vlib.h	/^struct _video_controller_t {$/;"	s
+_video_gob_t	vlib.h	/^typedef struct _video_gob_t {$/;"	s
+_video_macroblock_t	vlib.h	/^typedef struct _video_macroblock_t {$/;"	s
+_video_picture_context_t	vlib.h	/^typedef struct _video_picture_context_t {$/;"	s
+_video_stream_t	vlib.h	/^struct _video_stream_t {$/;"	s
+_vp_api_picture_	vlib.h	/^typedef struct _vp_api_picture_$/;"	s
+_vp_os_cond_t_	VP_Os/linux/vp_os_signal_dep.h	/^typedef struct _vp_os_cond_t_$/;"	s
+aligned_free	vlib.c	/^void aligned_free(void *ptr)$/;"	f
+aligned_malloc	vlib.c	/^void* aligned_malloc(size_t size, size_t align_size)$/;"	f
+aligned_realloc	vlib.c	/^aligned_realloc(void* ptr, size_t size, size_t align_size)$/;"	f
+altitude	navdata.c	/^    int32_t     altitude;               \/*!< UAV's altitude *\/$/;"	m	struct:_navdata_demo_t	file:
+appDeinit	app.c	/^void appDeinit()$/;"	f
+appInit	app.c	/^void appInit()$/;"	f
+appRender	app.c	/^void appRender(long tick, int width, int height)$/;"	f
+aq	vlib.h	/^  int32_t         aq, bq;$/;"	m	struct:_video_controller_t
+at_thread	app.c	/^THREAD_HANDLE at_thread = 0;$/;"	v
+at_udp_socket	at_cmds.c	/^static int at_udp_socket  = -1;$/;"	v	file:
+at_write	at_cmds.c	/^void at_write (int8_t *buffer, int32_t len)$/;"	f
+attr	VP_Os/linux/vp_os_thread.c	/^  pthread_attr_t  attr;$/;"	m	struct:_pthread_data_t	file:
+ax	navdata.c	/^    float32_t  ax;$/;"	m	struct:_navdata_iphone_angles_t	file:
+ay	navdata.c	/^    float32_t  ay;$/;"	m	struct:_navdata_iphone_angles_t	file:
+az	navdata.c	/^    float32_t  az;$/;"	m	struct:_navdata_iphone_angles_t	file:
+azq	vlib.h	/^  int32_t   azq;  \/\/ All zero coefficients$/;"	m	struct:_video_macroblock_t
+b	vlib.h	/^  uint8_t b[BDADDR_SIZE];$/;"	m	struct:_bdaddr_t
+bdaddr_t	vlib.h	/^} bdaddr_t;$/;"	t	typeref:struct:_bdaddr_t
+blockline	vlib.h	/^  int32_t          blockline;$/;"	m	struct:_vp_api_picture_
+blockline	vlib.h	/^  int32_t   blockline;            \/\/ Current blockline in picture$/;"	m	struct:_video_controller_t
+blockline_cache	vlib.h	/^  int16_t*      blockline_cache;  \/\/ Cache used to hold intermediate results (for hardware DCT for example)$/;"	m	struct:_video_controller_t
+bool_t	VP_Os/vp_os_types.h	56;"	d
+bool_t	vlib.h	68;"	d
+boot_drone	at_cmds.c	/^static void boot_drone(void)$/;"	f	file:
+bq	vlib.h	/^  int32_t         aq, bq;$/;"	m	struct:_video_controller_t
+bswap	VP_Os/linux/intrin.h	92;"	d
+bswap	VP_Os/win32/intrin.h	48;"	d
+bswap	vlib.h	657;"	d
+bytes	vlib.h	/^  uint32_t* bytes;      \/\/ Must be aligned on a 4-bytes boundary$/;"	m	struct:_video_stream_t
+c_pad	vlib.h	/^  uint32_t         c_pad;     \/\/ 2* camif_config.c_pad$/;"	m	struct:_vp_api_picture_
+c_woffset	vlib.h	/^  uint32_t  c_woffset; \/\/ = picture->cb_line_size (in bytes)$/;"	m	struct:_video_picture_context_t
+cache	vlib.h	/^  int16_t*      cache;            \/\/ Cache that holds data for the whole picture (used internally by gobs)$/;"	m	struct:_video_controller_t
+cache_mbs	vlib.h	/^  video_macroblock_t* cache_mbs;  \/\/ Array of macroblocks describing blockline_cache (used for decoding)$/;"	m	struct:_video_controller_t
+cache_stream	vlib.h	/^  cache_stream_fc     cache_stream;$/;"	m	struct:_uvlc_codec_t
+cache_stream	vlib.h	/^  cache_stream_fc     cache_stream;$/;"	m	struct:_video_codec_t
+cache_stream_fc	vlib.h	/^typedef C_RESULT (*cache_stream_fc)( video_controller_t* controller, video_stream_t* in );$/;"	t
+calloc	VP_Os/vp_os_malloc.c	10;"	d	file:
+calloc	VP_Os/vp_os_malloc.h	108;"	d
+cb_buf	vlib.h	/^  uint8_t         *cb_buf;    \/\/ camif -> encoder$/;"	m	struct:_vp_api_picture_
+cb_line_size	vlib.h	/^  uint32_t         cb_line_size;$/;"	m	struct:_vp_api_picture_
+cb_src	vlib.h	/^  uint8_t*  cb_src;$/;"	m	struct:_video_picture_context_t
+cks	navdata.c	/^    uint32_t  cks;$/;"	m	struct:_navdata_cks_t	file:
+clz	VP_Os/linux/intrin.h	/^static inline uint32_t clz(uint32_t code)$/;"	f
+clz	VP_Os/linux/intrin.h	88;"	d
+clz	VP_Os/win32/intrin.h	/^static inline uint32_t clz(uint32_t code)$/;"	f
+clz	vlib.h	656;"	d
+code	vlib.h	/^    int32_t code;$/;"	m	union:_huffman_code_t::__anon9
+code	vlib.h	/^  huffman_code_t* code;$/;"	m	struct:_huffman_tree_data_t
+code	vlib.h	/^  uint32_t  code;       \/\/ Currently read\/write data$/;"	m	struct:_video_stream_t
+codec_type	vlib.h	/^  uint32_t        codec_type;$/;"	m	struct:_video_controller_t
+codec_type_t	vlib.h	/^} codec_type_t;$/;"	t	typeref:enum:_codec_type_t
+complete	vlib.h	/^  uint32_t         complete;$/;"	m	struct:_vp_api_picture_
+cond	VP_Os/linux/vp_os_signal_dep.h	/^  pthread_cond_t  cond;$/;"	m	struct:_vp_os_cond_t_
+controller	stream.c	/^static video_controller_t controller;$/;"	v	file:
+copy_block_16_8	vlib.c	/^static void copy_block_16_8(uint8_t* dst, int32_t dst_offset, int16_t* src, int32_t src_offset)$/;"	f	file:
+copy_block_8_16	vlib.c	/^static void copy_block_8_16(int16_t* dst, int32_t dst_offset, uint8_t* src, int32_t src_offset)$/;"	f	file:
+cr_buf	vlib.h	/^  uint8_t         *cr_buf;    \/\/ camif -> encoder$/;"	m	struct:_vp_api_picture_
+cr_line_size	vlib.h	/^  uint32_t         cr_line_size;$/;"	m	struct:_vp_api_picture_
+cr_src	vlib.h	/^  uint8_t*  cr_src;$/;"	m	struct:_video_picture_context_t
+ctrl_state	navdata.c	/^    uint32_t    ctrl_state;             \/*!< instance of #def_mykonos_state_mask_t *\/$/;"	m	struct:_navdata_demo_t	file:
+current_bits	vlib.h	/^  int32_t   current_bits;         \/\/ Number of bits in the buffer$/;"	m	struct:_video_controller_t
+data	navdata.c	/^    uint8_t   data[];$/;"	m	struct:_navdata_option_t	file:
+data	vlib.h	/^  huffman_tree_data_t data[];$/;"	m	struct:_huffman_tree_t
+data	vlib.h	/^  int16_t*  data;         \/\/ macroblock's data$/;"	m	struct:_video_macroblock_t
+decode_blockline	vlib.h	/^  decode_blockline_fc decode_blockline;$/;"	m	struct:_uvlc_codec_t
+decode_blockline	vlib.h	/^  decode_blockline_fc decode_blockline;$/;"	m	struct:_video_codec_t
+decode_blockline_fc	vlib.h	/^typedef C_RESULT (*decode_blockline_fc)( video_controller_t* controller, vp_api_picture_t* blockline, bool_t* got_image );$/;"	t
+default_image	default.c	/^const unsigned short default_image[25344] = {$/;"	v
+desc	vlib.h	/^  uint32_t desc;$/;"	m	struct:_uvlc_mb_layer_t
+detection_camera_homo	navdata.c	/^    matrix33_t  detection_camera_homo;$/;"	m	struct:_navdata_demo_t	file:
+detection_camera_rot	navdata.c	/^    matrix33_t  detection_camera_rot;$/;"	m	struct:_navdata_demo_t	file:
+detection_camera_trans	navdata.c	/^    vector31_t  detection_camera_trans;$/;"	m	struct:_navdata_demo_t	file:
+dist	navdata.c	/^    uint32_t   dist[4];      $/;"	m	struct:_navdata_vision_detect_t	file:
+do_azq	vlib.h	/^  bool_t          do_azq;$/;"	m	struct:_video_controller_t
+do_quantize_inter_mb	vlib.c	/^int16_t* do_quantize_inter_mb(int16_t* ptr, int32_t quant, int32_t invQuant, int32_t* last_ptr)$/;"	f
+do_quantize_intra_mb	vlib.c	/^int16_t* do_quantize_intra_mb(int16_t* ptr, int32_t invQuant, int32_t* last_ptr)$/;"	f
+do_unquantize	vlib.c	/^C_RESULT do_unquantize(int16_t* ptr, int32_t picture_type, int32_t quant, int32_t num_coeff)$/;"	f
+dquant	vlib.h	/^  int32_t   dquant;$/;"	m	struct:_video_controller_t
+dquant	vlib.h	/^  int32_t   dquant;$/;"	m	struct:_video_macroblock_t
+dquant	vlib.h	/^  uint32_t dquant;$/;"	m	struct:_uvlc_mb_layer_t
+drone_camera_rot	navdata.c	/^    matrix33_t  drone_camera_rot;$/;"	m	struct:_navdata_demo_t	file:
+drone_camera_trans	navdata.c	/^    vector31_t  drone_camera_trans;$/;"	m	struct:_navdata_demo_t	file:
+elapsed	navdata.c	/^    uint32_t   elapsed;$/;"	m	struct:_navdata_iphone_angles_t	file:
+enable	navdata.c	/^    int32_t    enable;$/;"	m	struct:_navdata_iphone_angles_t	file:
+encode_blockline	vlib.h	/^  encode_blockline_fc encode_blockline;$/;"	m	struct:_uvlc_codec_t
+encode_blockline	vlib.h	/^  encode_blockline_fc encode_blockline;$/;"	m	struct:_video_codec_t
+encode_blockline_fc	vlib.h	/^typedef C_RESULT (*encode_blockline_fc)( video_controller_t* controller, const vp_api_picture_t* blockline, bool_t picture_complete );$/;"	t
+endianess	vlib.h	/^  uint32_t  endianess;  \/\/ Endianess of the stream$/;"	m	struct:_video_stream_t
+event_info	app.h	/^struct event_info {$/;"	s
+fdct	vlib.c	/^void fdct(const unsigned short* in, short* out)$/;"	f
+findThread	VP_Os/linux/vp_os_thread.c	/^static pthread_data_t* findThread(THREAD_HANDLE handle)$/;"	f	file:
+float32_t	VP_Os/vp_os_types.h	/^typedef float               float32_t;$/;"	t
+float64_t	VP_Os/vp_os_types.h	/^typedef double              float64_t;$/;"	t
+float64_t	vlib.h	/^typedef double              float64_t;$/;"	t
+format	vlib.h	/^  enum PixelFormat format;    \/\/ camif -> encoder : PIX_FMT_YUV420P$/;"	m	struct:_vp_api_picture_	typeref:enum:_vp_api_picture_::PixelFormat
+format	vlib.h	/^  uint32_t format;$/;"	m	struct:_uvlc_picture_layer_t
+framerate	vlib.h	/^  uint32_t         framerate; \/\/ camif -> encoder$/;"	m	struct:_vp_api_picture_
+free	VP_Os/vp_os_malloc.c	13;"	d	file:
+free	VP_Os/vp_os_malloc.h	111;"	d
+gAppAlive	app.c	/^int gAppAlive   = 0;$/;"	v
+get_mask_from_state	at_cmds.c	/^static inline int get_mask_from_state( uint32_t state, uint32_t mask )$/;"	f	file:
+get_mask_from_state	navdata.c	/^static inline int get_mask_from_state( uint32_t state, uint32_t mask )$/;"	f	file:
+get_screen_dimensions	app.c	/^void get_screen_dimensions(int *w, int *h)$/;"	f
+get_time_ms	at_cmds.c	/^static unsigned long get_time_ms(void)$/;"	f	file:
+gobs	vlib.h	/^  uvlc_gob_layer_t* gobs;$/;"	m	struct:_uvlc_picture_layer_t
+gobs	vlib.h	/^  video_gob_t*  gobs;             \/\/ Description of the picture as an array of gob$/;"	m	struct:_video_controller_t
+handle	VP_Os/linux/vp_os_thread.c	/^  THREAD_HANDLE   handle;$/;"	m	struct:_pthread_data_t	file:
+header	navdata.c	/^    uint32_t    header;$/;"	m	struct:_navdata_t	file:
+height	navdata.c	/^    uint32_t   height[4];    $/;"	m	struct:_navdata_vision_detect_t	file:
+height	vlib.h	/^  int32_t   height;$/;"	m	struct:_video_controller_t
+height	vlib.h	/^  uint32_t         height;    \/\/ camif -> encoder$/;"	m	struct:_vp_api_picture_
+huffman_code_t	vlib.h	/^} huffman_code_t;$/;"	t	typeref:struct:_huffman_code_t
+huffman_tree_data_t	vlib.h	/^} huffman_tree_data_t;$/;"	t	typeref:struct:_huffman_tree_data_t
+huffman_tree_t	vlib.h	/^} huffman_tree_t;$/;"	t	typeref:struct:_huffman_tree_t
+idct	vlib.c	/^void idct(const short* in, unsigned short* out)$/;"	f
+in_stream	vlib.h	/^  video_stream_t  in_stream;      \/\/ Internal buffer$/;"	m	struct:_video_controller_t
+index	vlib.h	/^  int32_t index;$/;"	m	struct:_huffman_code_t
+index	vlib.h	/^  uint32_t  index;      \/\/ Position of next dword available for reading\/writing$/;"	m	struct:_video_stream_t
+init_thread	VP_Os/linux/vp_os_thread.c	/^static void init_thread(void)$/;"	f	file:
+inline	VP_Os/vp_os.h	30;"	d
+int16_t	VP_Os/vp_os_types.h	/^typedef signed    __int16   int16_t;$/;"	t
+int32_t	VP_Os/vp_os_types.h	/^typedef signed    __int32   int32_t;$/;"	t
+int64_t	VP_Os/vp_os_types.h	/^typedef signed    __int64   int64_t;$/;"	t
+int8_t	VP_Os/vp_os_types.h	/^typedef signed    __int8    int8_t;$/;"	t
+invQp	vlib.h	/^  int32_t   invQp;$/;"	m	struct:_video_controller_t
+iquant_tab	vlib.h	/^static const int16_t iquant_tab[64]  ={  3,  5,  7,  9, 11, 13, 15, 17,$/;"	v
+isSleeping	VP_Os/linux/vp_os_thread.c	/^  uint32_t        isSleeping;$/;"	m	struct:_pthread_data_t	file:
+length	vlib.h	/^      uint8_t   length;$/;"	m	struct:_huffman_code_t::__anon9::__anon10
+length	vlib.h	/^  int32_t   length;     \/\/ Number of bits used in code (TODO why is it signed?)$/;"	m	struct:_video_stream_t
+m11	navdata.c	/^    float32_t m11;$/;"	m	struct:_matrix33_t	file:
+m12	navdata.c	/^    float32_t m12;$/;"	m	struct:_matrix33_t	file:
+m13	navdata.c	/^    float32_t m13;$/;"	m	struct:_matrix33_t	file:
+m21	navdata.c	/^    float32_t m21;$/;"	m	struct:_matrix33_t	file:
+m22	navdata.c	/^    float32_t m22;$/;"	m	struct:_matrix33_t	file:
+m23	navdata.c	/^    float32_t m23;$/;"	m	struct:_matrix33_t	file:
+m31	navdata.c	/^    float32_t m31;$/;"	m	struct:_matrix33_t	file:
+m32	navdata.c	/^    float32_t m32;$/;"	m	struct:_matrix33_t	file:
+m33	navdata.c	/^    float32_t m33;$/;"	m	struct:_matrix33_t	file:
+macroblocks	vlib.h	/^  video_macroblock_t* macroblocks;$/;"	m	struct:_uvlc_gob_layer_t
+macroblocks	vlib.h	/^  video_macroblock_t* macroblocks;$/;"	m	struct:_video_gob_t
+main	main.c	/^int main( int argc, char* argv[] )$/;"	f
+malloc	VP_Os/vp_os_malloc.c	11;"	d	file:
+malloc	VP_Os/vp_os_malloc.h	109;"	d
+matrix33_t	navdata.c	/^} matrix33_t;$/;"	t	typeref:struct:_matrix33_t	file:
+max_code_length	vlib.h	/^  int32_t max_code_length;$/;"	m	struct:_huffman_tree_t
+mb_blockline	vlib.h	/^  int32_t   mb_blockline;         \/\/ Number of macroblocks per blockline for this picture$/;"	m	struct:_video_controller_t
+memset	VP_Os/vp_os_malloc.c	12;"	d	file:
+memset	VP_Os/vp_os_malloc.h	110;"	d
+mode	vlib.h	/^  uint32_t        mode;           \/\/ encoding or decoding$/;"	m	struct:_video_controller_t
+motion_info	at_cmds.c	/^struct event_info motion_info;$/;"	v	typeref:struct:event_info
+mutex	VP_Os/linux/vp_os_signal_dep.h	/^  vp_os_mutex_t     *mutex;$/;"	m	struct:_vp_os_cond_t_
+mykonos_navdata_unpack_all	navdata.c	/^void mykonos_navdata_unpack_all(navdata_unpacked_t* navdata_unpacked, navdata_t* navdata, uint32_t* cks)$/;"	f
+mykonos_state	at_cmds.c	/^uint32_t mykonos_state = 0;$/;"	v
+mykonos_state	navdata.c	/^    uint32_t    mykonos_state;$/;"	m	struct:_navdata_t	file:
+mykonos_state	navdata.c	/^    uint32_t  mykonos_state;$/;"	m	struct:_navdata_unpacked_t	file:
+mykonos_ui_bitfield_t	at_cmds.c	/^} mykonos_ui_bitfield_t;$/;"	t	typeref:enum:__anon5	file:
+nav_thread	app.c	/^THREAD_HANDLE nav_thread = 0;$/;"	v
+navdata_cks_t	navdata.c	/^} __attribute__ ((packed)) navdata_cks_t;$/;"	t	typeref:struct:_navdata_cks_t	file:
+navdata_compute_cks	navdata.c	/^static inline uint32_t navdata_compute_cks( uint8_t* nv, int32_t size )$/;"	f	file:
+navdata_demo	navdata.c	/^    navdata_demo_t           navdata_demo;$/;"	m	struct:_navdata_unpacked_t	file:
+navdata_demo_t	navdata.c	/^} __attribute__ ((packed)) navdata_demo_t;$/;"	t	typeref:struct:_navdata_demo_t	file:
+navdata_iphone_angles	navdata.c	/^    navdata_iphone_angles_t  navdata_iphone_angles;$/;"	m	struct:_navdata_unpacked_t	file:
+navdata_iphone_angles_t	navdata.c	/^} __attribute__ ((packed)) navdata_iphone_angles_t;$/;"	t	typeref:struct:_navdata_iphone_angles_t	file:
+navdata_next_option	navdata.c	/^static inline navdata_option_t* navdata_next_option( navdata_option_t* navdata_options_ptr )$/;"	f	file:
+navdata_open_server	navdata.c	/^void navdata_open_server (void)$/;"	f
+navdata_option_t	navdata.c	/^} navdata_option_t;$/;"	t	typeref:struct:_navdata_option_t	file:
+navdata_t	navdata.c	/^} __attribute__ ((packed)) navdata_t;$/;"	t	typeref:struct:_navdata_t	file:
+navdata_tag_t	navdata.c	/^} navdata_tag_t;$/;"	t	typeref:enum:_navdata_tag_t	file:
+navdata_time_t	navdata.c	/^} __attribute__ ((packed)) navdata_time_t;$/;"	t	typeref:struct:_navdata_time_t	file:
+navdata_udp_socket	navdata.c	/^static int navdata_udp_socket  = -1;$/;"	v	file:
+navdata_unpack	navdata.c	196;"	d	file:
+navdata_unpack_option	navdata.c	/^static inline uint8_t* navdata_unpack_option( uint8_t* navdata_ptr, uint8_t* data, uint32_t size )$/;"	f	file:
+navdata_unpacked_t	navdata.c	/^} navdata_unpacked_t;$/;"	t	typeref:struct:_navdata_unpacked_t	file:
+navdata_vision_detect	navdata.c	/^    navdata_vision_detect_t  navdata_vision_detect;$/;"	m	struct:_navdata_unpacked_t	file:
+navdata_vision_detect_t	navdata.c	/^} __attribute__ ((packed)) navdata_vision_detect_t;$/;"	t	typeref:struct:_navdata_vision_detect_t	file:
+navdata_write	navdata.c	/^void navdata_write (int8_t *buffer, int32_t len)$/;"	f
+nb_detected	navdata.c	/^    uint32_t   nb_detected;  $/;"	m	struct:_navdata_vision_detect_t	file:
+num_blockline	vlib.h	/^  int32_t   num_blockline;        \/\/ Number of blocklines per picture$/;"	m	struct:_video_controller_t
+num_coeff_cb	vlib.h	/^  int32_t   num_coeff_cb; \/\/ Number of non-zeros coefficients for block cb$/;"	m	struct:_video_macroblock_t
+num_coeff_cr	vlib.h	/^  int32_t   num_coeff_cr; \/\/ Number of non-zeros coefficients for block cr$/;"	m	struct:_video_macroblock_t
+num_coeff_y0	vlib.h	/^  int32_t   num_coeff_y0; \/\/ Number of non-zeros coefficients for block y0$/;"	m	struct:_video_macroblock_t
+num_coeff_y1	vlib.h	/^  int32_t   num_coeff_y1; \/\/ Number of non-zeros coefficients for block y1$/;"	m	struct:_video_macroblock_t
+num_coeff_y2	vlib.h	/^  int32_t   num_coeff_y2; \/\/ Number of non-zeros coefficients for block y2$/;"	m	struct:_video_macroblock_t
+num_coeff_y3	vlib.h	/^  int32_t   num_coeff_y3; \/\/ Number of non-zeros coefficients for block y3$/;"	m	struct:_video_macroblock_t
+num_frames	navdata.c	/^    uint32_t    num_frames;			  \/*!< streamed frame index *\/$/;"	m	struct:_navdata_demo_t	file:
+num_frames	vlib.h	/^  uint32_t  num_frames;           \/\/ Frame index$/;"	m	struct:_video_controller_t
+num_max_codes	vlib.h	/^  int32_t num_max_codes;$/;"	m	struct:_huffman_tree_t
+num_picture_decoded	stream.c	/^int num_picture_decoded = 0;$/;"	v
+num_references	vlib.c	/^static uint32_t num_references = 0;$/;"	v	file:
+num_used_codes	vlib.h	/^  int32_t num_used_codes;$/;"	m	struct:_huffman_tree_t
+ocurrent	at_cmds.c	/^static unsigned long ocurrent = 0;$/;"	v	file:
+once	VP_Os/linux/vp_os_thread.c	/^static pthread_once_t once;$/;"	v	file:
+options	navdata.c	/^    navdata_option_t  options[1];$/;"	m	struct:_navdata_t	file:
+orientation	at_cmds.c	/^struct orientation_info orientation;$/;"	v	typeref:struct:orientation_info
+orientation_info	app.h	/^struct orientation_info {$/;"	s
+original_framerate	vlib.h	/^  int32_t   original_framerate;   \/\/ Frame rate of the original video sequence in pictures per second$/;"	m	struct:_video_controller_t
+otick	video.c	/^static long otick = 0;$/;"	v	file:
+output_bits	vlib.h	/^  int32_t   output_bits;          \/\/ Number of bits occupied by the previous encoded picture$/;"	m	struct:_video_controller_t
+overflow	at_cmds.c	/^static int overflow = 0;$/;"	v	file:
+phi	navdata.c	/^    float32_t   phi;                    \/*!< UAV's attitude *\/$/;"	m	struct:_navdata_demo_t	file:
+picture	stream.c	/^static vp_api_picture_t	picture;$/;"	v	file:
+pictureBpp	stream.c	/^static int pictureBpp;$/;"	v	file:
+picture_buf	stream.c	/^uint16_t picture_buf[VIDEO_BUFFER_SIZE];$/;"	v
+picture_complete	vlib.h	/^  bool_t    picture_complete;     \/\/ tells if picture is complete$/;"	m	struct:_video_controller_t
+picture_layer	vlib.h	/^  uvlc_picture_layer_t  picture_layer;$/;"	m	struct:_uvlc_codec_t
+picture_type	vlib.h	/^  uint32_t  picture_type;$/;"	m	struct:_video_controller_t
+picture_type	vlib.h	/^  uint32_t picture_type;$/;"	m	struct:_uvlc_picture_layer_t
+pixbuf	video.c	/^static uint8_t    *pixbuf = NULL;$/;"	v	file:
+psi	navdata.c	/^    float32_t   psi;                    \/*!< UAV's attitude *\/$/;"	m	struct:_navdata_demo_t	file:
+pthread_data_t	VP_Os/linux/vp_os_thread.c	/^} pthread_data_t;$/;"	t	typeref:struct:_pthread_data_t	file:
+quant	vlib.h	/^  int32_t   quant;$/;"	m	struct:_video_controller_t
+quant	vlib.h	/^  int32_t quant;$/;"	m	struct:_video_gob_t
+quant	vlib.h	/^  uint32_t quant;$/;"	m	struct:_uvlc_gob_layer_t
+quant	vlib.h	/^  uint32_t quant;$/;"	m	struct:_uvlc_picture_layer_t
+quant_tab	vlib.h	/^static const int16_t quant_tab[64]  ={  10923, 6554, 4681, 3641, 2979, 2521, 2185, 1928,$/;"	v
+realloc	VP_Os/vp_os_malloc.c	14;"	d	file:
+realloc	VP_Os/vp_os_malloc.h	112;"	d
+resolution	vlib.h	/^  uint32_t resolution;$/;"	m	struct:_uvlc_picture_layer_t
+resumeSignalHandler	VP_Os/linux/vp_os_thread.c	/^static void resumeSignalHandler(int sig)$/;"	f	file:
+saturate5	vlib.c	/^static inline uint16_t saturate5(int32_t x)$/;"	f	file:
+saturate5	vlib.c	/^static inline uint32_t saturate5(int32_t x)$/;"	f	file:
+saturate6	vlib.c	/^static inline uint16_t saturate6(int32_t x)$/;"	f	file:
+saturate6	vlib.c	/^static inline uint32_t saturate6(int32_t x)$/;"	f	file:
+saturate8	vlib.c	/^static inline int32_t saturate8(int32_t x)$/;"	f	file:
+screen_height	app.c	/^static int screen_height = 0;$/;"	v	file:
+screen_width	app.c	/^static int screen_width = 0;$/;"	v	file:
+send_command	at_cmds.c	/^static void send_command(int nb_sequence)$/;"	f	file:
+sequence	navdata.c	/^    uint32_t    sequence;$/;"	m	struct:_navdata_t	file:
+set_flat_trim	at_cmds.c	/^void set_flat_trim( void )$/;"	f
+set_iphone_acceleros	at_cmds.c	/^void set_iphone_acceleros( int enable, float32_t fax, float32_t fay, float32_t faz )$/;"	f
+set_radiogp_input	at_cmds.c	/^void set_radiogp_input( int32_t pitch, int32_t roll, int32_t gaz, int32_t yaw )$/;"	f
+set_ui_input	at_cmds.c	/^void set_ui_input( uint32_t value )$/;"	f
+size	navdata.c	/^    uint16_t    size;$/;"	m	struct:_navdata_demo_t	file:
+size	navdata.c	/^    uint16_t   size;$/;"	m	struct:_navdata_iphone_angles_t	file:
+size	navdata.c	/^    uint16_t   size;$/;"	m	struct:_navdata_vision_detect_t	file:
+size	navdata.c	/^    uint16_t  size;$/;"	m	struct:_navdata_cks_t	file:
+size	navdata.c	/^    uint16_t  size;$/;"	m	struct:_navdata_option_t	file:
+size	navdata.c	/^    uint16_t  size;$/;"	m	struct:_navdata_time_t	file:
+size	vlib.h	/^  uint32_t  size;       \/\/ Max size (in bytes, times of 4) of this stream$/;"	m	struct:_video_stream_t
+start_button	at_cmds.c	/^static int start_button = 0;$/;"	v	file:
+state	app.h	/^    unsigned state:1;$/;"	m	struct:event_info
+stream_deinit	stream.c	/^void stream_deinit(void)$/;"	f
+stream_init	stream.c	/^void stream_init(void)$/;"	f
+stream_thread	app.c	/^THREAD_HANDLE stream_thread = 0;$/;"	v
+suspendSignalHandler	VP_Os/linux/vp_os_thread.c	/^static void suspendSignalHandler(int sig)$/;"	f	file:
+tag	navdata.c	/^    uint16_t    tag;$/;"	m	struct:_navdata_demo_t	file:
+tag	navdata.c	/^    uint16_t   tag;$/;"	m	struct:_navdata_iphone_angles_t	file:
+tag	navdata.c	/^    uint16_t   tag;$/;"	m	struct:_navdata_vision_detect_t	file:
+tag	navdata.c	/^    uint16_t  tag;$/;"	m	struct:_navdata_cks_t	file:
+tag	navdata.c	/^    uint16_t  tag;$/;"	m	struct:_navdata_option_t	file:
+tag	navdata.c	/^    uint16_t  tag;$/;"	m	struct:_navdata_time_t	file:
+target_bitrate	vlib.h	/^  uint32_t        target_bitrate; \/\/ Target bitrate in bit\/s$/;"	m	struct:_video_controller_t
+target_framerate	vlib.h	/^  int32_t   target_framerate;     \/\/ Target frame rate in pictures per second (original_framerate \/ target_framerate must be an int)$/;"	m	struct:_video_controller_t
+texture	video.c	/^static GLuint      texture;$/;"	v	file:
+theta	navdata.c	/^    float32_t   theta;                  \/*!< UAV's attitude *\/$/;"	m	struct:_navdata_demo_t	file:
+threadTab	VP_Os/linux/vp_os_thread.c	/^static pthread_data_t* threadTab = NULL;$/;"	v	file:
+threadTabSize	VP_Os/linux/vp_os_thread.c	/^static uint32_t threadTabSize    = 128;$/;"	v	file:
+thread_mutex	VP_Os/linux/vp_os_thread.c	/^static vp_os_mutex_t thread_mutex;$/;"	v	file:
+time	navdata.c	/^    uint32_t  time;$/;"	m	struct:_navdata_time_t	file:
+trackball_info	at_cmds.c	/^struct event_info trackball_info;$/;"	v	typeref:struct:event_info
+type	navdata.c	/^    uint32_t   type[4];$/;"	m	struct:_navdata_vision_detect_t	file:
+ui_mask	at_cmds.c	/^static uint32_t ui_mask = MYKONOS_NO_TRIM;$/;"	v	file:
+uint16_t	VP_Os/vp_os_types.h	/^typedef unsigned  __int16   uint16_t;$/;"	t
+uint32_t	VP_Os/vp_os_types.h	/^typedef unsigned  __int32   uint32_t;$/;"	t
+uint64_t	VP_Os/vp_os_types.h	/^typedef unsigned  __int64   uint64_t;$/;"	t
+uint8_t	VP_Os/vp_os_types.h	/^typedef unsigned  __int8    uint8_t;$/;"	t
+unsused	app.h	/^	unsigned unsused:7;$/;"	m	struct:event_info
+update	vlib.h	/^  update_fc           update;$/;"	m	struct:_uvlc_codec_t
+update	vlib.h	/^  update_fc           update;$/;"	m	struct:_video_codec_t
+update_fc	vlib.h	/^typedef C_RESULT (*update_fc)( video_controller_t* controller );$/;"	t
+usat	VP_Os/linux/intrin.h	62;"	d
+usat16	VP_Os/linux/intrin.h	61;"	d
+use_me	vlib.h	/^  bool_t          use_me;         \/\/ use motion estimation \/ compensation$/;"	m	struct:_video_controller_t
+used	vlib.h	/^  uint32_t  used;       \/\/ Number of bytes used in stream$/;"	m	struct:_video_stream_t
+uvlc_cache	vlib.c	/^C_RESULT uvlc_cache( video_controller_t* controller, video_stream_t* ex_stream)$/;"	f
+uvlc_codec	vlib.c	/^const uvlc_codec_t uvlc_codec = {$/;"	v
+uvlc_codec_alloc	vlib.c	/^void uvlc_codec_alloc( video_controller_t* controller )$/;"	f
+uvlc_codec_free	vlib.c	/^void uvlc_codec_free( video_controller_t* controller )$/;"	f
+uvlc_codec_t	vlib.h	/^} uvlc_codec_t;$/;"	t	typeref:struct:_uvlc_codec_t
+uvlc_decode	vlib.c	/^C_RESULT uvlc_decode( video_stream_t* const stream, int32_t* run, int32_t* level, int32_t* last)$/;"	f
+uvlc_decode_blockline	vlib.c	/^C_RESULT uvlc_decode_blockline( video_controller_t* controller, vp_api_picture_t* picture, bool_t* got_image )$/;"	f
+uvlc_encode	vlib.c	/^void uvlc_encode( video_stream_t* const stream, int32_t level, int32_t run, int32_t not_last )$/;"	f
+uvlc_encode_blockline	vlib.c	/^C_RESULT uvlc_encode_blockline( video_controller_t* controller, const vp_api_picture_t* blockline, bool_t picture_complete )$/;"	f
+uvlc_flush_stream	vlib.c	/^static C_RESULT uvlc_flush_stream( video_stream_t* out, video_stream_t* in )$/;"	f	file:
+uvlc_gob_layer_t	vlib.h	/^} uvlc_gob_layer_t;$/;"	t	typeref:struct:_uvlc_gob_layer_t
+uvlc_load_stream	vlib.c	/^static C_RESULT uvlc_load_stream( video_stream_t* out, video_stream_t* in )$/;"	f	file:
+uvlc_mb_layer_t	vlib.h	/^} uvlc_mb_layer_t;$/;"	t	typeref:struct:_uvlc_mb_layer_t
+uvlc_pack_controller	vlib.c	/^C_RESULT uvlc_pack_controller( video_controller_t* controller )$/;"	f
+uvlc_picture_layer_t	vlib.h	/^} uvlc_picture_layer_t;$/;"	t	typeref:struct:_uvlc_picture_layer_t
+uvlc_read_block	vlib.c	/^C_RESULT uvlc_read_block( video_stream_t* stream, int16_t* data, int32_t* num_coeff )$/;"	f
+uvlc_read_block_unquantize	vlib.c	/^C_RESULT uvlc_read_block_unquantize( video_controller_t* controller, int16_t* data, int32_t quant, int32_t nc )$/;"	f
+uvlc_read_gob_layer	vlib.c	/^C_RESULT uvlc_read_gob_layer( video_stream_t* stream, uvlc_gob_layer_t* gob )$/;"	f
+uvlc_read_mb_layer	vlib.c	/^C_RESULT uvlc_read_mb_layer( video_stream_t* stream, video_macroblock_t* mb, int32_t num_macro_blocks )$/;"	f
+uvlc_read_mb_layer_unquantize	vlib.c	/^uint16_t* uvlc_read_mb_layer_unquantize( video_controller_t* controller, video_macroblock_t* mb, uint16_t* out )$/;"	f
+uvlc_read_picture_layer	vlib.c	/^C_RESULT uvlc_read_picture_layer( video_controller_t* controller, video_stream_t* stream )$/;"	f
+uvlc_unpack_controller	vlib.c	/^C_RESULT uvlc_unpack_controller( video_controller_t* controller )$/;"	f
+uvlc_update	vlib.c	/^C_RESULT uvlc_update( video_controller_t* controller )$/;"	f
+uvlc_write_block	vlib.c	/^void uvlc_write_block( video_stream_t* const stream, int16_t* data, int32_t num_coeff )$/;"	f
+uvlc_write_gob_layer	vlib.c	/^C_RESULT uvlc_write_gob_layer( video_stream_t* stream, uvlc_gob_layer_t* gob )$/;"	f
+uvlc_write_mb_layer	vlib.c	/^C_RESULT uvlc_write_mb_layer( video_stream_t* stream, video_macroblock_t* mb, int32_t num_macro_blocks )$/;"	f
+uvlc_write_picture_layer	vlib.c	/^C_RESULT uvlc_write_picture_layer( video_controller_t* controller, video_stream_t* stream )$/;"	f
+uxtb	VP_Os/linux/intrin.h	64;"	d
+uxtb16	VP_Os/linux/intrin.h	65;"	d
+uxth	VP_Os/linux/intrin.h	66;"	d
+v	navdata.c	/^        float32_t v[3];$/;"	m	union:_vector31_t::__anon1	file:
+values	app.h	/^	int values[3];$/;"	m	struct:orientation_info
+vbat_flying_percentage	navdata.c	/^    uint32_t    vbat_flying_percentage; \/*!< battery voltage filtered (mV) *\/$/;"	m	struct:_navdata_demo_t	file:
+vector31_t	navdata.c	/^} vector31_t; $/;"	t	typeref:struct:_vector31_t	file:
+video_align8	vlib.c	/^C_RESULT video_align8( video_stream_t* const stream )$/;"	f
+video_blockline_from_macro_blocks	vlib.c	/^C_RESULT video_blockline_from_macro_blocks(video_picture_context_t* ctx, int16_t* src, int32_t num_macro_blocks, enum PixelFormat format)$/;"	f
+video_blockline_from_macro_blocks_rgb565	vlib.c	/^static C_RESULT video_blockline_from_macro_blocks_rgb565(video_picture_context_t* ctx, int16_t* src, int32_t num_macro_blocks)$/;"	f	file:
+video_blockline_from_macro_blocks_yuv420	vlib.c	/^C_RESULT video_blockline_from_macro_blocks_yuv420(video_picture_context_t* ctx, int16_t* src, int32_t num_macro_blocks)$/;"	f
+video_blockline_to_macro_blocks	vlib.c	/^C_RESULT video_blockline_to_macro_blocks(video_picture_context_t* ctx, int16_t* dst, int32_t num_macro_blocks)$/;"	f
+video_cache_stream	vlib.c	/^C_RESULT video_cache_stream( video_controller_t* controller, video_stream_t* in )$/;"	f
+video_codec	vlib.h	/^  video_codec_t*  video_codec;$/;"	m	struct:_video_controller_t
+video_codec_close	vlib.c	/^C_RESULT video_codec_close( video_controller_t* controller )$/;"	f
+video_codec_open	vlib.c	/^C_RESULT video_codec_open( video_controller_t* controller, codec_type_t codec_type )$/;"	f
+video_codec_t	vlib.h	/^typedef struct _video_codec_t       video_codec_t;$/;"	t	typeref:struct:_video_codec_t
+video_controller_cleanup	vlib.c	/^C_RESULT video_controller_cleanup( video_controller_t* controller )$/;"	f
+video_controller_get_stream_ptr	vlib.h	/^static INLINE uint8_t* video_controller_get_stream_ptr( video_controller_t* controller ) {$/;"	f
+video_controller_get_stream_size	vlib.h	/^static INLINE uint32_t video_controller_get_stream_size( video_controller_t* controller ) {$/;"	f
+video_controller_set_bitrate	vlib.c	/^C_RESULT video_controller_set_bitrate( video_controller_t* controller, uint32_t target )$/;"	f
+video_controller_set_format	vlib.c	/^C_RESULT video_controller_set_format( video_controller_t* controller, int32_t width, int32_t height )$/;"	f
+video_controller_set_mode	vlib.c	/^C_RESULT video_controller_set_mode( video_controller_t* controller, uint32_t mode )$/;"	f
+video_controller_set_motion_estimation	vlib.c	/^C_RESULT  video_controller_set_motion_estimation( video_controller_t* controller, bool_t use_me )$/;"	f
+video_controller_set_picture_type	vlib.c	/^C_RESULT  video_controller_set_picture_type( video_controller_t* controller, uint32_t type )$/;"	f
+video_controller_t	vlib.h	/^typedef struct _video_controller_t  video_controller_t;$/;"	t	typeref:struct:_video_controller_t
+video_controller_update	vlib.c	/^C_RESULT video_controller_update( video_controller_t* controller, bool_t complete )$/;"	f
+video_copy32	vlib.c	/^C_RESULT video_copy32(uint32_t* dst, uint32_t* src, uint32_t nb)$/;"	f
+video_copy32_swap	vlib.c	/^C_RESULT video_copy32_swap(uint32_t* dst, uint32_t* src, uint32_t nb)$/;"	f
+video_decode_blockline	vlib.h	/^static INLINE C_RESULT video_decode_blockline( video_controller_t* controller, vp_api_picture_t* blockline, bool_t* got_image )$/;"	f
+video_decode_picture	vlib.c	/^C_RESULT video_decode_picture( video_controller_t* controller, vp_api_picture_t* picture, video_stream_t* ex_stream, bool_t* got_image )$/;"	f
+video_deinit	video.c	/^void video_deinit()$/;"	f
+video_encode_blockline	vlib.h	/^static INLINE C_RESULT video_encode_blockline( video_controller_t* controller, const vp_api_picture_t* blockline, bool_t picture_complete )$/;"	f
+video_encode_picture	vlib.c	/^C_RESULT video_encode_picture( video_controller_t* controller, const vp_api_picture_t* picture, bool_t* got_image )$/;"	f
+video_fdct_compute	vlib.c	/^int16_t* video_fdct_compute(int16_t* in, int16_t* out, int32_t num_macro_blocks)$/;"	f
+video_gob_t	vlib.h	/^} video_gob_t;$/;"	t	typeref:struct:_video_gob_t
+video_idct_compute	vlib.c	/^int16_t* video_idct_compute(int16_t* in, int16_t* out, int32_t num_macro_blocks)$/;"	f
+video_init	video.c	/^void video_init(void)$/;"	f
+video_macroblock_t	vlib.h	/^} video_macroblock_t;$/;"	t	typeref:struct:_video_macroblock_t
+video_packetizer_close	vlib.c	/^C_RESULT video_packetizer_close( video_controller_t* controller )$/;"	f
+video_packetizer_init	vlib.c	/^C_RESULT video_packetizer_init( video_controller_t* controller )$/;"	f
+video_peek_data	vlib.c	/^C_RESULT video_peek_data( const video_stream_t* const stream, uint32_t* code, int32_t length )$/;"	f
+video_picture_context_t	vlib.h	/^} video_picture_context_t;$/;"	t	typeref:struct:_video_picture_context_t
+video_quantize	vlib.c	/^C_RESULT video_quantize( video_controller_t* controller, video_macroblock_t* macroblock, int32_t num_macro_blocks )$/;"	f
+video_quantizer_init	vlib.c	/^C_RESULT video_quantizer_init( video_controller_t* controller )$/;"	f
+video_quantizer_update	vlib.c	/^C_RESULT video_quantizer_update( video_controller_t* controller )$/;"	f
+video_read_data	vlib.c	/^C_RESULT video_read_data( video_stream_t* const stream, uint32_t* code, int32_t length )$/;"	f
+video_realloc_buffers	vlib.c	/^static void video_realloc_buffers( video_controller_t* controller, int32_t num_prev_blockline )$/;"	f	file:
+video_render	video.c	/^void video_render(long tick, int width, int height)$/;"	f
+video_stream_t	vlib.h	/^typedef struct _video_stream_t      video_stream_t;$/;"	t	typeref:struct:_video_stream_t
+video_stuff8	vlib.c	/^C_RESULT video_stuff8( video_stream_t* const stream )$/;"	f
+video_udp_socket	stream.c	/^static int video_udp_socket  = -1;$/;"	v	file:
+video_unquantize	vlib.c	/^C_RESULT video_unquantize( video_controller_t* controller, video_macroblock_t* macroblock, int32_t num_macro_blocks )$/;"	f
+video_utils_close	vlib.c	/^C_RESULT video_utils_close( video_controller_t* controller )$/;"	f
+video_utils_init	vlib.c	/^C_RESULT video_utils_init( video_controller_t* controller )$/;"	f
+video_utils_set_format	vlib.c	/^C_RESULT video_utils_set_format( uint32_t width, uint32_t height )$/;"	f
+video_write	stream.c	/^void video_write (int8_t *buffer, int32_t len)$/;"	f
+video_write_data	vlib.c	/^void video_write_data( video_stream_t* const stream, uint32_t code, int32_t length )$/;"	f
+video_zeromem32	vlib.c	/^C_RESULT video_zeromem32( uint32_t* dst, uint32_t length )$/;"	f
+video_zztable_t81	vlib.c	/^int32_t video_zztable_t81[MCU_BLOCK_SIZE] = {$/;"	v
+vint16	VP_Os/vp_os_types.h	/^typedef volatile int16_t    vint16;$/;"	t
+vint16	vlib.h	/^typedef volatile int16_t    vint16;$/;"	t
+vint32	VP_Os/vp_os_types.h	/^typedef volatile int32_t    vint32;$/;"	t
+vint32	vlib.h	/^typedef volatile int32_t    vint32;$/;"	t
+vint64	VP_Os/vp_os_types.h	/^typedef volatile int64_t    vint64;$/;"	t
+vint64	vlib.h	/^typedef volatile int64_t    vint64;$/;"	t
+vint8	VP_Os/vp_os_types.h	/^typedef volatile int8_t     vint8;$/;"	t
+vint8	vlib.h	/^typedef volatile int8_t     vint8;$/;"	t
+vision_complete	vlib.h	/^  uint32_t         vision_complete;$/;"	m	struct:_vp_api_picture_
+vision_defined	navdata.c	/^    int      vision_defined;$/;"	m	struct:_navdata_t	file:
+vision_defined	navdata.c	/^    int    vision_defined;$/;"	m	struct:_navdata_unpacked_t	file:
+vlc	vlib.h	/^      uint32_t  vlc:24;$/;"	m	struct:_huffman_code_t::__anon9::__anon10
+vp_api_picture_t	vlib.h	/^vp_api_picture_t;$/;"	t	typeref:struct:_vp_api_picture_
+vp_os_aligned_free	VP_Os/vp_os_malloc.c	/^void vp_os_aligned_free(void *ptr)$/;"	f
+vp_os_aligned_malloc	VP_Os/vp_os_malloc.c	/^void* vp_os_aligned_malloc(size_t size, size_t align_size)$/;"	f
+vp_os_aligned_realloc	VP_Os/vp_os_malloc.c	/^vp_os_aligned_realloc(void* ptr, size_t size, size_t align_size)$/;"	f
+vp_os_calloc	VP_Os/vp_os_malloc.c	/^vp_os_calloc(size_t nmemb, size_t size)$/;"	f
+vp_os_cond_destroy	VP_Os/linux/vp_os_signal.c	/^vp_os_cond_destroy(vp_os_cond_t *cond)$/;"	f
+vp_os_cond_destroy	VP_Os/win32/vp_os_signal.c	/^vp_os_cond_destroy(vp_os_cond_t *cond)$/;"	f
+vp_os_cond_init	VP_Os/linux/vp_os_signal.c	/^vp_os_cond_init(vp_os_cond_t *cond, vp_os_mutex_t *mutex)$/;"	f
+vp_os_cond_init	VP_Os/win32/vp_os_signal.c	/^vp_os_cond_init(vp_os_cond_t *cond, vp_os_mutex_t *mutex)$/;"	f
+vp_os_cond_signal	VP_Os/linux/vp_os_signal.c	/^vp_os_cond_signal(vp_os_cond_t *cond)$/;"	f
+vp_os_cond_signal	VP_Os/win32/vp_os_signal.c	/^vp_os_cond_signal(vp_os_cond_t *cond)$/;"	f
+vp_os_cond_t	VP_Os/linux/vp_os_signal_dep.h	/^vp_os_cond_t;$/;"	t	typeref:struct:_vp_os_cond_t_
+vp_os_cond_t	VP_Os/win32/vp_os_signal_dep.h	/^typedef CRITICAL_SECTION vp_os_cond_t;$/;"	t
+vp_os_cond_timed_wait	VP_Os/linux/vp_os_signal.c	/^vp_os_cond_timed_wait(vp_os_cond_t *cond, uint32_t ms)$/;"	f
+vp_os_cond_timed_wait	VP_Os/win32/vp_os_signal.c	/^vp_os_cond_timed_wait(vp_os_cond_t *cond, uint32_t ms)$/;"	f
+vp_os_cond_wait	VP_Os/linux/vp_os_signal.c	/^vp_os_cond_wait(vp_os_cond_t *cond)$/;"	f
+vp_os_cond_wait	VP_Os/win32/vp_os_signal.c	/^vp_os_cond_wait(vp_os_cond_t *cond)$/;"	f
+vp_os_delay	VP_Os/linux/vp_os_delay.c	/^void vp_os_delay(uint32_t ms)$/;"	f
+vp_os_delay	VP_Os/win32/vp_os_delay.c	/^void vp_os_delay(uint32_t ms)$/;"	f
+vp_os_delay_us	VP_Os/linux/vp_os_delay.c	/^void vp_os_delay_us(uint32_t us)$/;"	f
+vp_os_delay_us	VP_Os/win32/vp_os_delay.c	/^void vp_os_delay_us(uint32_t us)$/;"	f
+vp_os_free	VP_Os/vp_os_malloc.c	/^vp_os_free(void *ptr)$/;"	f
+vp_os_malloc	VP_Os/vp_os_malloc.c	/^vp_os_malloc(size_t size)$/;"	f
+vp_os_malloc_no_assert	VP_Os/vp_os_malloc.c	/^vp_os_malloc_no_assert(size_t size)$/;"	f
+vp_os_memcpy	VP_Os/vp_os_malloc.h	/^vp_os_memcpy(void *dest, const void *src, size_t n)$/;"	f
+vp_os_memset	VP_Os/vp_os_malloc.h	/^vp_os_memset(void *s, int c, size_t n)$/;"	f
+vp_os_mutex_destroy	VP_Os/linux/vp_os_signal.c	/^vp_os_mutex_destroy(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_destroy	VP_Os/win32/vp_os_signal.c	/^vp_os_mutex_destroy(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_init	VP_Os/linux/vp_os_signal.c	/^vp_os_mutex_init(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_init	VP_Os/win32/vp_os_signal.c	/^vp_os_mutex_init(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_lock	VP_Os/linux/vp_os_signal.c	/^vp_os_mutex_lock(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_lock	VP_Os/win32/vp_os_signal.c	/^vp_os_mutex_lock(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_t	VP_Os/linux/vp_os_signal_dep.h	/^typedef pthread_mutex_t vp_os_mutex_t;$/;"	t
+vp_os_mutex_t	VP_Os/win32/vp_os_signal_dep.h	/^typedef CRITICAL_SECTION vp_os_mutex_t;$/;"	t
+vp_os_mutex_unlock	VP_Os/linux/vp_os_signal.c	/^vp_os_mutex_unlock(vp_os_mutex_t *mutex)$/;"	f
+vp_os_mutex_unlock	VP_Os/win32/vp_os_signal.c	/^vp_os_mutex_unlock(vp_os_mutex_t *mutex)$/;"	f
+vp_os_realloc	VP_Os/vp_os_malloc.c	/^vp_os_realloc(void *ptr, size_t size)$/;"	f
+vp_os_thread_create	VP_Os/linux/vp_os_thread.c	/^vp_os_thread_create(THREAD_ROUTINE f, THREAD_PARAMS parameters, THREAD_HANDLE *handle, ...)$/;"	f
+vp_os_thread_create	VP_Os/win32/vp_os_thread.c	/^vp_os_thread_create(THREAD_ROUTINE f, void *parameters, THREAD_HANDLE *handle, ...)$/;"	f
+vp_os_thread_join	VP_Os/linux/vp_os_thread.c	/^vp_os_thread_join(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_join	VP_Os/win32/vp_os_thread.c	/^vp_os_thread_join(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_priority	VP_Os/linux/vp_os_thread.c	/^vp_os_thread_priority(THREAD_HANDLE handle, int32_t priority)$/;"	f
+vp_os_thread_priority	VP_Os/win32/vp_os_thread.c	/^vp_os_thread_priority(THREAD_HANDLE handle, int32_t priority)$/;"	f
+vp_os_thread_resume	VP_Os/linux/vp_os_thread.c	/^vp_os_thread_resume(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_resume	VP_Os/win32/vp_os_thread.c	/^vp_os_thread_resume(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_self	VP_Os/linux/vp_os_thread.c	/^vp_os_thread_self(void)$/;"	f
+vp_os_thread_self	VP_Os/win32/vp_os_thread.c	/^vp_os_thread_self(void)$/;"	f
+vp_os_thread_suspend	VP_Os/linux/vp_os_thread.c	/^vp_os_thread_suspend(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_suspend	VP_Os/win32/vp_os_thread.c	/^vp_os_thread_suspend(THREAD_HANDLE handle)$/;"	f
+vp_os_thread_yield	VP_Os/linux/vp_os_thread.c	/^vp_os_thread_yield(void)$/;"	f
+vp_os_thread_yield	VP_Os/win32/vp_os_thread.c	/^vp_os_thread_yield(void)$/;"	f
+vuint16	VP_Os/vp_os_types.h	/^typedef volatile uint16_t   vuint16;$/;"	t
+vuint16	vlib.h	/^typedef volatile uint16_t   vuint16;$/;"	t
+vuint32	VP_Os/vp_os_types.h	/^typedef volatile uint32_t   vuint32;$/;"	t
+vuint32	vlib.h	/^typedef volatile uint32_t   vuint32;$/;"	t
+vuint64	VP_Os/vp_os_types.h	/^typedef volatile uint64_t   vuint64;$/;"	t
+vuint64	vlib.h	/^typedef volatile uint64_t   vuint64;$/;"	t
+vuint8	VP_Os/vp_os_types.h	/^typedef volatile uint8_t    vuint8;$/;"	t
+vuint8	vlib.h	/^typedef volatile uint8_t    vuint8;$/;"	t
+vx	navdata.c	/^    float32_t   vx;                     \/*!< UAV's estimated linear velocity *\/$/;"	m	struct:_navdata_demo_t	file:
+vy	navdata.c	/^    float32_t   vy;                     \/*!< UAV's estimated linear velocity *\/$/;"	m	struct:_navdata_demo_t	file:
+vz	navdata.c	/^    float32_t   vz;                     \/*!< UAV's estimated linear velocity *\/$/;"	m	struct:_navdata_demo_t	file:
+weight	vlib.h	/^  int32_t         weight;$/;"	m	struct:_huffman_tree_data_t
+width	navdata.c	/^    uint32_t   width[4];     $/;"	m	struct:_navdata_vision_detect_t	file:
+width	vlib.h	/^  int32_t   width;                \/\/ Size of picture currently decoded$/;"	m	struct:_video_controller_t
+width	vlib.h	/^  uint32_t         width;     \/\/ camif -> encoder$/;"	m	struct:_vp_api_picture_
+x	app.h	/^    unsigned x:12;$/;"	m	struct:event_info
+x	navdata.c	/^            float32_t x;$/;"	m	struct:_vector31_t::__anon1::__anon2	file:
+xc	navdata.c	/^    uint32_t   xc[4];        $/;"	m	struct:_navdata_vision_detect_t	file:
+y	app.h	/^    unsigned y:12;$/;"	m	struct:event_info
+y	navdata.c	/^            float32_t y;$/;"	m	struct:_vector31_t::__anon1::__anon2	file:
+y_buf	vlib.h	/^  uint8_t         *y_buf;     \/\/ camif -> encoder$/;"	m	struct:_vp_api_picture_
+y_hoffset	vlib.h	/^  uint32_t  y_hoffset; \/\/ = picture->y_line_size * MCU_HEIGHT (in bytes)$/;"	m	struct:_video_picture_context_t
+y_line_size	vlib.h	/^  uint32_t         y_line_size;$/;"	m	struct:_vp_api_picture_
+y_pad	vlib.h	/^  uint32_t         y_pad;     \/\/ 2* camif_config.y_pad$/;"	m	struct:_vp_api_picture_
+y_src	vlib.h	/^  uint8_t*  y_src;$/;"	m	struct:_video_picture_context_t
+y_woffset	vlib.h	/^  uint32_t  y_woffset; \/\/ = picture->y_line_size (in bytes)$/;"	m	struct:_video_picture_context_t
+yc	navdata.c	/^    uint32_t   yc[4];$/;"	m	struct:_navdata_vision_detect_t	file:
+z	navdata.c	/^            float32_t z;$/;"	m	struct:_vector31_t::__anon1::__anon2	file:

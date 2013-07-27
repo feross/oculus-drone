@@ -1,0 +1,9 @@
+1) Edit custom.makefile
+USE_OPENGL=no|yes : Video render, only used with Android
+USE_MINGW32=no|yes : Target platform, the version win32 is not finalized (not used for the moment). 
+
+2) export variable environement :
+export ALL_SOURCES=(Absolut path of sources directory)
+
+3) make
+

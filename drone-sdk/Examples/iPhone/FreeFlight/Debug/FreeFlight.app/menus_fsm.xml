@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<fsm>
+	<states>
+		<state name="UPDATER" object="MenuUpdater" />
+		<state name="HUD" object="hud" />
+	</states>
+	<actions>
+		<action name="NEXT" />
+	</actions>
+	<associations>
+        <association from-state="UPDATER" action="NEXT" to-state="HUD" />
+	</associations>
+</fsm>

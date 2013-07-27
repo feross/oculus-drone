@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<ardrone>
+  <devices>
+    <device id="0" name="Keyboard" default="no">
+      <controls>
+        <control name="takeoff" value="13" type="0"/>
+        <control name="emergency" value="32" type="0"/>
+        <control name="pitch_front" value="65362" type="0"/>
+        <control name="pitch_back" value="65364" type="0"/>
+        <control name="roll_left" value="81" type="0"/>
+        <control name="roll_right" value="68" type="0"/>
+        <control name="yaw_left" value="65361" type="0"/>
+        <control name="yaw_right" value="65363" type="0"/>
+        <control name="speed_up" value="90" type="0"/>
+        <control name="speed_down" value="88" type="0"/>
+      </controls>
+    </device>
+    <device id="102498320" name="GREAT PLANES InterLink" default="no">
+      <controls>
+        <control name="takeoff" value="3" type="3"/>
+        <control name="emergency" value="4" type="3"/>
+        <control name="pitch_front" value="-3" type="1"/>
+        <control name="pitch_back" value="3" type="1"/>
+        <control name="roll_left" value="-5" type="1"/>
+        <control name="roll_right" value="5" type="1"/>
+        <control name="yaw_left" value="-1" type="1"/>
+        <control name="yaw_right" value="1" type="1"/>
+        <control name="speed_up" value="-2" type="1"/>
+        <control name="speed_down" value="2" type="1"/>
+      </controls>
+    </device>
+    <device id="111347766" name="Saitek Cyborg X" default="no">
+      <controls>
+        <control name="takeoff" value="2" type="3"/>
+        <control name="emergency" value="1" type="3"/>
+        <control name="pitch_front" value="-2" type="1"/>
+        <control name="pitch_back" value="2" type="1"/>
+        <control name="roll_left" value="-1" type="1"/>
+        <control name="roll_right" value="1" type="1"/>
+        <control name="yaw_left" value="-4" type="1"/>
+        <control name="yaw_right" value="4" type="1"/>
+        <control name="speed_up" value="11" type="3"/>
+        <control name="speed_down" value="12" type="3"/>
+      </controls>
+    </device>
+    <device id="74301978" name="Logitech Logitech(R) Precision(TM) Gamepad" default="no">
+      <controls>
+        <control name="takeoff" value="9" type="3"/>
+        <control name="emergency" value="8" type="3"/>
+        <control name="pitch_front" value="-2" type="1"/>
+        <control name="pitch_back" value="2" type="1"/>
+        <control name="roll_left" value="-1" type="1"/>
+        <control name="roll_right" value="1" type="1"/>
+        <control name="yaw_left" value="4" type="3"/>
+        <control name="yaw_right" value="5" type="3"/>
+        <control name="speed_up" value="3" type="3"/>
+        <control name="speed_down" value="1" type="3"/>
+      </controls>
+    </device>
+    <device id="74301982" name="Generic X-Box pad" default="yes">
+      <controls>
+        <control name="takeoff" value="6" type="3"/>
+        <control name="emergency" value="10" type="3"/>
+        <control name="pitch_front" value="-2" type="1"/>
+        <control name="pitch_back" value="2" type="1"/>
+        <control name="roll_left" value="-1" type="1"/>
+        <control name="roll_right" value="1" type="1"/>
+        <control name="yaw_left" value="-4" type="1"/>
+        <control name="yaw_right" value="4" type="1"/>
+        <control name="speed_up" value="-5" type="1"/>
+        <control name="speed_down" value="5" type="1"/>
+      </controls>
+    </device>
+  </devices>
+</ardrone>
