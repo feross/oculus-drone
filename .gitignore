@@ -14,6 +14,10 @@ results
 
 npm-debug.log
 
+*.o
+*.d
+*.a
+*.hmap
 
 #########################
 # .gitignore file for Xcode4 / OS X Source projects
