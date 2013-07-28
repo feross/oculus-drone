@@ -5,9 +5,12 @@ var PaVEParser = require('./node_modules/ar-drone/lib/video/PaVEParser')
 var split = require('split')
 var through = require('through')
 
+// Don't crash node on exceptions
 process.on('uncaughtException', function (err) {
-  console.error(err)
-  land()
+  console.error(err.stack)
+  try {
+    land()
+  } catch (e) {}
   setTimeout(function () {
     process.exit(0)
   }, 200)
