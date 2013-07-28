@@ -31,9 +31,9 @@ var speed = {
   e: 0  // up/down
 }
 var pids = {
-  x: new PidController(0.05, 0.00004, 0.0004),
-  y: new PidController(0.05, 0.00004, 0.0004),
-  z: new PidController(0.05, 0.00004, 0.0004)
+  x: new PidController(0.1, 0, 0.2),
+  y: new PidController(0.1, 0, 0.05),
+  z: new PidController(0.01, 0, 0.001)
 }
 var zero = {
   x: 0,
