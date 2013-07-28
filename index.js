@@ -21,6 +21,7 @@ process.on('uncaughtException', function (err) {
 var argv = optimist
   .usage('Usage: $0 [--oculus]')
   .alias('oculus', 'o')
+  .alias('demo', 'd')
   .argv
 
 var drone = arDrone.createClient()
@@ -52,14 +53,14 @@ var lastInput = {
 }
 
 function correct(zTarget, last) {
-      while(zTarget - last.z > 180) {
-        zTarget -= 360
-      }
-      while(last.z - zTarget > 180) {
-        zTarget += 360
-      }
-      last.z = zTarget
-      return zTarget
+  while(zTarget - last.z > 180) {
+    zTarget -= 360
+  }
+  while(last.z - zTarget > 180) {
+    zTarget += 360
+  }
+  last.z = zTarget
+  return zTarget
 }
 
 var inAir = false, isRunning = false
@@ -121,7 +122,7 @@ function takeoff () {
   drone.stop()
   drone.takeoff()
   inAir = true
-  setTimeout(function(){isRunning = true}, 1000)
+  setTimeout(function(){isRunning = true}, 2000)
 }
 
 function land () {
@@ -284,3 +285,28 @@ drone.on('navdata', function (data) {
   }
 })
 
+if (argv.demo) {
+  takeoff()
+  drone
+    .after(5000, function () {
+      pids.z.setTarget(30)
+    })
+    .after(3000, function () {
+      pids.z.setTarget(-30)
+    })
+    .after(3000, function () {
+      pids.z.setTarget(-25)
+    })
+    .after(500, function () {
+      pids.z.setTarget(-35)
+    })
+    .after(500, function () {
+      pids.z.setTarget(-25)
+    })
+    .after(500, function () {
+      pids.z.setTarget(-35)
+    })
+    .after(3000, function () {
+      land()
+    })
+}
