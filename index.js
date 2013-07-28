@@ -67,6 +67,8 @@ var gestureEnabled = true
 
 drone.disableEmergency()
 drone.stop() // Stop command drone was executing before batt died
+drone.config('control:control_yaw', '6.1')
+drone.config('control:euler_angle_max', '0.5')
 
 drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
