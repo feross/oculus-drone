@@ -24,7 +24,10 @@ var argv = optimist
   .argv
 
 var drone = arDrone.createClient()
+var state = { x: 0, y: 0, z: 0, rot: 0 }
 var inAir = false
+var gestureEnabled = true
+
 drone.disableEmergency()
 drone.stop() // Stop command drone was executing before batt died
 
@@ -32,43 +35,48 @@ drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
 })
 
-var params = { x: 0, y: 0, z: 0, rot: 0 }
-
 setInterval(function () {
-  console.log(params)
+  console.log(state)
 }, 1000)
 
-function set (param, val) {
-  if (val > 1)
-    params[param] = 1
-  else if (val < -1)
-    params[param] = -1
-  else
-    params[param] = val
+function set (params) {
+  for (var param in params) {
+    var val = params[param]
 
-  if (param === 'x')
-    drone.front(params[param])
-  else if (param === 'y')
-    drone.right(params[param])
-  else if (param === 'z')
-    drone.up(params[param])
-  else if (param === 'rot')
-    drone.clockwise(params[param])
-  else
-    console.error('Invalid param to `set`')
+    // Update parameter
+    if (val > 1) {
+      state[param] = 1
+    } else if (val < -1) {
+      state[param] = -1
+    } else {
+      state[param] = val
+    }
+
+    // Send movement command to drone
+    if (param === 'x') {
+      drone.front(val)
+    } else if (param === 'y') {
+      drone.right(val)
+    } else if (param === 'z') {
+      drone.up(val)
+    } else if (param === 'rot') {
+      drone.clockwise(val)
+    } else {
+      console.error('Invalid param to `set`')
+    }
+  }
 }
 
 function reset () {
-  ['x', 'y', 'z', 'rot'].forEach(function (param) {
-    set(param, 0)
-  })
+  set({x: 0, y: 0, z: 0, rot: 0})
+  drone.stop()
 }
 
 function takeoff () {
-  inAir = true
   drone.disableEmergency()
   drone.stop()
   drone.takeoff()
+  inAir = true
 }
 
 function land () {
@@ -76,18 +84,25 @@ function land () {
   drone.land()
 }
 
-function flip () {
+function flipAhead () {
   drone.animate('flipAhead', 500)
-
-  drone
-    .after(750, function () {
-      drone.down(1)
-    })
-    .after(200, function () {
-      drone.down(0)
-    })
+}
+function flipBehind () {
+  drone.animate('flipBehind', 500)
+}
+function flipLeft () {
+  drone.animate('flipLeft', 500)
+}
+function flipRight () {
+  drone.animate('flipRight', 500)
 }
 
+function disableGestureTimeout () {
+  gestureEnabled = false
+  setTimeout(function () {
+    gestureEnabled = true
+  }, 2000)
+}
 
 // Keyboard control
 if (argv.keyboard) {
