@@ -31,39 +31,37 @@ var speed = {
   z: 0, // rotateLeft/rotateRight
   e: 0  // up/down
 }
-var pids = {
-  x: new PidController(0.1, 0, 0.2),
-  y: new PidController(0.1, 0, 0.05),
-  z: new PidController(0.01, 0, 0.001)
-}
+var pids = {}
 var zero = {
   x: 0,
   y: 0,
   z: 0
 }
-var lastOutput = {
-  x: 0,
-  y: 0,
-  z: 0
-}
-var lastInput = {
-  x: 0,
-  y: 0,
-  z: 0
+
+function setupPidControllers () {
+  pids.x = new PidController(0.01, 0.0001, 0)
+  pids.y = new PidController(0.01, 0.0001, 0)
+  pids.z = new PidController(0.01, 0, 0.001)
 }
 
-function correct(zTarget, last) {
-  while(zTarget - last.z > 180) {
+// Fixes the 180 to -180 problem
+var last = {
+  input: 0,
+  output: 0
+}
+function correctZ (zTarget, inOrOut) {
+  while(zTarget - last[inOrOut] > 180) {
     zTarget -= 360
   }
-  while(last.z - zTarget > 180) {
+  while(last[inOrOut] - zTarget > 180) {
     zTarget += 360
   }
-  last.z = zTarget
+  last[inOrOut] = zTarget
   return zTarget
 }
 
-var inAir = false, isRunning = false
+var inAir = false
+var isRunning = false
 var gestureEnabled = true
 
 drone.disableEmergency()
@@ -77,12 +75,15 @@ drone.on('batteryChange', function (num) {
 
 setInterval(function () {
   console.log(speed)
-  console.log({
-    xTarget: pids.x.target.toFixed(2),
-    yTarget: pids.y.target.toFixed(2),
-    zTarget: pids.z.target.toFixed(2)
-  })
-}, 1000)
+  if (pids.x) {
+    console.log({
+      xTarget: pids.x.target.toFixed(2),
+      yTarget: pids.y.target.toFixed(2),
+      zTarget: pids.z.target.toFixed(2),
+      isRunning: isRunning
+    })
+  }
+}, 500)
 
 function set (params) {
   for (var param in params) {
@@ -122,13 +123,18 @@ function takeoff () {
   drone.stop()
   drone.takeoff()
   inAir = true
-  setTimeout(function(){isRunning = true}, 2000)
+  setupPidControllers()
+  setTimeout(function () {
+    isRunning = true
+  }, 2000)
 }
 
 function land () {
   inAir = false
   drone.land()
-  setTimeout(function(){isRunning = false}, 1000)
+  setTimeout(function () {
+    isRunning = false
+  }, 2000)
 }
 
 function flipAhead () {
@@ -215,10 +221,15 @@ if (argv.oculus) {
     .pipe(split())
     .pipe(through(function (line) {
       var arr = line.split(',')
-      var xTarget = Number(-arr[0])
-      var yTarget = Number(-arr[2])
+      var xTarget = Number(-arr[0] * (180 / Math.PI))
+      var yTarget = Number(-arr[2] * (180 / Math.PI))
       var zTarget = Number(-arr[1] * (180 / Math.PI))
-      pids.z.setTarget(correct(zTarget, lastOutput))
+
+      if (isRunning) {
+        pids.x.setTarget(xTarget)
+        pids.y.setTarget(yTarget)
+        pids.z.setTarget(correctZ(zTarget, 'output'))
+      }
 
       // Gestures:
       //   DOWN to takeoff/land
@@ -262,14 +273,10 @@ drone.on('navdata', function (data) {
   var ySensor = Number(data.demo.rotation.y)
   var zSensor = Number(data.demo.rotation.z)
 
-  zSensor = correct(zSensor, lastInput)
+  zSensor = correctZ(zSensor, 'input')
 
   // Drone starting position should be 0,0,0.
-  if (!isRunning) {
-    zero.x = -xSensor
-    zero.y = -ySensor
-    zero.z = -zSensor
-  } else {
+  if (isRunning) {
     xSensor += zero.x
     ySensor += zero.y
     zSensor += zero.z
@@ -278,10 +285,15 @@ drone.on('navdata', function (data) {
     var yCorrect = pids.y.update(ySensor)
     var zCorrect = pids.z.update(zSensor)
 
+    set({ x: xCorrect })
+    set({ y: yCorrect })
     set({ z: zCorrect })
 
-    console.log('sensor: ' + zSensor.toFixed(2) + '  correct: ' + zCorrect.toFixed(2))
-
+    console.log('sensor: { x: '+xSensor.toFixed(2) + ' y: ' + ySensor.toFixed(2) + ' z: ' + zSensor.toFixed(2) + ' } correct: { x: ' + xCorrect.toFixed(2) + ' y: ' + yCorrect.toFixed(2) + ' z: ' + zCorrect.toFixed(2) + ' }')
+  } else {
+    zero.x = -xSensor
+    zero.y = -ySensor
+    zero.z = -zSensor
   }
 })
 
@@ -289,24 +301,18 @@ if (argv.demo) {
   takeoff()
   drone
     .after(5000, function () {
-      pids.z.setTarget(30)
+      pids.x.setTarget(25)
     })
-    .after(3000, function () {
-      pids.z.setTarget(-30)
+    // .after(3000, function () {
+    //   pids.x.setTarget(-25)
+    // })
+    // .after(3000, function () {
+    //   pids.x.setTarget(25)
+    // })
+    .after(5000, function () {
+      pids.x.setTarget(0)
     })
-    .after(3000, function () {
-      pids.z.setTarget(-25)
-    })
-    .after(500, function () {
-      pids.z.setTarget(-35)
-    })
-    .after(500, function () {
-      pids.z.setTarget(-25)
-    })
-    .after(500, function () {
-      pids.z.setTarget(-35)
-    })
-    .after(3000, function () {
+    .after(2000, function () {
       land()
     })
 }
