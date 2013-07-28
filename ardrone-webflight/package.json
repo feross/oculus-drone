@@ -1,0 +1,41 @@
+{
+  "name": "ardrone-webflight",
+  "version": "0.1.0",
+  "description": "Extensible remote-control environment for the AR Drone.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eschnou/ardrone-webflight.git"
+  },
+  "keywords": [
+    "drone",
+    "ardrone",
+    "nodecopter",
+    "parrot",
+    "cockpit",
+    "browser",
+    "artificial horizon"
+  ],
+  "dependencies": {
+    "ar-drone": "git+ssh://git@github.com:felixge/node-ar-drone.git#master",
+    "express": "3.0.x",
+    "ejs": "~0.8.3",
+    "socket.io": "~0.9.4",
+    "dronestream": "git+ssh://git@github.com:eschnou/node-dronestream.git#master",
+    "dateformat": "~1.0.6-1.2.3",
+    "line-reader": "~0.2.3",
+    "buffered-reader": "~1.0.1"
+  },
+  "author": "Laurent Eschenauer <laurent@eschenauer.be>",
+  "contributors": [
+    {
+      "name": "Benjamin Nortier",
+      "email": "bjnortier@gmail.com"
+    },
+    {
+      "name": "Bernhard K. Weisshuhn",
+      "email": "bkw@codingforce.com>"
+    }
+  ],
+  "license": "MIT"
+}
