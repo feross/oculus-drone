@@ -48,6 +48,19 @@ client
     set('x', x)
     set('rot', rot)
     set('y', y)
+
+    // Gestures:
+    //   DOWN to takeoff/land
+    //   UP to flip
+    if (x < -1)
+      flip()
+    if (x > 1) {
+      if (inAir) {
+        land()
+      } else {
+        takeoff()
+      }
+    }
   }))
 drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
