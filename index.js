@@ -62,7 +62,7 @@ var gestureEnabled = true
 drone.disableEmergency()
 drone.stop() // Stop command drone was executing before batt died
 drone.config('control:control_yaw', '6.1')
-drone.config('control:euler_angle_max', '0.37')
+drone.config('control:euler_angle_max', '0.10')
 
 drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
@@ -219,28 +219,39 @@ if (argv.oculus) {
       var yTarget = Number(-arr[2] * (180 / Math.PI))
       var zTarget = Number(-arr[1] * (180 / Math.PI))
 
-      if (inAir) {
-        set({ x: (xTarget / 90),
-              y: (yTarget / 90) })
-        pid.setTarget(correctZ(zTarget, 'output'))
-      }
-
       // Gestures:
       //   DOWN to takeoff/land
       //   UP to flip
-      // if (gestureEnabled) {
-      //   if (xTarget < -1) {
-      //     flipBehind()
-      //     disableGestureTimeout()
-      //   } else if (xTarget > 1) {
-      //     if (inAir) {
-      //       land()
-      //     } else {
-      //       takeoff()
-      //     }
-      //     disableGestureTimeout()
-      //   }
-      // }
+      var gestureThreshold = 60
+      if (gestureEnabled) {
+        if (xTarget > gestureThreshold) {
+          flipBehind()
+          disableGestureTimeout()
+          xTarget = 0
+          yTarget = 0
+        } else if (xTarget < -gestureThreshold) {
+          flipAhead()
+          disableGestureTimeout()
+          xTarget = 0
+          yTarget = 0
+        } else if (yTarget > gestureThreshold) {
+          flipRight()
+          disableGestureTimeout()
+          xTarget = 0
+          yTarget = 0
+        } else if (yTarget < -gestureThreshold) {
+          flipLeft()
+          disableGestureTimeout()
+          xTarget = 0
+          yTarget = 0
+        }
+      }
+
+      if (inAir) {
+        set({ x: xTarget / 40,
+              y: yTarget / 40})
+        pid.setTarget(correctZ(zTarget, 'output'))
+      }
     }))
 }
 
@@ -276,6 +287,8 @@ drone.on('navdata', function (data) {
     set({ z: zCorrect })
 
     console.log('sensor: { z: ' + zSensor.toFixed(2) + ' } correct: { z: ' + zCorrect.toFixed(2) + ' }')
+  } else {
+    zero.z = -zSensor
   }
 })
 
