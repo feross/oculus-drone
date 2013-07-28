@@ -23,7 +23,12 @@ var argv = optimist
   .argv
 
 var drone = arDrone.createClient()
-var state = { x: 0, y: 0, z: 0, rot: 0 }
+var speed = {
+  x: 0, // forward/back
+  y: 0, // left/right
+  z: 0, // rotateLeft/rotateRight
+  e: 0  // up/down
+}
 var inAir = false
 var gestureEnabled = true
 
@@ -35,7 +40,7 @@ drone.on('batteryChange', function (num) {
 })
 
 setInterval(function () {
-  console.log(state)
+  console.log(speed)
 }, 1000)
 
 function set (params) {
@@ -44,11 +49,11 @@ function set (params) {
 
     // Update parameter
     if (val > 1) {
-      state[param] = 1
+      speed[param] = 1
     } else if (val < -1) {
-      state[param] = -1
+      speed[param] = -1
     } else {
-      state[param] = val
+      speed[param] = val
     }
 
     // Send movement command to drone
@@ -56,9 +61,9 @@ function set (params) {
       drone.front(val)
     } else if (param === 'y') {
       drone.right(val)
-    } else if (param === 'z') {
+    } else if (param === 'e') {
       drone.up(val)
-    } else if (param === 'rot') {
+    } else if (param === 'z') {
       drone.clockwise(val)
     } else {
       console.error('Invalid param to `set`')
@@ -67,7 +72,7 @@ function set (params) {
 }
 
 function reset () {
-  set({x: 0, y: 0, z: 0, rot: 0})
+  set({x: 0, y: 0, z: 0, e: 0})
   drone.stop()
 }
 
@@ -120,12 +125,6 @@ process.stdin.on('data', function(chunk) {
     var LEFT = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 68)
   }
 
-  if (key === 'k') {
-    land()
-    setTimeout(function () {
-      process.exit(0)
-    }, 200)
-
   if (key === 'w') {
     set({ x: speed })
   } else if (key === 's') {
@@ -135,15 +134,20 @@ process.stdin.on('data', function(chunk) {
   } else if (key === 'a') {
     set({ y: -speed })
   } else if (UP) {
-    set({ z: speed })
+    set({ e: speed })
   } else if (DOWN) {
-    set({ z: -speed })
+    set({ e: -speed })
   } else if (LEFT) {
-    set({ rot: -speed }) // COUNTERCLOCKWISE
+    set({ z: -speed }) // COUNTERCLOCKWISE
   } else if (RIGHT) {
-    set({ rot: speed }) // CLOCKWISE
+    set({ z: speed }) // CLOCKWISE
   } else if (key === 'e') {
     drone.stop()
+  } else if (key === 'k') {
+    land()
+    setTimeout(function () {
+      process.exit(0)
+    }, 200)
   } else if (key === 't') {
     takeoff()
   } else if (key === 'l') {
@@ -165,8 +169,8 @@ if (argv.oculus) {
     .pipe(split())
     .pipe(through(function (line) {
       var arr = line.split(',')
-      var x = Number(-arr[0]), rot = Number(-arr[1]), y = Number(-arr[2])
-      set({ x: x, y: y, rot: rot })
+      var x = Number(-arr[0]), z = Number(-arr[1]), y = Number(-arr[2])
+      set({ x: x, y: y, z: z })
 
       // Gestures:
       //   DOWN to takeoff/land
@@ -206,8 +210,6 @@ net.createServer(function (c) {
 }).listen(6969)
 
 
-
-// drone.on('navdata', function (data) {
-//   console.log(data)
-// })
-
+drone.on('navdata', function (data) {
+  console.log(data)
+})
