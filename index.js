@@ -31,17 +31,13 @@ var speed = {
   z: 0, // rotateLeft/rotateRight
   e: 0  // up/down
 }
-var pids = {}
+var pid = null
 var zero = {
-  x: 0,
-  y: 0,
   z: 0
 }
 
-function setupPidControllers () {
-  pids.x = new PidController(0.01, 0.0001, 0)
-  pids.y = new PidController(0.01, 0.0001, 0)
-  pids.z = new PidController(0.01, 0, 0.001)
+function setupPid () {
+  pid = new PidController(0.01, 0, 0.0001)
 }
 
 // Fixes the 180 to -180 problem
@@ -61,26 +57,22 @@ function correctZ (zTarget, inOrOut) {
 }
 
 var inAir = false
-var isRunning = false
 var gestureEnabled = true
 
 drone.disableEmergency()
 drone.stop() // Stop command drone was executing before batt died
 drone.config('control:control_yaw', '6.1')
-drone.config('control:euler_angle_max', '0.5')
+drone.config('control:euler_angle_max', '0.37')
 
 drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
 })
 
 setInterval(function () {
-  console.log(speed)
-  if (pids.x) {
+  if (pid) {
     console.log({
-      xTarget: pids.x.target.toFixed(2),
-      yTarget: pids.y.target.toFixed(2),
-      zTarget: pids.z.target.toFixed(2),
-      isRunning: isRunning
+      zTarget: pid.target.toFixed(2),
+      inAir: inAir
     })
   }
 }, 500)
@@ -123,18 +115,12 @@ function takeoff () {
   drone.stop()
   drone.takeoff()
   inAir = true
-  setupPidControllers()
-  setTimeout(function () {
-    isRunning = true
-  }, 2000)
+  setupPid()
 }
 
 function land () {
   inAir = false
   drone.land()
-  setTimeout(function () {
-    isRunning = false
-  }, 2000)
 }
 
 function flipAhead () {
@@ -187,9 +173,17 @@ process.stdin.on('data', function(chunk) {
   } else if (DOWN) {
     set({ e: -speed })
   } else if (LEFT) {
-    set({ z: -speed }) // COUNTERCLOCKWISE
+    if (argv.oculus) {
+      zero.z += 5
+    } else {
+      set({ z: -speed }) // COUNTERCLOCKWISE
+    }
   } else if (RIGHT) {
-    set({ z: speed }) // CLOCKWISE
+    if (argv.oculus) {
+      zero.z -= 5
+    } else {
+      set({ z: speed }) // CLOCKWISE
+    }
   } else if (key === 'e') {
     drone.stop()
   } else if (key === 'k') {
@@ -225,10 +219,10 @@ if (argv.oculus) {
       var yTarget = Number(-arr[2] * (180 / Math.PI))
       var zTarget = Number(-arr[1] * (180 / Math.PI))
 
-      if (isRunning) {
-        pids.x.setTarget(xTarget)
-        pids.y.setTarget(yTarget)
-        pids.z.setTarget(correctZ(zTarget, 'output'))
+      if (inAir) {
+        set({ x: (xTarget / 90),
+              y: (yTarget / 90) })
+        pid.setTarget(correctZ(zTarget, 'output'))
       }
 
       // Gestures:
@@ -269,31 +263,19 @@ net.createServer(function (c) {
 }).listen(6969)
 
 drone.on('navdata', function (data) {
-  var xSensor = Number(data.demo.rotation.x)
-  var ySensor = Number(data.demo.rotation.y)
   var zSensor = Number(data.demo.rotation.z)
 
   zSensor = correctZ(zSensor, 'input')
 
   // Drone starting position should be 0,0,0.
-  if (isRunning) {
-    xSensor += zero.x
-    ySensor += zero.y
+  if (inAir) {
     zSensor += zero.z
 
-    var xCorrect = pids.x.update(xSensor)
-    var yCorrect = pids.y.update(ySensor)
-    var zCorrect = pids.z.update(zSensor)
+    var zCorrect = pid.update(zSensor)
 
-    set({ x: xCorrect })
-    set({ y: yCorrect })
     set({ z: zCorrect })
 
-    console.log('sensor: { x: '+xSensor.toFixed(2) + ' y: ' + ySensor.toFixed(2) + ' z: ' + zSensor.toFixed(2) + ' } correct: { x: ' + xCorrect.toFixed(2) + ' y: ' + yCorrect.toFixed(2) + ' z: ' + zCorrect.toFixed(2) + ' }')
-  } else {
-    zero.x = -xSensor
-    zero.y = -ySensor
-    zero.z = -zSensor
+    console.log('sensor: { z: ' + zSensor.toFixed(2) + ' } correct: { z: ' + zCorrect.toFixed(2) + ' }')
   }
 })
 
@@ -301,16 +283,16 @@ if (argv.demo) {
   takeoff()
   drone
     .after(5000, function () {
-      pids.x.setTarget(25)
+      set({ x: (1 / 30) })
     })
-    // .after(3000, function () {
-    //   pids.x.setTarget(-25)
-    // })
-    // .after(3000, function () {
-    //   pids.x.setTarget(25)
-    // })
+    .after(3000, function () {
+      set({ x: -(1 / 30) })
+    })
+    .after(3000, function () {
+      set({ x: (1 / 30) })
+    })
     .after(5000, function () {
-      pids.x.setTarget(0)
+      set({ x: 0 })
     })
     .after(2000, function () {
       land()
