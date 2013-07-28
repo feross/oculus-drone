@@ -3,6 +3,7 @@ var fs = require('fs')
 var net = require('net')
 var optimist = require('optimist')
 var PaVEParser = require('./node_modules/ar-drone/lib/video/PaVEParser')
+var PidController = require('node-pid-controller')
 var split = require('split')
 var through = require('through')
 
@@ -29,7 +30,39 @@ var speed = {
   z: 0, // rotateLeft/rotateRight
   e: 0  // up/down
 }
-var inAir = false
+var pids = {
+  x: new PidController(0.05, 0.00004, 0.0004),
+  y: new PidController(0.05, 0.00004, 0.0004),
+  z: new PidController(0.05, 0.00004, 0.0004)
+}
+var zero = {
+  x: 0,
+  y: 0,
+  z: 0
+}
+var lastOutput = {
+  x: 0,
+  y: 0,
+  z: 0
+}
+var lastInput = {
+  x: 0,
+  y: 0,
+  z: 0
+}
+
+function correct(zTarget, last) {
+      while(zTarget - last.z > 180) {
+        zTarget -= 360
+      }
+      while(last.z - zTarget > 180) {
+        zTarget += 360
+      }
+      last.z = zTarget
+      return zTarget
+}
+
+var inAir = false, isRunning = false
 var gestureEnabled = true
 
 drone.disableEmergency()
@@ -41,6 +74,11 @@ drone.on('batteryChange', function (num) {
 
 setInterval(function () {
   console.log(speed)
+  console.log({
+    xTarget: pids.x.target.toFixed(2),
+    yTarget: pids.y.target.toFixed(2),
+    zTarget: pids.z.target.toFixed(2)
+  })
 }, 1000)
 
 function set (params) {
@@ -81,11 +119,13 @@ function takeoff () {
   drone.stop()
   drone.takeoff()
   inAir = true
+  setTimeout(function(){isRunning = true}, 1000)
 }
 
 function land () {
   inAir = false
   drone.land()
+  setTimeout(function(){isRunning = false}, 1000)
 }
 
 function flipAhead () {
@@ -158,36 +198,41 @@ process.stdin.on('data', function(chunk) {
   }
 })
 
+// Oculus control
 if (argv.oculus) {
+
   // Connect to oculus server
   var oculusClient = net.connect({ port: 12345 })
   oculusClient.on('error', function (err) {
     console.error('Error connecting to oculus server.')
   })
 
+  // Process oculus data
   oculusClient
     .pipe(split())
     .pipe(through(function (line) {
       var arr = line.split(',')
-      var x = Number(-arr[0]), z = Number(-arr[1]), y = Number(-arr[2])
-      set({ x: x, y: y, z: z })
+      var xTarget = Number(-arr[0])
+      var yTarget = Number(-arr[2])
+      var zTarget = Number(-arr[1] * (180 / Math.PI))
+      pids.z.setTarget(correct(zTarget, lastOutput))
 
       // Gestures:
       //   DOWN to takeoff/land
       //   UP to flip
-      if (gestureEnabled) {
-        if (x < -1) {
-          flipBehind()
-          disableGestureTimeout()
-        } else if (x > 1) {
-          if (inAir) {
-            land()
-          } else {
-            takeoff()
-          }
-          disableGestureTimeout()
-        }
-      }
+      // if (gestureEnabled) {
+      //   if (xTarget < -1) {
+      //     flipBehind()
+      //     disableGestureTimeout()
+      //   } else if (xTarget > 1) {
+      //     if (inAir) {
+      //       land()
+      //     } else {
+      //       takeoff()
+      //     }
+      //     disableGestureTimeout()
+      //   }
+      // }
     }))
 }
 
@@ -209,7 +254,31 @@ net.createServer(function (c) {
 
 }).listen(6969)
 
-
 drone.on('navdata', function (data) {
-  console.log(data)
+  var xSensor = Number(data.demo.rotation.x)
+  var ySensor = Number(data.demo.rotation.y)
+  var zSensor = Number(data.demo.rotation.z)
+
+  zSensor = correct(zSensor, lastInput)
+
+  // Drone starting position should be 0,0,0.
+  if (!isRunning) {
+    zero.x = -xSensor
+    zero.y = -ySensor
+    zero.z = -zSensor
+  } else {
+    xSensor += zero.x
+    ySensor += zero.y
+    zSensor += zero.z
+
+    var xCorrect = pids.x.update(xSensor)
+    var yCorrect = pids.y.update(ySensor)
+    var zCorrect = pids.z.update(zSensor)
+
+    set({ z: zCorrect })
+
+    console.log('sensor: ' + zSensor.toFixed(2) + '  correct: ' + zCorrect.toFixed(2))
+
+  }
 })
+
