@@ -8,6 +8,8 @@ var PidController = require('node-pid-controller')
 var split = require('split')
 var through = require('through')
 
+var SPEED = 0.2
+
 module.exports = function (drone, oculus) {
   // Don't crash node on exceptions
   process.on('uncaughtException', function (err) {
@@ -37,7 +39,8 @@ module.exports = function (drone, oculus) {
   }
   var pid = null
   var zero = {
-    z: 0
+    drone: 0,
+    oculus: 0
   }
 
   function setupPid () {
@@ -66,7 +69,7 @@ module.exports = function (drone, oculus) {
   drone.disableEmergency()
   drone.stop() // Stop command drone was executing before batt died
   drone.config('control:control_yaw', '6.1')
-  drone.config('control:euler_angle_max', '0.10')
+  drone.config('control:euler_angle_max', '0.25')
 
   drone.on('batteryChange', function (num) {
     console.log('battery: ' + num)
@@ -152,7 +155,7 @@ module.exports = function (drone, oculus) {
   process.stdin.on('data', function(chunk) {
     var key = chunk.toString()
     var keyBuf = chunk.toJSON()
-    var speed = 0.2
+    var speed = SPEED
 
     console.log(key)
     console.log(keyBuf)
@@ -178,13 +181,13 @@ module.exports = function (drone, oculus) {
       set({ e: -speed })
     } else if (LEFT) {
       if (argv.oculus) {
-        zero.z += 5
+        zero.drone += 5
       } else {
         set({ z: -speed }) // COUNTERCLOCKWISE
       }
     } else if (RIGHT) {
       if (argv.oculus) {
-        zero.z -= 5
+        zero.drone -= 5
       } else {
         set({ z: speed }) // CLOCKWISE
       }
@@ -223,6 +226,12 @@ module.exports = function (drone, oculus) {
         var yTarget = Number(-arr[2] * (180 / Math.PI))
         var zTarget = Number(-arr[1] * (180 / Math.PI))
 
+        if (inAir) {
+          zTarget += zero.oculus
+        } else {
+          zero.oculus = -zTarget
+        }
+
         // Gestures:
         //   DOWN to takeoff/land
         //   UP to flip
@@ -251,9 +260,14 @@ module.exports = function (drone, oculus) {
           }
         }
 
+        var x = xTarget > 10  ? ((xTarget - 10) / 40) :
+                xTarget < -10 ? ((xTarget + 10) / 40) : 0;
+        var y = yTarget > 10  ? ((yTarget - 10) / 40) :
+                yTarget < -10 ? ((yTarget + 10) / 40) : 0;
+        // console.log("x: " + x + " y: " + y);
+
         if (inAir) {
-          set({ x: xTarget / 40,
-                y: yTarget / 40})
+          set({ x: x, y: y})
           pid.setTarget(correctZ(zTarget, 'output'))
         }
       }))
@@ -299,7 +313,7 @@ module.exports = function (drone, oculus) {
 
     // Drone starting position should be 0,0,0.
     if (inAir) {
-      zSensor += zero.z
+      zSensor += zero.drone
 
       var zCorrect = pid.update(zSensor)
 
@@ -307,7 +321,7 @@ module.exports = function (drone, oculus) {
 
       console.log('sensor: { z: ' + zSensor.toFixed(2) + ' } correct: { z: ' + zCorrect.toFixed(2) + ' }')
     } else {
-      zero.z = -zSensor
+      zero.drone = -zSensor
     }
   })
 
@@ -330,4 +344,54 @@ module.exports = function (drone, oculus) {
         land()
       })
   }
+
+
+  // Socket server for control from web app
+  var io = require('socket.io').listen(7777)
+  io.sockets.on('connection', function (socket) {
+    socket.on('key', function (keyCode) {
+      var key = String.fromCharCode(keyCode)
+      var speed = SPEED
+
+      console.log('Received ' + key)
+
+      if (key === 'w') {
+        set({ e: speed })
+      } else if (key === 's') {
+        set({ e: -speed })
+      // } else if (UP) {
+      //   set({ e: speed })
+      // } else if (DOWN) {
+      //   set({ e: -speed })
+      } else if (key === 'a') {
+        if (argv.oculus) {
+          zero.drone += 5
+        } else {
+          set({ z: -speed }) // COUNTERCLOCKWISE
+        }
+      } else if (key === 'd') {
+        if (argv.oculus) {
+          zero.drone -= 5
+        } else {
+          set({ z: speed }) // CLOCKWISE
+        }
+      } else if (key === 'e') {
+        drone.stop()
+      } else if (key === 'k') {
+        land()
+        setTimeout(function () {
+          process.exit(0)
+        }, 200)
+      } else if (key === 't') {
+        takeoff()
+      } else if (key === 'l') {
+        land()
+      }
+      // } else if (keyBuf[0] === 32) {
+      //   flipAhead()
+      // }
+
+    })
+  })
+
 }

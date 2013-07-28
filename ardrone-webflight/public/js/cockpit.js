@@ -1,5 +1,13 @@
 (function(window, document) {
-        
+
+    // Keys
+    console.log('Setting up keys');
+    var controlSocket = io.connect('http://localhost:7777')
+    $(document).keypress(function (e) {
+      console.log(e.keyCode)
+      controlSocket.emit('key', e.keyCode)
+    })
+
     var hostname = document.location.hostname ? document.location.hostname : "localhost";
 
     var Cockpit = function Cockpit() {
@@ -37,7 +45,7 @@
                 html     : 'Error : ' + JSON.stringify(e)
               });
         });
-        
+
     };
 
     Cockpit.prototype.loadPlugins = function loadPlugins() {
