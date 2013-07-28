@@ -108,35 +108,59 @@ function flip () {
     })
 }
 
-process.stdin.on('data', function(chunk) {
-  var key = chunk.toString()
-  var keyBuf = chunk.toJSON()
 
-  console.log(key)
+// Keyboard control
+if (argv.keyboard) {
+  process.stdin.setRawMode(true)
+  process.stdin.on('data', function(chunk) {
+    var key = chunk.toString()
+    var keyBuf = chunk.toJSON()
+    var speed = 0.2
 
-  if (key === 'e') {
-    drone.disableEmergency()
+    console.log(key)
+    console.log(keyBuf)
 
-  } else if (key === 't') {
-    takeoff()
+    if (Array.isArray(keyBuf)) {
+      var UP = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 65)
+      var DOWN = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 66)
+      var RIGHT = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 67)
+      var LEFT = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 68)
+    }
 
-  } else if (key === 'l') {
-    land()
+    if (key === 'w') {
+      set({ x: speed })
+    } else if (key === 's') {
+      set({ x: -speed })
+    } else if (key === 'd') {
+      set({ y: speed })
+    } else if (key === 'a') {
+      set({ y: -speed })
+    } else if (UP) {
+      set({ z: speed })
+    } else if (DOWN) {
+      set({ z: -speed })
+    } else if (LEFT) {
+      set({ rot: -speed }) // COUNTERCLOCKWISE
+    } else if (RIGHT) {
+      set({ rot: speed }) // CLOCKWISE
+    } else if (key === 'e') {
+      drone.stop()
+    } else if (key === 't') {
+      takeoff()
+    } else if (key === 'l') {
+      land()
+    } else if (key === 'k') {
+      land()
+      setTimeout(function () {
+        process.exit(0)
+      }, 200)
+    } else if (keyBuf[0] === 32) {
+      flipAhead()
+    }
+  })
+}
 
-  } else if (key === 'k') {
-    console.log('KILL')
-    land()
-    setTimeout(function () {
-      process.exit(0)
-    }, 200)
 
-  } else if (key === 'q') {
-    drone.stop()
-
-  } else if (keyBuf[0] === 32) {
-    flip()
-  }
-})
 
 net.createServer(function (c) {
   console.log('server connected')
