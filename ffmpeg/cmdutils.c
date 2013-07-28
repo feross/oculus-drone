@@ -23,6 +23,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <math.h>
+#include <pthread.h>
 
 /* Include only the enabled headers since some compilers (namely, Sun
    Studio) will not omit unused inline functions and create undefined
@@ -123,7 +124,7 @@ void exit_program(int ret)
     if (program_exit)
         program_exit(ret);
 
-    exit(ret);
+    pthread_exit(NULL);
 }
 
 double parse_number_or_die(const char *context, const char *numstr, int type,

@@ -1435,7 +1435,7 @@ no_output_pic:
     return 0;
 }
 
-void (*hackPictureDataCallback)(char **toSend) = NULL;
+void (*hackPictureDataCallback)(char **toSend, void *data) = NULL;
 void *hackUserData = NULL;
 
 int ff_MPV_encode_picture(AVCodecContext *avctx, AVPacket *pkt,

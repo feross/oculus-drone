@@ -106,6 +106,7 @@ $(foreach P,$(PROGS-yes),$(eval $(call DOPROG,$(P))))
 
 libffmpeghack.dylib: ffmpeg.o $(FF_DEP_LIBS)
 	$(LD) $(LDFLAGS) -dynamiclib $(LD_O) $(OBJS-ffmpeg) $(FF_EXTRALIBS)
+	install_name_tool -id /Users/jhiesey/Desktop/oculus-drone/ffmpeg/libffmpeghack.dylib libffmpeghack.dylib
 
 OBJDIRS += tools
 

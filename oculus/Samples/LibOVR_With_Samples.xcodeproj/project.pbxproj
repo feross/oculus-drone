@@ -108,6 +108,7 @@
 		C50FA3D2177BB88E00730BB7 /* OVR_Profile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C50FA3CE177BB88E00730BB7 /* OVR_Profile.cpp */; };
 		C50FA3D3177BB88E00730BB7 /* OVR_Profile.h in Headers */ = {isa = PBXBuildFile; fileRef = C50FA3CF177BB88E00730BB7 /* OVR_Profile.h */; };
 		E495245B17A48EF300919D99 /* server-socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E495245A17A48EF300919D99 /* server-socket.cpp */; };
+		E4E73ABF17A533A900A684AF /* libffmpeghack.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E73ABE17A533A900A684AF /* libffmpeghack.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +266,7 @@
 		C50FA3CE177BB88E00730BB7 /* OVR_Profile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OVR_Profile.cpp; sourceTree = "<group>"; };
 		C50FA3CF177BB88E00730BB7 /* OVR_Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVR_Profile.h; sourceTree = "<group>"; };
 		E495245A17A48EF300919D99 /* server-socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "server-socket.cpp"; path = "../../server/server-socket.cpp"; sourceTree = "<group>"; };
+		E4E73ABE17A533A900A684AF /* libffmpeghack.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libffmpeghack.dylib; path = ../../ffmpeg/libffmpeghack.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 				4985388E16ECFF53008D0727 /* OpenGL.framework in Frameworks */,
 				4985385E16ECFE92008D0727 /* Cocoa.framework in Frameworks */,
 				9BAB70F6170E69530006FE98 /* libovr.a in Frameworks */,
+				E4E73ABF17A533A900A684AF /* libffmpeghack.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +357,7 @@
 		49A5332A16E527490039CB59 = {
 			isa = PBXGroup;
 			children = (
+				E4E73ABE17A533A900A684AF /* libffmpeghack.dylib */,
 				9BA4DDB71727061100CF7715 /* Oculus.icns */,
 				49DB65F01718B1E10097A8DD /* ApplicationServices.framework */,
 				49ABA2E81718A38100E288A7 /* AudioToolbox.framework */,
@@ -890,6 +894,10 @@
 					../../server,
 				);
 				INFOPLIST_FILE = "LibOVR_With_Samples.xcodeproj/OculusWorldDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ffmpeg\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = OculusWorldDemo/MacOS/Debug;
 				WRAPPER_EXTENSION = app;
@@ -912,6 +920,10 @@
 					../../server,
 				);
 				INFOPLIST_FILE = "LibOVR_With_Samples.xcodeproj/OculusWorldDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ffmpeg\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = OculusWorldDemo/MacOS/Release;
 				WRAPPER_EXTENSION = app;

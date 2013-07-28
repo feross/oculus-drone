@@ -3410,7 +3410,6 @@ static void *mainThreadFunc(void *argv0) {
     return NULL;
 }
 
-
 extern void (*hackPictureDataCallback)(char **toSend, void *data);
 extern void *hackUserData;
 
@@ -3419,13 +3418,13 @@ void setHackCallback(void (*callback)(char **toSend, void *data)) {
 }
 
 void runHackThread(void *data) {
-    hackUserData = data;
     pthread_t thread;
+    hackUserData = data;
     pthread_create(&thread, NULL, mainThreadFunc, (void *) "ffmpeg");  
 }
 
 int main(int argc, char **argv) {
-    runHackThread();
+    runHackThread(NULL);
     return 0;
 }
 
