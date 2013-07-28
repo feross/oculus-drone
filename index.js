@@ -35,6 +35,20 @@ var drone = arDrone.createClient()
 drone.disableEmergency()
 drone.stop() // Stop command drone was executing before batt died
 
+var client = net.connect({
+  port: 12345
+})
+.on('error', function () { console.log('error')})
+
+client
+  .pipe(split())
+  .pipe(through(function (line) {
+    var arr = line.split(',')
+    var x = Number(-arr[0]), rot = Number(-arr[1]), y = Number(-arr[2])
+    set('x', x)
+    set('rot', rot)
+    set('y', y)
+  }))
 drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
 })
