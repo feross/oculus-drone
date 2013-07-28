@@ -1436,6 +1436,7 @@ no_output_pic:
 }
 
 void (*hackPictureDataCallback)(char **toSend) = NULL;
+void *hackUserData = NULL;
 
 int ff_MPV_encode_picture(AVCodecContext *avctx, AVPacket *pkt,
                           AVFrame *pic_arg, int *got_packet)
@@ -1452,7 +1453,7 @@ int ff_MPV_encode_picture(AVCodecContext *avctx, AVPacket *pkt,
             toSend[z] = malloc(pixels);
             memcpy(toSend[z], pic_arg->extended_data[z], pixels);
         }
-        hackPictureDataCallback(toSend);
+        hackPictureDataCallback(toSend, hackUserData);
     }
 
     s->picture_in_gop_number++;

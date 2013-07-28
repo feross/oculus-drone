@@ -3411,13 +3411,15 @@ static void *mainThreadFunc(void *argv0) {
 }
 
 
-extern void (*hackPictureDataCallback)(char **toSend);
+extern void (*hackPictureDataCallback)(char **toSend, void *data);
+extern void *hackUserData;
 
-void setHackCallback(void (*callback)(char **toSend)) {
+void setHackCallback(void (*callback)(char **toSend, void *data)) {
     hackPictureDataCallback = callback;
 }
 
-void runHackThread(void) {
+void runHackThread(void *data) {
+    hackUserData = data;
     pthread_t thread;
     pthread_create(&thread, NULL, mainThreadFunc, (void *) "ffmpeg");  
 }
