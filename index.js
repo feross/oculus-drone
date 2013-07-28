@@ -1,6 +1,7 @@
 var arDrone = require('ar-drone')
 var fs = require('fs')
 var net = require('net')
+var optimist = require('optimist')
 var PaVEParser = require('./node_modules/ar-drone/lib/video/PaVEParser')
 var split = require('split')
 var through = require('through')
@@ -16,40 +17,16 @@ process.on('uncaughtException', function (err) {
   }, 200)
 })
 
-process.stdin.setRawMode(true)
+var argv = optimist
+  .usage('Usage: $0 [--oculus] [--keyboard]')
+  .alias('oculus', 'o')
+  .alias('keyboard', 'k')
+  .argv
 
 var drone = arDrone.createClient()
 var inAir = false
 drone.disableEmergency()
 drone.stop() // Stop command drone was executing before batt died
-
-var client = net.connect({
-  port: 12345
-})
-.on('error', function () { console.log('error')})
-
-client
-  .pipe(split())
-  .pipe(through(function (line) {
-    var arr = line.split(',')
-    var x = Number(-arr[0]), rot = Number(-arr[1]), y = Number(-arr[2])
-    set('x', x)
-    set('rot', rot)
-    set('y', y)
-
-    // Gestures:
-    //   DOWN to takeoff/land
-    //   UP to flip
-    if (x < -1)
-      flip()
-    if (x > 1) {
-      if (inAir) {
-        land()
-      } else {
-        takeoff()
-      }
-    }
-  }))
 
 drone.on('batteryChange', function (num) {
   console.log('battery: ' + num)
@@ -163,8 +140,40 @@ if (argv.keyboard) {
   })
 }
 
+if (argv.oculus) {
+  // Connect to oculus server
+  var oculusClient = net.connect({ port: 12345 })
+  oculusClient.on('error', function (err) {
+    console.error('Error connecting to oculus server.')
+  })
 
+  oculusClient
+    .pipe(split())
+    .pipe(through(function (line) {
+      var arr = line.split(',')
+      var x = Number(-arr[0]), rot = Number(-arr[1]), y = Number(-arr[2])
+      set({ x: x, y: y, rot: rot })
 
+      // Gestures:
+      //   DOWN to takeoff/land
+      //   UP to flip
+      if (gestureEnabled) {
+        if (x < -1) {
+          flipBehind()
+          disableGestureTimeout()
+        } else if (x > 1) {
+          if (inAir) {
+            land()
+          } else {
+            takeoff()
+          }
+          disableGestureTimeout()
+        }
+      }
+    }))
+}
+
+// Video server
 net.createServer(function (c) {
   console.log('server connected')
 
