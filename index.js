@@ -18,9 +18,8 @@ process.on('uncaughtException', function (err) {
 })
 
 var argv = optimist
-  .usage('Usage: $0 [--oculus] [--keyboard]')
+  .usage('Usage: $0 [--oculus]')
   .alias('oculus', 'o')
-  .alias('keyboard', 'k')
   .argv
 
 var drone = arDrone.createClient()
@@ -105,55 +104,55 @@ function disableGestureTimeout () {
 }
 
 // Keyboard control
-if (argv.keyboard) {
-  process.stdin.setRawMode(true)
-  process.stdin.on('data', function(chunk) {
-    var key = chunk.toString()
-    var keyBuf = chunk.toJSON()
-    var speed = 0.2
+process.stdin.setRawMode(true)
+process.stdin.on('data', function(chunk) {
+  var key = chunk.toString()
+  var keyBuf = chunk.toJSON()
+  var speed = 0.2
 
-    console.log(key)
-    console.log(keyBuf)
+  console.log(key)
+  console.log(keyBuf)
 
-    if (Array.isArray(keyBuf)) {
-      var UP = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 65)
-      var DOWN = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 66)
-      var RIGHT = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 67)
-      var LEFT = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 68)
-    }
+  if (Array.isArray(keyBuf)) {
+    var UP = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 65)
+    var DOWN = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 66)
+    var RIGHT = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 67)
+    var LEFT = (keyBuf[0] === 27 && keyBuf[1] === 91 && keyBuf[2] === 68)
+  }
 
-    if (key === 'w') {
-      set({ x: speed })
-    } else if (key === 's') {
-      set({ x: -speed })
-    } else if (key === 'd') {
-      set({ y: speed })
-    } else if (key === 'a') {
-      set({ y: -speed })
-    } else if (UP) {
-      set({ z: speed })
-    } else if (DOWN) {
-      set({ z: -speed })
-    } else if (LEFT) {
-      set({ rot: -speed }) // COUNTERCLOCKWISE
-    } else if (RIGHT) {
-      set({ rot: speed }) // CLOCKWISE
-    } else if (key === 'e') {
-      drone.stop()
-    } else if (key === 't') {
-      takeoff()
-    } else if (key === 'l') {
-      land()
-    } else if (key === 'k') {
-      land()
-      setTimeout(function () {
-        process.exit(0)
-      }, 200)
-    } else if (keyBuf[0] === 32) {
-      flipAhead()
-    }
-  })
-}
+  if (key === 'k') {
+    land()
+    setTimeout(function () {
+      process.exit(0)
+    }, 200)
+
+  if (key === 'w') {
+    set({ x: speed })
+  } else if (key === 's') {
+    set({ x: -speed })
+  } else if (key === 'd') {
+    set({ y: speed })
+  } else if (key === 'a') {
+    set({ y: -speed })
+  } else if (UP) {
+    set({ z: speed })
+  } else if (DOWN) {
+    set({ z: -speed })
+  } else if (LEFT) {
+    set({ rot: -speed }) // COUNTERCLOCKWISE
+  } else if (RIGHT) {
+    set({ rot: speed }) // CLOCKWISE
+  } else if (key === 'e') {
+    drone.stop()
+  } else if (key === 't') {
+    takeoff()
+  } else if (key === 'l') {
+    land()
+
+  } else if (keyBuf[0] === 32) {
+    flipAhead()
+  }
+})
 
 if (argv.oculus) {
   // Connect to oculus server
