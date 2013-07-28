@@ -1547,13 +1547,14 @@ void OculusWorldDemoApp::Render(const StereoEyeParams& stereo)
     {
         
         // MAIN CRAP MAIN
+//        
+//        static int frame = 0;
+//        std::cout << "FRAME: " << frame << std::endl;
+//        frame++;
         
         pRender->ApplyStereoParams2D(stereo);
-        
-        //pRender->SetDepthMode(false, false);
-        
-        float unitPixel = SConfig.Get2DUnitPixel();
-        float textHeight= unitPixel * 22;
+        pRender->SetDepthMode(false, false);
+
         PopulatePreloadScene();
         
         LoadingScene.Render(pRender, Matrix4f());

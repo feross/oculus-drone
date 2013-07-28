@@ -1445,17 +1445,6 @@ int ff_MPV_encode_picture(AVCodecContext *avctx, AVPacket *pkt,
     int i, stuffing_count, ret;
     int context_count = s->slice_context_count;
 
-    if(hackPictureDataCallback) {
-        int pixels = pic_arg->height * pic_arg->width;
-        int z;
-        char *toSend[3];
-        for(z = 0; z < 3; z++) {
-            toSend[z] = malloc(pixels);
-            memcpy(toSend[z], pic_arg->extended_data[z], pixels);
-        }
-        hackPictureDataCallback(toSend, hackUserData);
-    }
-
     s->picture_in_gop_number++;
 
     if (load_input_picture(s, pic_arg) < 0)
@@ -1463,6 +1452,18 @@ int ff_MPV_encode_picture(AVCodecContext *avctx, AVPacket *pkt,
 
     if (select_input_picture(s) < 0) {
         return -1;
+    }
+
+    if(hackPictureDataCallback) {
+        int pixels = pic_arg->height * pic_arg->width;
+        int z;
+        char *toSend[3];
+        for(z = 0; z < 3; z++) {
+            printf("number of pixels: %d\n", pixels);
+            toSend[z] = malloc(pixels);
+            memcpy(toSend[z], pic_arg->data[z], pixels);
+        }
+        hackPictureDataCallback(toSend, hackUserData);
     }
 
     /* output? */
