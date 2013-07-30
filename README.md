@@ -1,5 +1,7 @@
-oculus-drone
+Oculus Drone
 ============
+
+Control a quadcopter with an Oculus Rift. This is virtual reality piloting---you see through the drone's camera. When you turn, it turns; when you nod, it tilts. Kind of like flying a jetpack.
 
 ![slide.png](Oculus Drone project)
 
@@ -9,6 +11,13 @@ oculus-drone
 - John Hiesey
 - Daniel Posch
 - Abi Raja
+
+
+## Contributors
+
+**Contributions welcome!**
+
+
 ## The MIT License
 
 Copyright (c) 2013
