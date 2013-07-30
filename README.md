@@ -1,5 +1,11 @@
 oculus-drone
 ============
+## Authors
+
+- Feross Aboukhadijeh
+- John Hiesey
+- Daniel Posch
+- Abi Raja
 ## The MIT License
 
 Copyright (c) 2013
