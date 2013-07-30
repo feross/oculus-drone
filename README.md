@@ -12,6 +12,9 @@ Control a quadcopter with an Oculus Rift. This is virtual reality piloting---you
 - Daniel Posch
 - Abi Raja
 
+## Greylock Hackfest 2013
+
+Originally written in 24 hours for the Greylock Hackfest, where we got 2nd place. Code is currently a mess, as expected. Will improve over the coming weeks.
 
 ## Contributors
 
