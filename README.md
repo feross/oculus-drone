@@ -3,7 +3,7 @@ Oculus Drone
 
 Control a quadcopter with an Oculus Rift. This is virtual reality piloting---you see through the drone's camera. When you turn, it turns; when you nod, it tilts. Kind of like flying a jetpack.
 
-![slide.png](Oculus Drone project)
+![https://raw.github.com/feross/oculus-drone/master/slide.png](Oculus Drone project)
 
 ## Authors
 
