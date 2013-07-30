@@ -1,5 +1,8 @@
 oculus-drone
 ============
+
+![slide.png](Oculus Drone project)
+
 ## Authors
 
 - Feross Aboukhadijeh
