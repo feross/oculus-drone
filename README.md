@@ -5,11 +5,25 @@ Oculus Drone
 
 Control a quadcopter with an Oculus Rift. This is virtual reality piloting---you see through the drone's camera. When you turn, it turns; when you nod, it tilts. Kind of like flying a jetpack.
 
+## How it works
+
+The Oculus has a C++ SDK. We made a server in C++ that gets orientation readings from the Oculus and sends them out over TCP. 
+
+The main command+control was a Node.js application. It connects to the Oculus server. There's a great Node.js SDK for the AR Drone 2.0 -- written by users, by the way, the OEM's SDK is in C++ and is really bad. 
+
+The Node app does the following:
+* Reads headset orientation from the Oculus server
+* Runs a PID controller to make the drone orientation match that of the headset, with some modifications
+* Pulls the video feed from the drone, converts it, and serves it as an HTTP stream
+* Serves a tiny web page
+
+The web page runs in full screen. (To clarify: the Oculus is plugged in both via USB, for orientation readings, and HDMI, for video.) The web page receives the video stream and uses WebGL to render two copies of the video, side by side, for the right and left eyes.
+
 ## Authors
 
-- Feross Aboukhadijeh
+- [Feross Aboukhadijeh](http://feross.org)
 - John Hiesey
-- Daniel Posch
+- [Daniel Posch](http://dcpos.ch/)
 - Abi Raja
 
 ## Greylock Hackfest 2013
