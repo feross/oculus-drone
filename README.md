@@ -30,6 +30,16 @@ The web page runs in full screen. (To clarify: the Oculus is plugged in both via
 
 Originally written in 24 hours for the Greylock Hackfest, where we got 2nd place. Code is currently a mess, as expected. Will improve over the coming weeks.
 
+## How to get this running
+
+This project is still very much hackathon quality code, so it's a bit tricky to get it running. We never had a chance to go back and fix it, so these instructions will have to suffice.
+
+There's an Xcode project in there somewhere that you need to build and run first. It gathers data points from the oculus headset and sends them over a TCP socket to anyone who connects. Then you run the node server which connects to the first server and uses the data to control the drone over wifi. You need to already be connected to the drone's wifi hotspot when you run the node server. Then you visit http://localhost:3000, I believe, and you get the live video feed there. Fullscreen your web browser to fill up the Oculus's display and you're good to go.
+
+Use up/down (or maybe W/S) keys to control elevation since the oculus only has six axes. Once you're at a good elevation, then use the oculus for all control. Tilt extra far in one direction to do a flip in that direction.
+
+It works best in huge, wide open spaces.
+
 ## Contributors
 
 **Contributions welcome!**
