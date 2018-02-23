@@ -1,6 +1,8 @@
 Oculus Drone
 ============
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feross/oculus-drone.svg)](https://greenkeeper.io/)
+
 ![Oculus Drone project](https://raw.github.com/feross/oculus-drone/master/slide.png)
 
 Control a quadcopter with an Oculus Rift. This is virtual reality piloting---you see through the drone's camera. When you turn, it turns; when you nod, it tilts. Kind of like flying a jetpack.
