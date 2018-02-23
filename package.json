@@ -4,9 +4,9 @@
   "description": "oculus-drone ============",
   "main": "index.js",
   "dependencies": {
-    "ar-drone": "~0.1.0",
-    "node-pid-controller": "~0.0.3",
-    "split": "~0.2.6",
+    "ar-drone": "~0.3.3",
+    "node-pid-controller": "~1.0.0",
+    "split": "~1.0.1",
     "through": "~2.3.4",
     "optimist": "~0.6.0"
   },
